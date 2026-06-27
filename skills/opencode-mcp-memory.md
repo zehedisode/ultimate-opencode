@@ -1,6 +1,6 @@
 ---
 name: opencode-mcp-memory
-description: "Entegrasyon / MCP — opencode için kalıcı bellek MCP sunucusu 2841⭐"
+description: "Entegrasyon / MCP — opencode için kalıcı bellek MCP sunucusu 2K⭐"
 ---
 
 # Opencode MCP Memory

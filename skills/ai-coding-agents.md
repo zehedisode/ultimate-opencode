@@ -1,6 +1,6 @@
 ---
 name: ai-coding-agents
-description: "Referans / Yardımcı — AI coding agent karşılaştırma ve seçim rehberi 8732⭐"
+description: "Referans / Yardımcı — AI coding agent karşılaştırma ve seçim rehberi 8K⭐"
 ---
 
 # AI Coding Agents Karşılaştırma

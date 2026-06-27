@@ -1,6 +1,6 @@
 ---
 name: wshobson-agents
-description: "Entegrasyon / MCP — Multi-harness agentic plugin marketplace 37394⭐"
+description: "Entegrasyon / MCP — Multi-harness agentic plugin marketplace 37K⭐"
 ---
 
 # WS Hobson Agents

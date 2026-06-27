@@ -1,6 +1,6 @@
 ---
 name: graphify
-description: "AI framework / agent harness — Klasörü knowledge graph'a çevir 72935⭐"
+description: "AI framework / agent harness — Klasörü knowledge graph'a çevir 72K⭐"
 ---
 
 # Graphify

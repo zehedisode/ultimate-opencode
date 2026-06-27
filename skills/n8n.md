@@ -1,6 +1,6 @@
 ---
 name: n8n
-description: "Geliştirme aracı / güvenlik — Workflow automation CLI (400+ entegrasyon, AI + MCP native) 194441⭐"
+description: "Geliştirme aracı / güvenlik — Workflow automation CLI (400+ entegrasyon, AI + MCP native) 194K⭐"
 ---
 
 # n8n — Workflow Automation

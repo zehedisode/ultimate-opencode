@@ -1,6 +1,6 @@
 ---
 name: cc-switch
-description: "Geliştirme aracı / güvenlik — Cross-platform AI CLI yöneticisi 109842⭐"
+description: "Geliştirme aracı / güvenlik — Cross-platform AI CLI yöneticisi 109K⭐"
 ---
 
 # CC Switch

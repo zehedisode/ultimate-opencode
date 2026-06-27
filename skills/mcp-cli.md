@@ -1,6 +1,6 @@
 ---
 name: mcp-cli
-description: "Entegrasyon / MCP — MCP CLI: MCP sunucularını terminalden yönet 4732⭐"
+description: "Entegrasyon / MCP — MCP CLI: MCP sunucularını terminalden yönet 4K⭐"
 ---
 
 # MCP CLI

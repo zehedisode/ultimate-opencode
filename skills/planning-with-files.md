@@ -1,6 +1,6 @@
 ---
 name: planning-with-files
-description: "Geliştirme aracı / güvenlik — Crash-proof planning (context kaybına dayanıklı) 24024⭐"
+description: "Geliştirme aracı / güvenlik — Crash-proof planning (context kaybına dayanıklı) 24K⭐"
 ---
 
 # Planning with Files

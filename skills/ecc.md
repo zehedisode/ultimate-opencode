@@ -1,6 +1,6 @@
 ---
 name: ecc
-description: "AI framework / agent harness 222568⭐"
+description: "AI framework / agent harness 222K⭐"
 ---
 
 # CLAUDE.md

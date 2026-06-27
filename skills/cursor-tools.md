@@ -1,6 +1,6 @@
 ---
 name: cursor-tools
-description: "Entegrasyon / MCP — Cursor IDE ile opencode arasında köprü 8622⭐"
+description: "Entegrasyon / MCP — Cursor IDE ile opencode arasında köprü 8K⭐"
 ---
 
 # Cursor Tools

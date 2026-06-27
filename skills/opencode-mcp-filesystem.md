@@ -1,6 +1,6 @@
 ---
 name: opencode-mcp-filesystem
-description: "Entegrasyon / MCP — opencode için güvenli dosya sistemi MCP sunucusu 1652⭐"
+description: "Entegrasyon / MCP — opencode için güvenli dosya sistemi MCP sunucusu 1K⭐"
 ---
 
 # Opencode MCP Filesystem

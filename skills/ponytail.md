@@ -1,6 +1,6 @@
 ---
 name: ponytail
-description: "AI framework / agent harness 61629⭐"
+description: "AI framework / agent harness 61K⭐"
 ---
 
 <p align="center">

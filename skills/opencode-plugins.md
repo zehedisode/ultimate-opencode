@@ -1,6 +1,6 @@
 ---
 name: opencode-plugins
-description: "Entegrasyon / MCP — opencode plugin geliştirme rehberi ve şablonları 1567⭐"
+description: "Entegrasyon / MCP — opencode plugin geliştirme rehberi ve şablonları 1K⭐"
 ---
 
 # Opencode Plugins

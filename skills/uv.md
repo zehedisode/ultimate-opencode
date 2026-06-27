@@ -1,6 +1,6 @@
 ---
 name: uv
-description: "Geliştirme aracı / güvenlik — Rust'la yazılmış ultra hızlı Python package manager 40705⭐"
+description: "Geliştirme aracı / güvenlik — Rust'la yazılmış ultra hızlı Python package manager 40K⭐"
 ---
 
 # uv — Ultra Fast Python Package Manager

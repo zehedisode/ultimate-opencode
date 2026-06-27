@@ -1,6 +1,6 @@
 ---
 name: continue
-description: "AI framework / agent harness — VS Code için açık kaynak AI asistan 21538⭐"
+description: "AI framework / agent harness — VS Code için açık kaynak AI asistan 21K⭐"
 ---
 
 # Continue

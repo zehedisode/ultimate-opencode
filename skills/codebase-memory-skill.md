@@ -1,6 +1,6 @@
 ---
 name: codebase-memory-skill
-description: "Entegrasyon / MCP — Kod zekası knowledge graph 17397⭐"
+description: "Entegrasyon / MCP — Kod zekası knowledge graph 17K⭐"
 ---
 
 # Codebase Memory Skill

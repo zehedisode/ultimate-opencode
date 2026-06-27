@@ -1,6 +1,6 @@
 ---
 name: lazygit
-description: "Geliştirme aracı / güvenlik — Terminal UI git client 55337⭐"
+description: "Geliştirme aracı / güvenlik — Terminal UI git client 55K⭐"
 ---
 
 # Lazygit — Terminal UI Git Client

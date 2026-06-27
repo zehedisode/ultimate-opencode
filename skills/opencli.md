@@ -1,6 +1,6 @@
 ---
 name: opencli
-description: "Entegrasyon / MCP — Website'leri CLI komutlarına çevir 25461⭐"
+description: "Entegrasyon / MCP — Website'leri CLI komutlarına çevir 25K⭐"
 ---
 
 # OpenCLI — Website → CLI

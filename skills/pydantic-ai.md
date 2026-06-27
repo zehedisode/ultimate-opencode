@@ -1,6 +1,6 @@
 ---
 name: pydantic-ai
-description: "AI framework / agent harness — Pydantic resmi AI Agent Framework (type-safe, Python) 18536⭐"
+description: "AI framework / agent harness — Pydantic resmi AI Agent Framework (type-safe, Python) 18K⭐"
 ---
 
 # Pydantic AI

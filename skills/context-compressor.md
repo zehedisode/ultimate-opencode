@@ -1,6 +1,6 @@
 ---
 name: context-compressor
-description: "Geliştirme aracı / güvenlik — AI context penceresini optimize eden sıkıştırma aracı 3421⭐"
+description: "Geliştirme aracı / güvenlik — AI context penceresini optimize eden sıkıştırma aracı 3K⭐"
 ---
 
 # Context Compressor

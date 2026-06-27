@@ -1,6 +1,6 @@
 ---
 name: awesome-mcp-servers
-description: "Entegrasyon / MCP — En kapsamlı MCP server koleksiyonu 89934⭐"
+description: "Entegrasyon / MCP — En kapsamlı MCP server koleksiyonu 89K⭐"
 ---
 
 # Awesome MCP Servers

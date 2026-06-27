@@ -1,6 +1,6 @@
 ---
 name: opencode-mcp-postgres
-description: "Entegrasyon / MCP — opencode için PostgreSQL MCP sunucusu 1832⭐"
+description: "Entegrasyon / MCP — opencode için PostgreSQL MCP sunucusu 1K⭐"
 ---
 
 # Opencode MCP PostgreSQL

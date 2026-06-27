@@ -1,6 +1,6 @@
 ---
 name: loop-engineering
-description: "Referans / Yardımcı 3174⭐"
+description: "Referans / Yardımcı 3K⭐"
 ---
 
 # Loop Engineering

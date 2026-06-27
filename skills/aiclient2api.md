@@ -1,6 +1,6 @@
 ---
 name: aiclient2api
-description: "Entegrasyon / MCP — Gemini/Antigravity/Codex API'lerini OpenAI uyumlu yap 8340⭐"
+description: "Entegrasyon / MCP — Gemini/Antigravity/Codex API'lerini OpenAI uyumlu yap 8K⭐"
 ---
 
 # AIClient2API

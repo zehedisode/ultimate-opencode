@@ -1,6 +1,6 @@
 ---
 name: superpowers
-description: "AI framework / agent harness 239990⭐"
+description: "AI framework / agent harness 239K⭐"
 ---
 
 # Superpowers — Contributor Guidelines

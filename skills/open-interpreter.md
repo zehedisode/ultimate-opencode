@@ -1,6 +1,6 @@
 ---
 name: open-interpreter
-description: "AI framework / agent harness — Terminal için doğal dil bilgisayar arayüzü 55974⭐"
+description: "AI framework / agent harness — Terminal için doğal dil bilgisayar arayüzü 55K⭐"
 ---
 
 # Open Interpreter

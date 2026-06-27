@@ -1,6 +1,6 @@
 ---
 name: opencode-mcp-github
-description: "Entegrasyon / MCP — opencode için GitHub MCP sunucusu 3215⭐"
+description: "Entegrasyon / MCP — opencode için GitHub MCP sunucusu 3K⭐"
 ---
 
 # Opencode MCP GitHub

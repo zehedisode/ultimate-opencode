@@ -1,6 +1,6 @@
 ---
 name: agentic-threat-detection
-description: "Geliştirme aracı / güvenlik — AI agent'larda prompt injection, data exfil, tool abuse tespiti 4856⭐"
+description: "Geliştirme aracı / güvenlik — AI agent'larda prompt injection, data exfil, tool abuse tespiti 4K⭐"
 ---
 
 # Agentic Threat Detection

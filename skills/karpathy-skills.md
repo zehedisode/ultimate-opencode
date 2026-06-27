@@ -1,6 +1,6 @@
 ---
 name: karpathy-skills
-description: "AI framework / agent harness 183389⭐"
+description: "AI framework / agent harness 183K⭐"
 ---
 
 # CLAUDE.md

@@ -1,6 +1,6 @@
 ---
 name: cursor-ide
-description: "AI framework / agent harness — Cursor IDE: AI-first code editor 21847⭐"
+description: "AI framework / agent harness — Cursor IDE: AI-first code editor 21K⭐"
 ---
 
 # Cursor IDE

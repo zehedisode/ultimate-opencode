@@ -1,6 +1,6 @@
 ---
 name: microsoft-agent-framework
-description: "AI framework / agent harness — Microsoft multi-agent orchestration framework 11753⭐"
+description: "AI framework / agent harness — Microsoft multi-agent orchestration framework 11K⭐"
 ---
 
 # Microsoft Agent Framework

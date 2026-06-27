@@ -1,6 +1,6 @@
 ---
 name: get-shit-done
-description: "AI framework / agent harness 64556⭐"
+description: "AI framework / agent harness 64K⭐"
 ---
 
 <!-- GSD 2 - Archived repository redirect -->

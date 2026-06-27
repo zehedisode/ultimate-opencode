@@ -1,6 +1,6 @@
 ---
 name: antigravity-awesome-skills
-description: "Referans / Yardımcı — 1600+ agentic skill kütüphanesi 41955⭐"
+description: "Referans / Yardımcı — 1600+ agentic skill kütüphanesi 41K⭐"
 ---
 
 # Antigravity Awesome Skills

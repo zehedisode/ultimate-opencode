@@ -1,6 +1,6 @@
 ---
 name: dify
-description: "AI framework / agent harness — Production-ready agentic workflow platform 147296⭐"
+description: "AI framework / agent harness — Production-ready agentic workflow platform 147K⭐"
 ---
 
 # Dify

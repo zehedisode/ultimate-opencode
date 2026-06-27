@@ -1,6 +1,6 @@
 ---
 name: arc-kit
-description: "Geliştirme aracı / güvenlik 2030⭐"
+description: "Geliştirme aracı / güvenlik 2K⭐"
 ---
 
 # CLAUDE.md

@@ -1,6 +1,6 @@
 ---
 name: prompt-master
-description: "Geliştirme aracı / güvenlik — Kusursuz prompt yazma 9892⭐"
+description: "Geliştirme aracı / güvenlik — Kusursuz prompt yazma 9K⭐"
 ---
 
 # Prompt Master

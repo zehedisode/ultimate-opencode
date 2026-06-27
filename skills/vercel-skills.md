@@ -1,6 +1,6 @@
 ---
 name: vercel-skills
-description: "Tasarım / Dokümantasyon — npx skills ile skill yönetimi 23790⭐"
+description: "Tasarım / Dokümantasyon — npx skills ile skill yönetimi 23K⭐"
 ---
 
 # Vercel Skills

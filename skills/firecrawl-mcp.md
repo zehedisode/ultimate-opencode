@@ -1,6 +1,6 @@
 ---
 name: firecrawl-mcp
-description: "Entegrasyon / MCP — Web scraping + search MCP sunucusu 6709⭐"
+description: "Entegrasyon / MCP — Web scraping + search MCP sunucusu 6K⭐"
 ---
 
 # Firecrawl MCP

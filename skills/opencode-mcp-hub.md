@@ -1,6 +1,6 @@
 ---
 name: opencode-mcp-hub
-description: "Entegrasyon / MCP — opencode için MCP server marketplace ve yöneticisi 2137⭐"
+description: "Entegrasyon / MCP — opencode için MCP server marketplace ve yöneticisi 2K⭐"
 ---
 
 # Opencode MCP Hub

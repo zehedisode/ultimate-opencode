@@ -1,6 +1,6 @@
 ---
 name: copilot-cli
-description: "Geliştirme aracı / güvenlik — GitHub Copilot CLI: terminal'de AI destekli komut önerileri 4382⭐"
+description: "Geliştirme aracı / güvenlik — GitHub Copilot CLI: terminal'de AI destekli komut önerileri 4K⭐"
 ---
 
 # GitHub Copilot CLI

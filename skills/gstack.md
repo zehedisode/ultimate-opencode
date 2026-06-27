@@ -1,6 +1,6 @@
 ---
 name: gstack
-description: "AI framework / agent harness 117177⭐"
+description: "AI framework / agent harness 117K⭐"
 ---
 
 # gstack development

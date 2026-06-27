@@ -1,6 +1,6 @@
 ---
 name: deepseek-reasonix
-description: "AI framework / agent harness — DeepSeek-native AI coding agent 25112⭐"
+description: "AI framework / agent harness — DeepSeek-native AI coding agent 25K⭐"
 ---
 
 # DeepSeek Reasonix

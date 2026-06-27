@@ -1,6 +1,6 @@
 ---
 name: claude-code-cli
-description: "AI framework / agent harness — Anthropic Claude Code CLI agent 15423⭐"
+description: "AI framework / agent harness — Anthropic Claude Code CLI agent 15K⭐"
 ---
 
 # Claude Code CLI

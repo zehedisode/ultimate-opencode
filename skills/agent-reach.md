@@ -1,6 +1,6 @@
 ---
 name: agent-reach
-description: "Entegrasyon / MCP — AI agentlara internet görüşü 43476⭐"
+description: "Entegrasyon / MCP — AI agentlara internet görüşü 43K⭐"
 ---
 
 # Agent Reach

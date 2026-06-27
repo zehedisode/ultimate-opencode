@@ -1,6 +1,6 @@
 ---
 name: claude-code-best-practice
-description: "AI framework / agent harness 61304⭐"
+description: "AI framework / agent harness 61K⭐"
 ---
 
 # CLAUDE.md

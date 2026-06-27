@@ -1,6 +1,6 @@
 ---
 name: github-copilot
-description: "AI framework / agent harness — GitHub Copilot: AI pair programmer 38241⭐"
+description: "AI framework / agent harness — GitHub Copilot: AI pair programmer 38K⭐"
 ---
 
 # GitHub Copilot

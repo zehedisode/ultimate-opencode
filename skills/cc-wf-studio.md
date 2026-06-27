@@ -1,6 +1,6 @@
 ---
 name: cc-wf-studio
-description: "Geliştirme aracı / güvenlik 5206⭐"
+description: "Geliştirme aracı / güvenlik 5K⭐"
 ---
 
 # cc-wf-studio Development Guidelines

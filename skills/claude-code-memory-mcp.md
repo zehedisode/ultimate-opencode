@@ -1,6 +1,6 @@
 ---
 name: claude-code-memory-mcp
-description: "Entegrasyon / MCP — Claude Code kalıcı bellek MCP sunucusu 3213⭐"
+description: "Entegrasyon / MCP — Claude Code kalıcı bellek MCP sunucusu 3K⭐"
 ---
 
 # Claude Code Memory MCP

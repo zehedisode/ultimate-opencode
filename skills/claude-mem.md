@@ -1,6 +1,6 @@
 ---
 name: claude-mem
-description: "AI framework / agent harness 84734⭐"
+description: "AI framework / agent harness 84K⭐"
 ---
 
 # Claude-Mem: AI Development Instructions

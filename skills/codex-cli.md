@@ -1,6 +1,6 @@
 ---
 name: codex-cli
-description: "AI framework / agent harness — OpenAI Codex CLI: terminal AI coding agent 17628⭐"
+description: "AI framework / agent harness — OpenAI Codex CLI: terminal AI coding agent 17K⭐"
 ---
 
 # OpenAI Codex CLI

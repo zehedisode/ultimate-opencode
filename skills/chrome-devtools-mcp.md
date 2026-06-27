@@ -1,6 +1,6 @@
 ---
 name: chrome-devtools-mcp
-description: "Entegrasyon / MCP — Chrome DevTools'u AI agentlara açan resmi MCP server 44680⭐"
+description: "Entegrasyon / MCP — Chrome DevTools'u AI agentlara açan resmi MCP server 44K⭐"
 ---
 
 # Chrome DevTools MCP

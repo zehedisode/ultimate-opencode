@@ -1,6 +1,6 @@
 ---
 name: free-llm-apis
-description: "Referans / Yardımcı 5363⭐"
+description: "Referans / Yardımcı 5K⭐"
 ---
 
 # Contributing

@@ -62,6 +62,16 @@ if [ "${1:-}" = "--self" ] || [ "${1:-}" = "-s" ]; then
 
     check "install.sh bash syntax" bash -n "$PROJECT_DIR/install.sh"
     check "rollback.sh bash syntax" bash -n "$PROJECT_DIR/rollback.sh"
+    check "uninstall.sh bash syntax" bash -n "$PROJECT_DIR/uninstall.sh"
+
+    echo ""
+    echo "👥 COUNCIL DOGRULAMA:"
+    for f in "$PROJECT_DIR/council/agents/"*.md; do
+        name=$(basename "$f" .md)
+        check "Council '$name' SKILL.md'de var" grep -q "$name" "$PROJECT_DIR/council/council/SKILL.md"
+    done
+    COUNCIL_REFS=$(grep -oP 'council-\w+' "$PROJECT_DIR/council/council/SKILL.md" 2>/dev/null | sort -u | wc -l)
+    check "SKILL.md referanslari gercek dosyalarla eslesiyor" test "$COUNCIL_REFS" -eq 18
 
     echo ""
     echo -e "=========================================="

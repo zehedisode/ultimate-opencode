@@ -1,0 +1,22 @@
+# Code owners
+* @zehedisode
+
+# Core files
+/install.sh @zehedisode
+/README.md @zehedisode
+/config/ @zehedisode
+
+# Scripts
+/scripts/ @zehedisode
+
+# Skills
+/skills/ @zehedisode
+
+# Agents
+/agents/ @zehedisode
+
+# Council
+/council/ @zehedisode
+
+# ATLAS
+/atlas/ @zehedisode

@@ -1,6 +1,6 @@
 ---
 name: screenshot-to-code
-description: "Geliştirme aracı / güvenlik — Ekran görüntüsünden kod üret 64581⭐"
+description: "Geliştirme aracı / güvenlik — Ekran görüntüsünden kod üret 64K⭐"
 ---
 
 # Screenshot to Code

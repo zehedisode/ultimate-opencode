@@ -1,6 +1,6 @@
 ---
 name: raptor-security
-description: "Geliştirme aracı / güvenlik 3200⭐"
+description: "Geliştirme aracı / güvenlik 3K⭐"
 ---
 
 # RAPTOR - Autonomous Offensive/Defensive Research Framework

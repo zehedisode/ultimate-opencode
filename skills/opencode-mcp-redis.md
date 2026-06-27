@@ -1,6 +1,6 @@
 ---
 name: opencode-mcp-redis
-description: "Entegrasyon / MCP — opencode için Redis MCP sunucusu 1247⭐"
+description: "Entegrasyon / MCP — opencode için Redis MCP sunucusu 1K⭐"
 ---
 
 # Opencode MCP Redis

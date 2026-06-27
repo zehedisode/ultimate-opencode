@@ -1,6 +1,6 @@
 ---
 name: ruflo
-description: "AI framework / agent harness 61738⭐"
+description: "AI framework / agent harness 61K⭐"
 ---
 
 # Claude Code Configuration - Ruflo v3.5

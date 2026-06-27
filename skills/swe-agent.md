@@ -1,6 +1,6 @@
 ---
 name: swe-agent
-description: "AI framework / agent harness — Software Engineering Agent: GitHub issue'larını otomatik çözen AI 12982⭐"
+description: "AI framework / agent harness — Software Engineering Agent: GitHub issue'larını otomatik çözen AI 12K⭐"
 ---
 
 # SWE-Agent

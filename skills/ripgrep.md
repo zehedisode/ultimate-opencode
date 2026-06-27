@@ -1,6 +1,6 @@
 ---
 name: ripgrep
-description: "Geliştirme aracı / güvenlik — En hızlı kod arama CLI aracı 51736⭐"
+description: "Geliştirme aracı / güvenlik — En hızlı kod arama CLI aracı 51K⭐"
 ---
 
 # ripgrep (rg)

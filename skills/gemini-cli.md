@@ -1,6 +1,6 @@
 ---
 name: gemini-cli
-description: "AI framework / agent harness — Google Gemini CLI: terminal AI asistan 12458⭐"
+description: "AI framework / agent harness — Google Gemini CLI: terminal AI asistan 12K⭐"
 ---
 
 # Gemini CLI

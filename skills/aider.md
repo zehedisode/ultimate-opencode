@@ -1,6 +1,6 @@
 ---
 name: aider
-description: "AI framework / agent harness — AI pair programming terminal aracı 25491⭐"
+description: "AI framework / agent harness — AI pair programming terminal aracı 25K⭐"
 ---
 
 # Aider

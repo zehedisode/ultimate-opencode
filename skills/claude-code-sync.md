@@ -1,6 +1,6 @@
 ---
 name: claude-code-sync
-description: "Entegrasyon / MCP — Claude Code oturumları arası senkronizasyon 1274⭐"
+description: "Entegrasyon / MCP — Claude Code oturumları arası senkronizasyon 1K⭐"
 ---
 
 # Claude Code Sync

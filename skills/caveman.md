@@ -1,6 +1,6 @@
 ---
 name: caveman
-description: "AI framework / agent harness 77401⭐"
+description: "AI framework / agent harness 77K⭐"
 ---
 
 # CLAUDE.md — caveman

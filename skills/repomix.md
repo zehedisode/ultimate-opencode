@@ -1,6 +1,6 @@
 ---
 name: repomix
-description: "Geliştirme aracı / güvenlik — Tüm repoyu tek LLM-prompt dosyasına sıkıştır 5176⭐"
+description: "Geliştirme aracı / güvenlik — Tüm repoyu tek LLM-prompt dosyasına sıkıştır 5K⭐"
 ---
 
 # Repomix
