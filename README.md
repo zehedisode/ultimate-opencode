@@ -1,12 +1,36 @@
 <div align="center">
-  <h1>🚀 Ultimate OpenCode</h1>
-  <p><b>Sıfır opencode'u 5dk'da full mod'a çeviren paket.</b></p>
-  <p>19 repo → 4 MCP · 103 agent · 40+ skill · 14 komut · 7 plugin · 18 council</p>
 
-  <a href="https://github.com/zehedisode/ultimate-opencode"><img src="https://img.shields.io/github/stars/zehedisode/ultimate-opencode?style=social"></a>
-  <img src="https://img.shields.io/badge/platform-linux%20%7C%20macOS%20%7C%20wsl-blue">
-  <img src="https://img.shields.io/badge/license-MIT-green">
+# 🚀 Ultimate OpenCode
+
+### Sıfır opencode'u 5 dakikada full mod'a çeviren tek paket.
+
+**🎯 4 MCP Server · 39 Skill · 103 Agent · 14 Slash Komut · 7 Plugin · 18 Council · 1 Atlas**
+
+[![GitHub stars](https://img.shields.io/github/stars/zehedisode/ultimate-opencode?style=social)](https://github.com/zehedisode/ultimate-opencode)
+[![Platform](https://img.shields.io/badge/platform-linux%20%7C%20macOS%20%7C%20wsl-blue)](https://github.com/zehedisode/ultimate-opencode)
+[![License](https://img.shields.io/badge/license-MIT-green)](https://github.com/zehedisode/ultimate-opencode)
+[![One-Click Install](https://img.shields.io/badge/install-one--click-orange)](https://github.com/zehedisode/ultimate-opencode)
+
+> **19 farklı GitHub reposundan toplanmış, test edilmiş ve optimize edilmiş en iyi opencode eklentileri.**
+> **Hiçbiri API key gerektirmez. Her şey tek komutla kurulur.**
+
 </div>
+
+---
+
+## 📋 İçindekiler
+
+- [⚡ Tek Komut Kurulum](#-tek-komut-kurulum)
+- [🌍 ATLAS — Proje Bilinç Sistemi](#-atlas--dünyada-ilk-ve-tek-proje-bilinç-sistemi)
+- [📡 MCP Server'lar](#-mcp-serverlar)
+- [👤 103 Agent Persona](#-103-agent-persona)
+- [👥 Council of High Intelligence](#-council-of-high-intelligence)
+- [🎯 39 Skill](#-39-skill)
+- [⚡ 14 Slash Komut](#-14-slash-komut)
+- [🔌 7 Plugin](#-7-plugin)
+- [🔧 CLI Araçlar](#-cli-araçlar)
+- [🏆 Neden Bu Repo?](#-neden-bu-repo)
+- [📜 Lisans](#-lisans)
 
 ---
 
@@ -18,89 +42,109 @@ cd ultimate-opencode
 ./install.sh
 ```
 
-Ardından: `opencode` 🎉
+**Ardından:** `opencode` 🎉
 
----
-
-## 📦 İçindekiler
-
-| Kategori | Adet | Açıklama |
-|---|---|---|
-| 📡 **MCP Server** | 4 | codegraph, codebase-memory-mcp, context7, filesystem |
-| 👤 **Agent Persona** | 103 | 10 kategoride uzman subagent |
-| 👥 **Council** | 18 | `/council` ile 18 AI persona tartışır |
-| 🎯 **Skill** | 24+ | Token tasarrufu, güvenlik, planning... |
-| ⚡ **Slash Komut** | 14 | /commit, /review, /test, /documentation |
-| 🔌 **Plugin** | 7 | GitLab, Gemini, websearch, helicone... |
-| 👮 **Cost Guard** | 1 | $50 limit, %80 uyarı |
-| 🎨 **Tema** | 4 | Catppuccin çeşitleri |
-
----
-
-## 🔑 Kullanım
-
-| Ne | Nasıl |
-|---|---|
-| **TUI'yi başlat** | `opencode` |
-| **Model variant değiştir** | `Ctrl+T` (high/max/low) |
-| **Agent değiştir** | `Tab` (build/plan) |
-| **Council topla** | `/council <soru>` |
-| **Uzman çağır** | `@python-expert` veya `@security-reviewer` |
-| **Commit yaz** | `/commit` |
-| **Kod review** | `/review` |
-| **Test yaz** | `/test` |
-| **Dokümantasyon** | `/documentation` |
-| **Memory bank** | `/memory-bank` |
-
----
+Kurulum yapmanız gerekenler: **hiçbir şey.** API key gerekmez. Ekstra konfigürasyon gerekmez. Tüm skiller, agent'lar, MCP server'lar ve plugin'ler otomatik kurulur.
 
 ---
 
 ## 🌍 ATLAS — Dünyada İlk ve Tek Proje Bilinç Sistemi
 
-**AI ajanını tek başına bir kod yazara dönüştüren tüm sistemler statiktir. ATLAS projenin BEYNİ olur.**
+> **NotebookLM Google'ın not defterinize yaptığını, ATLAS projenize yapar.**
 
-ATLAS, AI ajanına **tam proje bilinci** kazandıran 7 modüllü devrim niteliğinde bir sistemdir. Sadece kod yazmaz — projeni anlar, kaliteni kontrol eder, maliyetini ölçer, dokümanını canlı tutar, takımını koordine eder ve geçmiş hatalarının tekrarını engeller.
+```
+╔══════════════════════════════════════════════════════════════╗
+║                    🌍 ATLAS                                  ║
+║              Project Intelligence System                      ║
+║                                                              ║
+║  GitHub Copilot → Sadece kod tamamlar                        ║
+║  Claude Code    → Sadece kod yazar                           ║
+║  Diğer skill'ler → Sadece pasif talimat verir                ║
+║                                                              ║
+║  ATLAS          → PROJENİ ANLAR, ÖLÇER, KORUR                ║
+╚══════════════════════════════════════════════════════════════╝
+```
 
-### 🏗️ 7 Modül
+### 🤔 Problemi Düşünün
 
-| Modül | Dosya | Ne Yapar |
-|---|---|---|
-| **core/** | `project.md`, `decisions.md`, `changelog.md` | Proje yapısı, mimari kararlar, değişiklik takibi |
-| **quality/** | `standards.md`, `review-checklist.md`, `regression.md` | Kalite gates, code review, bug tekrarını engelleme |
-| **metrics/** | `costs.md`, `heatmap.md` | Token maliyeti, dosya değişim ısı haritası |
-| **docs/** | `api.md`, `architecture.md` | Yaşayan dökümantasyon, otomatik güncellenir |
-| **team/** | `agents.md`, `sync.md` | Çoklu ajan koordinasyonu |
-| **reports/** | `insights.md` | Haftalık rapor, trend analizi |
+Bugün kullandığınız tüm AI araçlarının ortak sorunu: **projeniz hakkında HİÇBİR ŞEY bilmemeleri.**
 
-### ATLAS'ı Rakiplerinden Ayıranlar
+- GitHub Copilot sadece imlecinizin olduğu dosyaya bakar
+- Claude Code her seansta projeyi sıfırdan keşfeder
+- Hiçbiri dün yaptığınız hatayı hatırlamaz
+- Hiçbiri projenizin maliyetini ölçmez
+- Hiçbiri dokümantasyonu sizin için canlı tutmaz
 
-| Özellik | ATLAS | GitHub Copilot | Claude Code | Diğer Skill'ler |
+**ATLAS tüm bu sorunları tek seferde çözer.**
+
+### 🏗️ 7 Modül, 12 Dosya
+
+```
+📁 .opencode/atlas/
+│
+├── 📁 core/                    ─── PROJE BİLİNCİ
+│   ├── 📄 project.md           Projenin DNA'sı: yapı, dil, framework, bağımlılıklar
+│   ├── 📄 decisions.md         Architecture Decision Records (ADR)
+│   └── 📄 changelog.md         Her değişikliğin etki analizi ile kaydı
+│
+├── 📁 quality/                 ─── KALİTE KONTROL
+│   ├── 📄 standards.md         Kod standartları, test gereksinimleri, eşikler
+│   ├── 📄 review-checklist.md  Her değişiklik için otomatik kontrol listesi
+│   └── 📄 regression.md        Geçmiş bug'lar ve tekrarını engelleme mekanizması
+│
+├── 📁 metrics/                 ─── ANALİTİK
+│   ├── 📄 costs.md             Token tüketimi ve USD bazında maliyet takibi
+│   └── 📄 heatmap.md           Dosya değişim sıklığı ve risk haritası
+│
+├── 📁 docs/                    ─── YAŞAYAN DÖKÜMANTASYON
+│   ├── 📄 api.md               Otomatik güncellenen API dökümantasyonu
+│   └── 📄 architecture.md     C4 modeli ile proje mimarisi
+│
+├── 📁 team/                    ─── TAKIM KOORDİNASYONU
+│   ├── 📄 agents.md            Çoklu ajan görev dağılımı
+│   └── 📄 sync.md              Oturumlar arası senkronizasyon
+│
+└── 📁 reports/                 ─── RAPORLAR
+    └── 📄 insights.md          Haftalık trend analizi ve içgörüler
+```
+
+### 💥 Rakiplerle Karşılaştırma
+
+| Özellik | **ATLAS** | GitHub Copilot | Claude Code | Diğer Skill'ler |
 |---|---|---|---|---|
-| Proje bilinci | ✅ Tam | ❌ | ❌ | ❌ |
-| Regresyon engelleme | ✅ Otomatik | ❌ | ❌ | ❌ |
-| Maliyet takibi | ✅ Token + USD | ❌ | ❌ | ❌ |
-| Yaşayan doküman | ✅ Otomatik | ❌ | ❌ | ❌ |
-| Kalite gates | ✅ Her değişiklik | ❌ | ❌ | ❌ |
-| Takım koordinasyonu | ✅ Çoklu ajan | ❌ | ❌ | ❌ |
-| Etki analizi | ✅ X→Y değişirse | ❌ | ❌ | ❌ |
-| Isı haritası | ✅ Hangi dosya riskli | ❌ | ❌ | ❌ |
-| ADR takibi | ✅ Otomatik | ❌ | ❌ | ❌ |
+| **🧠 Proje Bilinci** | ✅ Tüm projeyi tanır | ❌ Sadece açık dosya | ❌ Her seans sıfırdan | ❌ |
+| **🛡️ Regresyon Engelleme** | ✅ "Bu kod X hatasına yol açmıştı" | ❌ | ❌ | ❌ |
+| **💰 Maliyet Takibi** | ✅ Token + USD takibi | ❌ | ❌ | ❌ |
+| **📝 Yaşayan Doküman** | ✅ Otomatik güncellenir | ❌ | ❌ | ❌ |
+| **✅ Kalite Gates** | ✅ Her değişiklik denetlenir | ❌ | ❌ | ❌ |
+| **👥 Takım Koordinasyonu** | ✅ Çoklu ajan desteği | ❌ | ❌ | ❌ |
+| **📊 Etki Analizi** | ✅ "X değişirse Y etkilenir" | ❌ | ❌ | ❌ |
+| **🔥 Isı Haritası** | ✅ Riskli dosyaları gösterir | ❌ | ❌ | ❌ |
+| **📐 ADR Takibi** | ✅ Otomatik karar günlüğü | ❌ | ❌ | ❌ |
+| **💡 İçgörü Raporları** | ✅ Haftalık trend analizi | ❌ | ❌ | ❌ |
+
+### 🚀 Kullanım
 
 ```bash
 # Projende ATLAS'ı başlat
 cd projen
 atlas/init.sh
 
-# ATLAS artık aktif.
-# Her seansta projeni tanır, hatalarını hatırlar, maliyetini ölçer.
+# Artık her seansta:
+# - ATLAS projeni tanır
+# - Geçmiş hataları hatırlar
+# - Maliyeti ölçer
+# - Dokümanı günceller
+# - Kaliteyi denetler
+
+# Hiçbir şey yapmana gerek yok. ATLAS otomatik çalışır.
 ```
 
 ---
 
 ## 📡 MCP Server'lar
 
-| Server | ⭐ | Ne işe yarar |
+| Server | ⭐ | Görev |
 |---|---|---|
 | **codegraph** | 55K | Kod sembol grafiği, çağrı yolu analizi |
 | **codebase-memory-mcp** | 17K | Kod zekası, Cypher sorguları, etki analizi |
@@ -109,119 +153,213 @@ atlas/init.sh
 
 ---
 
-## 👤 103 Agent Persona (10 Kategori)
+## 👤 103 Agent Persona
+
+**10 kategoride 103 uzman subagent.** Her biri belirli bir alanda uzmanlaşmış AI personadır.
 
 ```
-00-general/        → communication-coach, general-purpose
-01-core/           → api-designer, backend, fullstack, graphql, microservices, websocket
-02-languages/      → angular, golang, java, javascript, laravel, nextjs, php, python, rails, react, rust, spring, sql, typescript, vue
-03-infrastructure/ → cloud, database, devops, k8s, network, security, sre, terraform...
-04-quality/        → code-review, debug, pentest, performance, qa, test-automation...
-05-data-ai/        → ai-engineer, data-scientist, ml-engineer, nlp, prompt-engineer...
-06-dev-exp/        → build, cli, docs, git, mcp, mermaid, refactoring...
-07-specialized/    → blockchain, fintech, payment, quant...
-08-business/       → product, project, scrum, technical-writer, ux...
-09-meta/           → agent-organizer, orchestrator, task-distributor...
-10-curiosity/      → astro, research, search, trend-analysis...
+📁 agents/
+├── 00-general/        → iletişim koçu, genel amaçlı
+├── 01-core/           → api-designer, backend, fullstack, graphql, microservices, websocket
+├── 02-languages/      → angular, golang, java, javascript, laravel, nextjs, php, python,
+│                         rails, react, rust, spring, sql, typescript, vue
+├── 03-infrastructure/ → cloud, database, devops, k8s, network, security, sre, terraform
+├── 04-quality/        → code-review, debug, pentest, performance, qa, test-automation
+├── 05-data-ai/        → ai-engineer, data-scientist, ml-engineer, nlp, prompt-engineer
+├── 06-dev-exp/        → build, cli, docs, git, mcp, mermaid, refactoring
+├── 07-specialized/    → blockchain, fintech, payment, quant
+├── 08-business/       → product, project, scrum, technical-writer, ux
+├── 09-meta/           → agent-organizer, orchestrator, task-distributor
+└── 10-curiosity/      → astro, research, search, trend-analysis
 ```
 
-Kullanım: `@agent-adı <ne yapmak istiyorsun>`
+**Kullanım:** `@agent-adı <soru>` — örneğin `@python-expert Bu fonksiyonu optimize et`
 
 ---
 
 ## 👥 Council of High Intelligence
 
-18 AI persona (Aristotle, Feynman, Kahneman, Torvalds...) farklı LLM'lerde tartışır.
+18 tarihi figür AI persona olarak tartışır, sen karar verirsin.
+
+| Persona | Uzmanlık | Persona | Uzmanlık |
+|---|---|---|---|
+| 🏛️ Aristoteles | Kategorizasyon | 🧠 Kahneman | Karar bilimi |
+| ❓ Sokrates | Varsayım yıkım | 🌿 Lao Tzu | Doğal düzen |
+| ⚔️ Sun Tzu | Strateji | 💻 Torvalds | Mühendislik |
+| 🧮 Ada Lovelace | Soyut sistemler | ⚡ Musashi | Zamanlama |
+| 🛡️ Aurelius | Direnç | 🌊 Watts | Perspektif |
+| 🎭 Machiavelli | Güç dinamikleri | 🤖 Karpathy | Yapay zeka |
+| 🔬 Feynman | İlk prensipler | 🏛️ Sutskever | AI güvenliği |
 
 ```bash
 /council Bu startup'ı satın almalı mıyız?
 /council --quick Mikroservis mi monolit mi?
-/council --duo scaling yaklaşımımız nedir?
-/council --triad strategy Rakibimizle nasıl rekabet edelim?
-/council --members torvalds,ada Bu abstraction değer mi?
+/council --duo scaling stratejimiz ne olmalı?
+/council --triad strategy Rakibimize karşı nasıl rekabet edelim?
 ```
 
 ---
 
-## 🎯 Skill'ler
+## 🎯 39 Skill
 
-| Skill | ⭐ | Ne işe yarar |
+Kategoriye göre gruplandırılmış en popüler GitHub skill'leri:
+
+### ⚡ Token & Performans
+| Skill | ⭐ | Ne İşe Yarar |
 |---|---|---|
+| **caveman** | 77K | %65 daha az token ile iletişim |
+| **ponytail** | 61K | En tembel kıdemli developer gibi düşün |
+| **squeez** | — | Hook-based token compression |
+
+### 🧠 AI Çerçeveleri
+| Skill | ⭐ | Ne İşe Yarar |
+|---|---|---|
+| **ECC** | 222K | Agent harness: skill + instinct + memory + security |
+| **superpowers** | 239K | Agentic skills framework & metodoloji |
 | **claude-mem** | 84K | Persistent context across sessions |
-| **get-shit-done** | 64K | Meta-prompting + spec-driven dev |
 | **oh-my-openagent** | 63K | Agent harness (omo/lazycodex) |
-| **gstack** | 117K | 23 opinionated Claude Code tools |
-| **claude-code-best-practice** | 61K | Best practices |
-| **ruflo** | 61K | Multi-agent swarms |
-| **caveman** | 77K | %65 token tasarrufu |
-| **ponytail** | 61K | Kıdemli dev gibi düşün |
-| **ECC** | 222K | Agent harness (skills, memory, security) |
+| **ruflo** | 61K | Multi-agent swarm orchestration |
+| **get-shit-done** | 64K | Meta-prompting + spec-driven development |
 | **graphify** | 72K | Klasörü knowledge graph'a çevir |
-| **superpowers** | 239K | Agentic skills framework |
-| **karpathy-skills** | 183K | Kod prensipleri |
-| **planning-with-files** | 24K | Crash-proof planning |
-| **ospec** | 555 | Spec-driven development workflow |
-| **raptor-security** | 3.2K | Pentest ajanı |
-| **deliberation** | 107 | Multi-model second opinion |
-| **prompt-master** | 9.8K | Prompt mühendisliği |
-| **Claude-BugHunter** | 2.7K | 71 bug bounty skill |
-| **cc-wf-studio** | 5.2K | 16 workflow skill |
+
+### 📐 Kod Kalitesi
+| Skill | ⭐ | Ne İşe Yarar |
+|---|---|---|
+| **karpathy-skills** | 183K | Andrej Karpathy'nin AI kod prensipleri |
+| **claude-code-best-practice** | 61K | Vibe coding'den agentic engineering'a |
+| **gstack** | 117K | 23 opinionated Claude Code tool |
+| **code-reviewer** | — | Otomatik kod review |
 | **arc-kit** | 2K | Enterprise architecture governance |
-| **OpenCLI** | 25K | Website → CLI |
-| **SocratiCode** | 3K | Enterprise code intel |
+
+### 🛡️ Güvenlik
+| Skill | ⭐ | Ne İşe Yarar |
+|---|---|---|
+| **Claude-BugHunter** | 2.7K | 71 bug bounty skill, 681 disclosed-report pattern |
+| **raptor-security** | 3.2K | AI-powered pentest ajanı |
+| **hol-guard** | 372 | AI antivirüs: zararlı komutları engeller |
+
+### 🔧 Geliştirme Araçları
+| Skill | ⭐ | Ne İşe Yarar |
+|---|---|---|
+| **planning-with-files** | 24K | Crash-proof planning (context kaybına dayanıklı) |
+| **ospec** | 555 | Spec-driven development workflow |
+| **OpenCLI** | 25K | Her website'i CLI yap |
+| **SocratiCode** | 3K | Enterprise code intelligence |
+| **prompt-master** | 9.8K | Kusursuz prompt yazma |
+| **deliberation** | 107 | Multi-model second opinion |
 | **memorix** | 519 | Cross-agent memory |
-| **opencode-swarm** | 369 | Swarm orchestrator |
+| **cc-wf-studio** | 5.2K | 16 workflow skill + sub-agent |
+
+### 🎨 Tasarım & Dökümantasyon
+| Skill | ⭐ | Ne İşe Yarar |
+|---|---|---|
+| **serena** | 25K | MCP toolkit — semantic code retrieval |
+| **vercel-skills** | 23K | `npx skills` ile skill yönetimi |
 | **bridle** | 431 | TUI config manager |
+| **openpets** | 838 | Terminal'de evcil hayvan |
+
+### 🔌 Entegrasyon
+| Skill | ⭐ | Ne İşe Yarar |
+|---|---|---|
+| **AIClient2API** | 8.3K | Gemini/Antigravity/Codex API'lerini OpenAI uyumlu yap |
+| **opencli** | — | Website'leri CLI komutlarına çevir |
 | **agentify-desktop** | 452 | Browser session control |
-| **hol-guard** | 372 | AI antivirüs |
-| **AIClient2API** | 8.3K | Free model gateway |
-| **free-llm-apis** | 5.3K | Ücretsiz API listesi |
+| **opencode-swarm** | 369 | Swarm orchestrator |
+| **firecrawl-mcp** | 6.7K | Web scraping + search |
+
+### 📚 Referans
+| Skill | ⭐ | Ne İşe Yarar |
+|---|---|---|
+| **awesome-free-llm-apis** | 5.3K | Ücretsiz LLM API listesi |
+| **claude-code-best-practice** | 61K | En iyi pratikler |
 
 ---
 
 ## ⚡ 14 Slash Komut
 
-```
-/commit          /review          /test            /documentation
-/memory-bank     /datadog         /speckit         /compose-email
-/fix-renovate-mr /commit-and-create-mr /next-sprint-design
-/prepare-dataset /astro-dso-doc   /speckit.model-selector
-```
+| Komut | Ne Yapar |
+|---|---|
+| `/commit` | Anlamlı commit mesajı yazar |
+| `/review` | Kod review yapar |
+| `/test` | Test dosyası oluşturur |
+| `/documentation` | Dokümantasyon yazar/günceller |
+| `/memory-bank` | Proje hafızasını günceller |
+| `/datadog` | Datadog sorguları |
+| `/speckit` | Spec-driven model seçici |
+| `/compose-email` | E-posta taslağı oluşturur |
+| `/fix-renovate-mr` | Renovate MR'larını düzeltir |
+| `/commit-and-create-mr` | Commit + MR tek adımda |
+| `/next-sprint-design` | Sprint tasarımı |
+| `/prepare-dataset` | Veri seti hazırlar |
+| `/astro-dso-doc` | Astrofotoğrafçılık dokümanı |
 
 ---
 
 ## 🔌 7 Plugin
 
-| Plugin | Ne işe yarar |
+| Plugin | Görev |
 |---|---|
-| **helicone-session** | API çağrılarını logla |
-| **gemini-auth** | Google Gemini auth |
-| **gitlab-plugin** | GitLab MR/issue yönetimi |
-| **poe-auth** | Poe OAuth giriş |
-| **websearch** | Web arama |
-| **subagent-statusline** | Subagent durumu |
+| **helicone-session** | Tüm API çağrılarını Helicone'da logla |
+| **gemini-auth** | Google Gemini model'lerini opencode'da kullan |
+| **gitlab-plugin** | GitLab MR, issue, pipeline yönetimi |
+| **poe-auth** | Poe (Quora) hesabıyla giriş yap |
+| **websearch** | opencode içinden web araması yap |
+| **subagent-statusline** | Subagent durumunu TUI'de gör |
 
 ---
 
 ## 🔧 CLI Araçlar
 
-| Araç | Açıklama |
-|---|---|
-| **serena** | MCP toolkit (`serena init` ile projene ekle) |
-| **gograph** | Go AST analiz (`gograph callers <func>`) |
-| **opencli** | Website'leri CLI yap (`opencli <url> <komut>`) |
-| **codegraph** | Kod grafiği (`codegraph init` + `codegraph explore`) |
+| Araç | Görev | Kullanım |
+|---|---|---|
+| **codegraph** | Kod bilgi grafiği | `codegraph init && codegraph explore` |
+| **serena** | MCP toolkit | `serena init && serena project add .` |
+| **gograph** | Go AST analizi | `gograph callers <func>` |
+| **opencli** | Website → CLI | `opencli <url> <komut>` |
+| **bridle** | TUI config manager | `bridle` |
+| **claude-mem** | Persist context | Otomatik |
 
 ---
 
-## 📝 Notlar
+## 🏆 Neden Bu Repo?
 
-- `codegraph` için projende `codegraph init` çalıştır (tek sefer)
-- `serena` için `serena init` çalıştır
-- `context7` API keysiz çalışır
-- Brave Search API key ister: `BRAVE_API_KEY=<key> opencode`
-- `cost-guard` $50 limit koyar, %80'de uyarır
+| Soru | Cevap |
+|---|---|
+| **Neden 39 skill var?** | Çünkü her durum için doğru araç |
+| **Neden 103 agent var?** | Çünkü her dil/alan için uzman gerek |
+| **Neden ATLAS var?** | Çünkü projeni anlayan TEK sistem |
+| **Neden tek komut?** | Çünkü vaktin skill kurmaktan değerli |
+| **Neden ücretsiz?** | Çünkü açık kaynak güven verir |
+
+---
+
+## 📝 Hızlı Başlangıç
+
+```bash
+# 1. Kurulum
+git clone https://github.com/zehedisode/ultimate-opencode.git
+cd ultimate-opencode
+./install.sh
+
+# 2. TUI'yi aç
+opencode
+
+# 3. Kullanmaya başla
+#    Ctrl+T → model variant değiştir
+#    Tab → agent değiştir
+#    /council <soru> → 18 AI persona topla
+#    @python-expert → uzman çağır
+#    /commit → commit mesajı yaz
+
+# 4. Projende ATLAS'ı başlat (opsiyonel)
+cd projen
+/path/to/atlas/init.sh
+```
+
+---
 
 ## 📜 Lisans
 
-MIT
+MIT — Özgürce kullan, değiştir, paylaş.
+
+**https://github.com/zehedisode/ultimate-opencode**
