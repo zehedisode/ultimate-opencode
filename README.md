@@ -466,6 +466,7 @@ MIT — Free to use, modify, and share.
 - [🛡️ Security Policy](SECURITY.md)
 - [📝 Changelog](CHANGELOG.md)
 - [📚 Docs](docs/)
+- [🗺️ Roadmap & Known Issues](docs/ROADMAP.md)
 - [🧪 Tests](tests/)
 - [⭐ Star on GitHub](https://github.com/zehedisode/ultimate-opencode)
 
