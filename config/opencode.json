@@ -1,0 +1,11 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "plugin": [
+    "opencode-helicone-session",
+    "opencode-gemini-auth",
+    "opencode-gitlab-plugin",
+    "opencode-poe-auth",
+    "opencode-subagent-statusline",
+    "opencode-websearch"
+  ]
+}
