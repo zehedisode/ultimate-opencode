@@ -3,91 +3,61 @@
 
 In repositories indexed by CodeGraph (a `.codegraph/` directory exists at the repo root), reach for it BEFORE grep/find or reading files when you need to understand or locate code:
 
-- **MCP tool** (when available): `codegraph_explore` answers most code questions in one call — the relevant symbols' verbatim source plus the call paths between them, including dynamic-dispatch hops grep can't follow. Name a file or symbol in the query to read its current line-numbered source. If it's listed but deferred, load it by name via tool search.
-- **Shell** (always works): `codegraph explore "<symbol names or question>"` prints the same output.
-
-If there is no `.codegraph/` directory, skip CodeGraph entirely — indexing is the user's decision.
+- **MCP tool**: `codegraph_explore` answers most code questions in one call — the relevant symbols' verbatim source plus the call paths between them, including dynamic-dispatch hops grep can't follow.
+- **Shell**: `codegraph explore "<symbol names or question>"` prints the same output.
 <!-- CODEGRAPH_END -->
 
 <!-- codebase-memory-mcp:start -->
-# Codebase Knowledge Graph (codebase-memory-mcp)
+## codebase-memory-mcp (17K⭐)
 
-This project uses codebase-memory-mcp to maintain a knowledge graph of the codebase.
-ALWAYS prefer MCP graph tools over grep/glob/file-search for code discovery.
+Code intelligence knowledge graph. 14 MCP tools.
 
-## Priority Order
-1. `search_graph` — find functions, classes, routes, variables by pattern
-2. `trace_path` — trace who calls a function or what it calls (depth 1-5)
-3. `get_code_snippet` — read specific function/class source code
-4. `query_graph` — run Cypher queries for complex patterns (MATCH (f:Function)-[:CALLS]->(g) WHERE ...)
-5. `get_architecture` — high-level project summary (languages, packages, routes, hotspots, clusters)
-6. `detect_changes` — map git diff to affected symbols + blast radius with risk classification
-7. `search_code` — grep-like text search within indexed project files
-8. `manage_adr` — CRUD for Architecture Decision Records
+**Priority**: `search_graph` → `trace_path` → `get_code_snippet` → `query_graph` → `get_architecture` → `detect_changes`
 
-## When to fall back to grep/glob
-- Searching for string literals, error messages, config values
-- Searching non-code files (Dockerfiles, shell scripts, configs)
-- When MCP tools return insufficient results
-- Use `search_code` tool for grep-like search within indexed files
-
-## Examples
-- Find a handler: `search_graph(name_pattern=".*OrderHandler.*")`
-- Who calls it: `trace_path(function_name="OrderHandler", direction="inbound")`
-- Read source: `get_code_snippet(qualified_name="pkg/orders.OrderHandler")`
-- Dead code: `query_graph('MATCH (f:Function) WHERE NOT EXISTS { (f)<-[:CALLS]-() } RETURN f.name')`
-- Impact: use `detect_changes` on current branch
+**Examples**:
+- `search_graph(name_pattern=".*Handler.*")` — find handlers
+- `trace_path(function_name="main", direction="inbound")` — who calls
+- `query_graph('MATCH (f:Function) WHERE NOT EXISTS { (f)<-[:CALLS]-() } RETURN f.name')` — dead code
 <!-- codebase-memory-mcp:end -->
 
-## gograph (CLI)
+## 🛠️ Bu Projede Kullanılan Tüm Araçlar
 
-For Go projects, use `gograph` CLI for AST-based code analysis:
-- `gograph build` - index the repo
-- `gograph callers <func>` - find callers
-- `gograph deps <pkg>` - dependency graph
-- `gograph impact <func>` - impact analysis
-Add `--json` for machine output, `--mermaid` for diagrams.
+### 📡 MCP Server'lar
+| Araç | Ne İşe Yarar |
+|---|---|
+| **codegraph_explore** | Kod bilgi grafiği — tek sorguda kaynak + çağrı yolları |
+| **search_graph / trace_path** | Semantik kod arama ve çağrı zinciri |
 
-## Serena (MCP Toolkit)
+### 🎯 Skill'ler (Kategorik)
 
-For semantic code retrieval, refactoring and editing:
-- `serena init` - initialize in a project
-- `serena project add .` - add current project
-- `serena context add` - query code context
+**⚡ Token & Performans**: caveman (%65 token tasarrufu), ponytail (kıdemli dev gibi düşün)
 
-## Web Search (Brave Search MCP)
-Web araması için: `web_search(query="...")` veya `web_search(query="...", count=10)`
-- Güncel bilgi, dokümantasyon, API referansları için kullan.
+**🧠 AI Çerçeveleri**: ECC (222K⭐), superpowers (239K⭐), claude-mem (84K⭐), oh-my-openagent (63K⭐), ruflo (61K⭐), get-shit-done (64K⭐), graphify (72K⭐)
 
-## Context7 MCP (Dokümantasyon)
-Kütüphane/framework dökümantasyonu için: `context7_search(query="...")`
-- npm paketleri, framework'ler, API'ler için hızlı doküman erişimi.
+**📐 Kod Kalitesi**: karpathy-skills (183K⭐), claude-code-best-practice (61K⭐), gstack (117K⭐), arc-kit (2K⭐)
 
-## Filesystem MCP
-Dosya sistemi işlemleri için ek araçlar.
+**🛡️ Güvenlik**: Claude-BugHunter (2.7K⭐), raptor-security (3.2K⭐), hol-guard (372⭐)
 
-## OpenCLI (25.4K⭐)
-Website'leri CLI komutlarına çevirir. Kullanım: `opencli <url> <komut>`
+**🔧 Geliştirme**: planning-with-files (24K⭐), ospec (555⭐), OpenCLI (25K⭐), SocratiCode (3K⭐), prompt-master (9.8K⭐), deliberation (107⭐), memorix (519⭐), cc-wf-studio (5.2K⭐), opencode-swarm (369⭐), bridle (431⭐)
 
-## SocratiCode (3K⭐)
-Enterprise code intelligence. Hybrid semantic search, dependency graphs, impact analysis.
+**🎨 Tasarım/Doküman**: serena (25K⭐), vercel-skills (23K⭐), openpets (838⭐), agentify-desktop (452⭐)
 
-## cc-wf-studio (5.2K⭐)
-Claude Code Workflow Studio - 16 skill + sub-agent workflows.
-Skills: pr-review, jira-planning, workflow-tuning, pr-to-main.
+**🔌 Entegrasyon**: AIClient2API (8.3K⭐), codebase-memory-skill, firecrawl-mcp (6.7K⭐)
 
-## awesome-free-llm-apis (5.3K⭐)
-Ücretsiz LLM API'leri listesi. Bedava model kullanmak için referans.
+**📚 Referans**: awesome-free-llm-apis (5.3K⭐), ask-user-questions, ultimate-opencode
 
-## AIClient2API (8.3K⭐)
-Gemini, Antigravity, Codex, Grok, Kiro API'lerini OpenAI uyumlu hale getirir.
+### 👥 Council of High Intelligence
+`/council <soru>` — 18 AI persona tartışır
+- `--quick` hızlı, `--duo` ikili, `--triad <domain>` 3 kişi
+- Domain: strategy, architecture, decision, ethics, risk, shipping, ai
 
-## Council of High Intelligence (1K⭐)
-18 AI persona tek komutla: `/council <soru>`
-Modlar: `--quick` (hızlı), `--duo` (ikili), `--triad <domain>` (3 kişi)
-Domain'ler: strategy, architecture, decision, ethics, risk, shipping, ai
-
-## ATLAS (Project Intelligence)
-Projen için: `atlas/init.sh` ile başlat.
+### 🌍 ATLAS — Project Intelligence
+Projende `atlas/init.sh` çalıştır.
 7 modül: core, quality, metrics, docs, team, reports
-Her seansta proje bilincini otomatik günceller.
+
+### 🔧 CLI Araçlar
+- `gograph` — Go AST analiz
+- `serena` — MCP toolkit
+- `opencli` — Website → CLI
+- `bridle` — TUI config manager
+- `claude-mem` — Persistent memory

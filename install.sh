@@ -4,8 +4,32 @@ set -euo pipefail
 RED='\033[0;31m'; GREEN='\033[0;32m'; YELLOW='\033[1;33m'; CYAN='\033[0;36m'; NC='\033[0m'
 PWD="$(cd "$(dirname "$0")" && pwd)"
 BACKUP_DIR="$HOME/.config/opencode.yedek_$(date +%Y%m%d_%H%M%S)"
+TIMEOUT=30  # saniye
 
 trap 'echo -e "${RED}❌ Hata!${NC}"; exit 1' ERR
+
+# ---- Network Check ----
+if ! curl -s --max-time 5 https://github.com >/dev/null 2>&1; then
+    echo -e "${RED}❌ İnternet bağlantısı yok!${NC}"
+    exit 1
+fi
+
+# ---- SELinux / AppArmor Uyarısı ----
+if command -v getenforce &>/dev/null && [ "$(getenforce 2>/dev/null)" = "Enforcing" ]; then
+    echo -e "${YELLOW}⚠️  SELinux Enforcing modunda. MCP server'larda sorun yaşarsan:${NC}"
+    echo "   sudo setsebool -P domain_can_mmap_files 1"
+fi
+
+# ---- NPM Destek Kontrol ----
+NPM_CMD="npm"
+if ! command -v npm &>/dev/null; then
+    if command -v pnpm &>/dev/null; then NPM_CMD="pnpm"
+    elif command -v yarn &>/dev/null; then NPM_CMD="yarn"
+    else
+        echo -e "${YELLOW}⚠️  npm bulunamadı! MCP server'lar manuel kurulmalı.${NC}"
+        NPM_CMD=""
+    fi
+fi
 
 # ---- OS Detection ----
 detect_os() {
@@ -121,39 +145,47 @@ echo -e "  ${GREEN}$PLUGIN_OK kuruldu${NC}${YELLOW}, $PLUGIN_FAIL atlandı${NC}"
 echo ""
 echo -e "${YELLOW}📡 MCP Server'lar${NC}"
 
+npm_install() {
+    if [ -n "${NPM_CMD:-}" ]; then
+        timeout "$TIMEOUT" $NPM_CMD install -g "$1" 2>/dev/null
+    else
+        return 1
+    fi
+}
+
 install_mcp() {
     local name=$1 stars=$2 cmd=$3 install_cmd=$4
     echo -n "  → $name ($stars⭐) ... "
     if command -v "$cmd" &>/dev/null; then
         echo -e "${GREEN}zaten var${NC}"
+        return
+    fi
+    if timeout "$TIMEOUT" bash -c "$install_cmd" 2>/dev/null; then
+        echo -e "${GREEN}kuruldu${NC}"
     else
-        if eval "$install_cmd" 2>/dev/null; then
-            echo -e "${GREEN}kuruldu${NC}"
-        else
-            echo -e "${YELLOW}önerildi (manuel kurulum gerekebilir)${NC}"
-        fi
+        echo -e "${YELLOW}önerildi (manuel: ${install_cmd%%|*})${NC}"
     fi
 }
 
-install_mcp "codegraph"       "55K"  "codegraph"           'npm install -g @colbymchenry/codegraph'
-install_mcp "codebase-memory" "17K"  "codebase-memory-mcp" 'curl -fsSL https://raw.githubusercontent.com/DeusData/codebase-memory-mcp/main/install.sh | bash'
-install_mcp "context7"        "doc"  "context7-mcp"        'npm install -g @upstash/context7-mcp'
-install_mcp "filesystem"      "mcp"  "filesystem-mcp"      'npm install -g @modelcontextprotocol/server-filesystem'
+install_mcp "codegraph"       "55K"  "codegraph"           'npm_install @colbymchenry/codegraph'
+install_mcp "codebase-memory" "17K"  "codebase-memory-mcp" 'curl -fsSL --max-time 30 https://raw.githubusercontent.com/DeusData/codebase-memory-mcp/main/install.sh | bash'
+install_mcp "context7"        "doc"  "context7-mcp"        'npm_install @upstash/context7-mcp'
+install_mcp "filesystem"      "mcp"  "filesystem-mcp"      'npm_install @modelcontextprotocol/server-filesystem'
 
 # ---- CLI Tools ----
 echo ""
 echo -e "${YELLOW}🔧 CLI Araçlar${NC}"
 for tool in \
-    "bridle|431⭐|npm install -g bridle" \
-    "claude-mem|84K⭐|npm install -g claude-mem" \
-    "opencli|25K⭐|npm install -g @jackwener/opencli"; do
+    "bridle|431⭐|bridle" \
+    "claude-mem|84K⭐|claude-mem" \
+    "opencli|25K⭐|@jackwener/opencli"; do
     
-    IFS='|' read -r cmd stars install_cmd <<< "$tool"
+    IFS='|' read -r cmd stars pkg <<< "$tool"
     echo -n "  → $cmd ($stars) ... "
     if command -v "$cmd" &>/dev/null; then
         echo -e "${GREEN}zaten var${NC}"
     else
-        eval "$install_cmd" >/dev/null 2>&1 && echo -e "${GREEN}kuruldu${NC}" || echo -e "${YELLOW}hata${NC}"
+        npm_install "$pkg" && echo -e "${GREEN}kuruldu${NC}" || echo -e "${YELLOW}hata${NC}"
     fi
 done
 
