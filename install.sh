@@ -111,6 +111,17 @@ if ! command -v gograph &>/dev/null; then
 fi
 
 echo ""
+echo -e "${YELLOW}🧠 PRISM — Kişisel AI Evrim Sistemi${NC}"
+echo -n "  → Başlatılıyor... "
+mkdir -p ~/.opencode/prism
+if [ -d ".opencode/prism" ]; then
+    cp -r .opencode/prism/* ~/.opencode/prism/ 2>/dev/null
+    echo -e "${GREEN}kuruldu${NC}"
+else
+    echo -e "${YELLOW}atlandı${NC}"
+fi
+
+echo ""
 echo -e "${GREEN}"
 echo "=========================================="
 echo "  ✅ Ultimate OpenCode kuruldu!"

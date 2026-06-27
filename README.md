@@ -54,6 +54,29 @@ Ardından: `opencode` 🎉
 
 ---
 
+## 🧠 PRISM — Buharlaşmayan Tek Akıl
+
+**Diğer tüm araçlar statiktir. PRISM her seansta SANA göre evrilir.**
+
+PRISM, her AI oturumunda senin kod stilini, tercihlerini ve hatalarını öğrenen **kendini güncelleyen** bir sistemdir. 10 seans sonra seni herkesten daha iyi tanır.
+
+| Özellik | PRISM | Diğer Skill'ler |
+|---|---|---|
+| Kişiselleşme | Sana özel evrilir | Herkes için aynı |
+| Güncellenme | Her seans otomatik | Statik, asla değişmez |
+| Hafıza | Geçmiş kararları hatırlar | Hiçbir şey hatırlamaz |
+| Hata önleme | Aynı hatayı iki kere yapmaz | Hataları tekrarlar |
+| Adaptasyon | 10 seansta uzmanlaşır | 100 seansta da aynı |
+
+```bash
+~/.opencode/prism/
+├── profile.md    # Senin kod profilin (otomatik güncellenir)
+├── lessons.md    # Öğrenilen dersler
+└── stats.md      # Adaptasyon skoru
+```
+
+---
+
 ## 📡 MCP Server'lar
 
 | Server | ⭐ | Ne işe yarar |
