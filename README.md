@@ -105,16 +105,24 @@ Kullanım: `@agent-adı <ne yapmak istiyorsun>`
 |---|---|---|
 | **caveman** | 77K | %65 token tasarrufu |
 | **ponytail** | 61K | Kıdemli dev gibi düşün |
+| **ECC** | 222K | Agent harness (skills, memory, security) |
+| **graphify** | 72K | Klasörü knowledge graph'a çevir |
 | **superpowers** | 239K | Agentic skills framework |
 | **karpathy-skills** | 183K | Kod prensipleri |
 | **planning-with-files** | 24K | Crash-proof planning |
+| **ospec** | 555 | Spec-driven development workflow |
 | **raptor-security** | 3.2K | Pentest ajanı |
 | **deliberation** | 107 | Multi-model second opinion |
 | **prompt-master** | 9.8K | Prompt mühendisliği |
 | **Claude-BugHunter** | 2.7K | 71 bug bounty skill |
 | **cc-wf-studio** | 5.2K | 16 workflow skill |
+| **arc-kit** | 2K | Enterprise architecture governance |
 | **OpenCLI** | 25K | Website → CLI |
 | **SocratiCode** | 3K | Enterprise code intel |
+| **memorix** | 519 | Cross-agent memory |
+| **opencode-swarm** | 369 | Swarm orchestrator |
+| **bridle** | 431 | TUI config manager |
+| **agentify-desktop** | 452 | Browser session control |
 | **hol-guard** | 372 | AI antivirüs |
 | **AIClient2API** | 8.3K | Free model gateway |
 | **free-llm-apis** | 5.3K | Ücretsiz API listesi |

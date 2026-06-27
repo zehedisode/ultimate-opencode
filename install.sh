@@ -88,6 +88,10 @@ install_mcp "filesystem"      "mcp"  "filesystem-mcp"    'npm install -g @modelc
 
 echo ""
 echo -e "${YELLOW}🔧 CLI Araçlar${NC}"
+if ! command -v bridle &>/dev/null; then
+    echo -n "  → bridle (431⭐) ... "
+    npm install -g bridle >/dev/null 2>&1 && echo -e "${GREEN}kuruldu${NC}" || echo -e "${YELLOW}hata${NC}"
+fi
 if ! command -v serena &>/dev/null; then
     echo -n "  → serena (25K⭐) ... "
     which uv &>/dev/null || curl -LsSf https://astral.sh/uv/install.sh | bash >/dev/null 2>&1
