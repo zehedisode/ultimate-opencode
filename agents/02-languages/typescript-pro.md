@@ -1,9 +1,9 @@
 ---
 name: typescript-pro
 subagent_type: typescript-pro
-color: green
 model: claude-3-sonnet
 tools: ["Read","Grep","Glob","Bash","Edit","Write"]
+color: green
 description: Expert TypeScript developer specializing in advanced type system usage, full-stack development, and build optimization. Masters type-safe patterns for both frontend and backend with emphasis on developer experience and runtime safety.
 ---
 

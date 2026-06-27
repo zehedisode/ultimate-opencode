@@ -6,7 +6,7 @@ PWD="$(cd "$(dirname "$0")" && pwd)"
 BACKUP_DIR="$HOME/.config/opencode.yedek_$(date +%Y%m%d_%H%M%S)"
 TIMEOUT=30
 TOTAL_STEPS=12; CURRENT=0
-VERSION="1.5.0"
+VERSION="1.6.0"
 
 # ---- Version ----
 if [ "${1:-}" = "--version" ] || [ "${1:-}" = "-v" ]; then

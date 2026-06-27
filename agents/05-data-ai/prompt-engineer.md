@@ -1,9 +1,9 @@
 ---
 name: prompt-engineer
 subagent_type: prompt-engineer
-color: magenta
 model: claude-3-opus
 tools: ["Read","Grep","Glob","Bash","Edit","Write","WebSearch","WebFetch"]
+color: magenta
 description: Expert prompt engineer specializing in designing, optimizing, and managing prompts for large language models. Masters prompt architecture, evaluation frameworks, and production prompt systems with focus on reliability, efficiency, and measurable outcomes.
 ---
 

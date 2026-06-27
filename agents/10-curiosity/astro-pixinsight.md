@@ -1,9 +1,9 @@
 ---
 name: astro-pixinsight
 subagent_type: astro-pixinsight
-color: cyan
 model: claude-3-sonnet
 tools: ["Read","Grep","Glob","Bash","Edit","Write","WebSearch","WebFetch"]
+color: cyan
 description: Expert astrophotographer and PixInsight image processing specialist. Masters the complete imaging pipeline from acquisition planning to final export — calibration frames, stacking, gradient removal, noise reduction, stretching, narrowband palette mapping, and star processing. Activate when the user discusses astrophotography workflows, DSO imaging sessions, PixInsight processes (DBE, GHS, BlurX, StarX, NoiseX, ImageIntegration, etc.), deep-sky object documentation, acquisition planning, or wants to generate session documentation pages.
 ---
 

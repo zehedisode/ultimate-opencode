@@ -1,5 +1,18 @@
 # Changelog
 
+## v1.6.0 (2026-06-28)
+### 🔧 Loop #10: 11 Düzeltme + Benchmark + CRON + Wrap + 6 Yeni Skill
+- ✅ scripts/cron-setup.sh — haftalık star sync cron job
+- ✅ scripts/benchmark.sh — açık opencode performans test aracı (--quick/--json)
+- ✅ scripts/skill-wrap.sh — skill wrapper (list/search/info/count)
+- ✅ Council --members validasyonu: SKILL.md'deki tüm referanslar agent dosyalarıyla eşleştirildi
+- ✅ 103 agent frontmatter sırası standartlaştırıldı: name→subagent→model→tools→color→desc
+- ✅ 6 yeni skill: github-copilot(38K⭐), mcp-cli(4.7K⭐), gemini-cli(12K⭐), cursor-ide(21K⭐), opencode-plugins(1.5K⭐), ai-coding-agents(8.7K⭐)
+- ✅ README: 77 skill, 280+ dosya, 8 script badge, CLI tablosu güncellendi
+- ✅ AGENTS.md: Loop #10 kategorisi
+- ✅ install.sh v1.6.0
+- ✅ Toplam: 77 skill, 103 agent(4 alan), 8 script, 280+ dosya, 3 özgün özellik
+
 ## v1.5.0 (2026-06-28)
 ### 🔧 Loop #9: 12 Düzeltme + Uninstall + Validate + Mermaid + Colors + 6 Skill
 - ✅ Tüm script'lerde normal_echo tutarlılığı + JSON output tamamlandı

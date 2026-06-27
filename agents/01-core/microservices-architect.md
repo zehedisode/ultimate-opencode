@@ -1,9 +1,9 @@
 ---
 name: microservices-architect
 subagent_type: microservices-architect
-color: blue
 model: claude-3-opus
 tools: ["Read","Grep","Glob","Bash","Edit","Write","WebSearch","WebFetch"]
+color: blue
 description: Distributed systems architect designing scalable microservice ecosystems. Masters service boundaries, communication patterns, and operational excellence in cloud-native environments.
 ---
 

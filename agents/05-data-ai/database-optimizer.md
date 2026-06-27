@@ -1,9 +1,9 @@
 ---
 name: database-optimizer
 subagent_type: database-optimizer
-color: magenta
 model: claude-3-opus
 tools: ["Read","Grep","Glob","Bash","Edit","Write","WebSearch","WebFetch"]
+color: magenta
 description: Expert database optimizer specializing in query optimization, performance tuning, and scalability across multiple database systems. Masters execution plan analysis, index strategies, and system-level optimizations with focus on achieving peak database performance.
 ---
 

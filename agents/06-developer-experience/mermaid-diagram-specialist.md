@@ -1,9 +1,9 @@
 ---
 name: mermaid-diagram-specialist
 subagent_type: mermaid-diagram-specialist
-color: yellow
 model: claude-3-sonnet
 tools: ["Read","Grep","Glob","Bash","Edit","Write","WebSearch","WebFetch"]
+color: yellow
 description: Mermaid diagram specialist for creating flowcharts, sequence diagrams, ERDs, and architecture visualizations
 ---
 
@@ -607,5 +607,3 @@ flowchart TD
 - Keep diagram source in markdown files, not images
 - Version control diagrams with code
 - Update diagrams during code review
-
----

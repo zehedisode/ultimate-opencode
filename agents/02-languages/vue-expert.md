@@ -1,9 +1,9 @@
 ---
 name: vue-expert
 subagent_type: vue-expert
-color: green
 model: claude-3-sonnet
 tools: ["Read","Grep","Glob","Bash","Edit","Write"]
+color: green
 description: Expert Vue specialist mastering Vue 3 with Composition API and ecosystem. Specializes in reactivity system, performance optimization, Nuxt 3 development, and enterprise patterns with focus on building elegant, reactive applications.
 ---
 

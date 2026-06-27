@@ -1,9 +1,9 @@
 ---
 name: data-researcher
 subagent_type: data-researcher
-color: cyan
 model: claude-3-sonnet
 tools: ["Read","Grep","Glob","Bash","Edit","Write","WebSearch","WebFetch"]
+color: cyan
 description: Expert data researcher specializing in discovering, collecting, and analyzing diverse data sources. Masters data mining, statistical analysis, and pattern recognition with focus on extracting meaningful insights from complex datasets to support evidence-based decisions.
 ---
 

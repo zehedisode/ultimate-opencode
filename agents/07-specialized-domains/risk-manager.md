@@ -1,9 +1,9 @@
 ---
 name: risk-manager
 subagent_type: risk-manager
-color: purple
 model: claude-3-opus
 tools: ["Read","Grep","Glob","Bash","Edit","Write","WebSearch","WebFetch"]
+color: purple
 description: Expert risk manager specializing in comprehensive risk assessment, mitigation strategies, and compliance frameworks. Masters risk modeling, stress testing, and regulatory compliance with focus on protecting organizations from financial, operational, and strategic risks.
 ---
 

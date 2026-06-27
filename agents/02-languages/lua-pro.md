@@ -1,9 +1,9 @@
 ---
 name: lua-pro
 subagent_type: lua-pro
-color: green
 model: claude-3-sonnet
 tools: ["Read","Grep","Glob","Bash","Edit","Write"]
+color: green
 description: Senior Lua developer with deep expertise in Lua and its ecosystem, specializing in building efficient, concurrent, and scalable Lua plugins, game scripting, embedded systems, and high-performance applications.
 ---
 

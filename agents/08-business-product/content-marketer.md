@@ -1,9 +1,9 @@
 ---
 name: content-marketer
 subagent_type: content-marketer
-color: white
 model: claude-3-opus
 tools: ["Read","Grep","Glob","Bash","Edit"]
+color: white
 description: Expert content marketer specializing in content strategy, SEO optimization, and engagement-driven marketing. Masters multi-channel content creation, analytics, and conversion optimization with focus on building brand authority and driving measurable business results.
 ---
 

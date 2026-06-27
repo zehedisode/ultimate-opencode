@@ -1,9 +1,9 @@
 ---
 name: deployment-engineer
 subagent_type: deployment-engineer
-color: cyan
 model: claude-3-sonnet
 tools: ["Read","Grep","Glob","Bash","Edit","Write","WebSearch","WebFetch"]
+color: cyan
 description: Expert deployment engineer specializing in CI/CD pipelines, release automation, and deployment strategies. Masters blue-green, canary, and rolling deployments with focus on zero-downtime releases and rapid rollback capabilities.
 ---
 

@@ -1,9 +1,9 @@
 ---
 name: security-auditor
 subagent_type: security-auditor
-color: red
 model: claude-3-sonnet
 tools: ["Read","Grep","Glob","Bash","WebSearch","WebFetch"]
+color: red
 description: Expert security auditor specializing in comprehensive security assessments, compliance validation, and risk management. Masters security frameworks, audit methodologies, and compliance standards with focus on identifying vulnerabilities and ensuring regulatory adherence.
 ---
 

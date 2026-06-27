@@ -4,7 +4,7 @@
 
 ### Sıfır opencode'u 5 dakikada full mod'a çeviren tek paket.
 
-**🎯 8+ MCP Server · 71 Skill · 103 Agent (sa+model+tools+color) · 14 Komut · 8 Plugin · 18 Council · 1 Atlas · 270+ Dosya · 6 Script**
+**🎯 8+ MCP Server · 77 Skill · 103 Agent (sa+model+tools+color) · 14 Komut · 8 Plugin · 18 Council · 1 Atlas · 280+ Dosya · 8 Script · 3 Özgün**
 
 [![GitHub stars](https://img.shields.io/github/stars/zehedisode/ultimate-opencode?style=social)](https://github.com/zehedisode/ultimate-opencode)
 [![Platform](https://img.shields.io/badge/platform-linux%20%7C%20macOS%20%7C%20wsl-blue)](https://github.com/zehedisode/ultimate-opencode)
@@ -285,7 +285,7 @@ Detay: `skills/echo.md`
 
 ---
 
-## 🎯 71 Skill
+## 🎯 77 Skill
 
 Kategoriye göre gruplandırılmış en popüler GitHub skill'leri:
 
@@ -413,6 +413,16 @@ Kategoriye göre gruplandırılmış en popüler GitHub skill'leri:
 | **continue** | 21K | VS Code açık kaynak AI asistan |
 | **claude-code-cli** | 15K | Anthropic Claude Code CLI |
 
+### 🆕x6 Loop #10: 6 Yeni Skill + Benchmark + CRON + Wrap + Validasyon
+| Skill | ⭐ | Ne İşe Yarar |
+|---|---|---|
+| **github-copilot** | 38K | GitHub Copilot AI pair programmer |
+| **mcp-cli** | 4.7K | MCP sunucu yönetim CLI |
+| **gemini-cli** | 12K | Google Gemini terminal asistanı |
+| **cursor-ide** | 21K | Cursor AI-first code editor |
+| **opencode-plugins** | 1.5K | Plugin geliştirme şablonu |
+| **ai-coding-agents** | 8.7K | AI coding agent karşılaştırma rehberi |
+
 ---
 
 ## ⚡ 14 Slash Komut
@@ -463,6 +473,11 @@ Kategoriye göre gruplandırılmış en popüler GitHub skill'leri:
 | **🧠 prism** | Kod stili profiling | `prism analyze src/` |
 | **⚡ chamber** | Session yönetimi | `chamber new feature` |
 | **🔊 echo** | Context mirroring | `echo share "keşif"` |
+| **🗑️ uninstall** | Kaldırma aracı | `./uninstall.sh` |
+| **👥 validate-council** | Council doğrulama | `./scripts/validate-council.sh` |
+| **📊 benchmark** | Performans testi | `./scripts/benchmark.sh` |
+| **🎯 skill** | Skill wrapper | `skill list/search/info` |
+| **⏰ cron-setup** | Haftalık star sync | `./scripts/cron-setup.sh` |
 
 ---
 
@@ -470,7 +485,7 @@ Kategoriye göre gruplandırılmış en popüler GitHub skill'leri:
 
 | Soru | Cevap |
 |---|---|
-| **Neden 65 skill var?** | Çünkü her durum için doğru araç |
+| **Neden 77 skill var?** | Çünkü her durum için doğru araç |
 | **Neden 103 agent var?** | Çünkü her dil/alan için uzman gerek |
 | **Neden ATLAS var?** | Çünkü projeni anlayan TEK sistem |
 | **Neden tek komut?** | Çünkü vaktin skill kurmaktan değerli |

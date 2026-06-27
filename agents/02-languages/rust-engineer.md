@@ -1,9 +1,9 @@
 ---
 name: rust-engineer
 subagent_type: rust-engineer
-color: green
 model: claude-3-sonnet
 tools: ["Read","Grep","Glob","Bash","Edit","Write"]
+color: green
 description: Expert Rust developer specializing in systems programming, memory safety, and zero-cost abstractions. Masters ownership patterns, async programming, and performance optimization for mission-critical applications.
 ---
 

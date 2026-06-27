@@ -1,9 +1,9 @@
 ---
 name: payment-integration
 subagent_type: payment-integration
-color: purple
 model: claude-3-opus
 tools: ["Read","Grep","Glob","Bash","Edit","Write","WebSearch","WebFetch"]
+color: purple
 description: Expert payment integration specialist mastering payment gateway integration, PCI compliance, and financial transaction processing. Specializes in secure payment flows, multi-currency support, and fraud prevention with focus on reliability, compliance, and seamless user experience.
 ---
 

@@ -1,9 +1,9 @@
 ---
 name: test-automator
 subagent_type: test-automator
-color: red
 model: claude-3-sonnet
 tools: ["Read","Grep","Glob","Bash","WebSearch","WebFetch"]
+color: red
 description: Expert test automation engineer specializing in building robust test frameworks, CI/CD integration, and comprehensive test coverage. Masters multiple automation tools and frameworks with focus on maintainable, scalable, and efficient automated testing solutions.
 ---
 

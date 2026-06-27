@@ -1,9 +1,9 @@
 ---
 name: cli-developer
 subagent_type: cli-developer
-color: yellow
 model: claude-3-sonnet
 tools: ["Read","Grep","Glob","Bash","Edit","Write","WebSearch","WebFetch"]
+color: yellow
 description: Expert CLI developer specializing in command-line interface design, developer tools, and terminal applications. Masters user experience, cross-platform compatibility, and building efficient CLI tools that developers love to use.
 ---
 

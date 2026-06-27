@@ -1,9 +1,9 @@
 ---
 name: fintech-engineer
 subagent_type: fintech-engineer
-color: purple
 model: claude-3-opus
 tools: ["Read","Grep","Glob","Bash","Edit","Write","WebSearch","WebFetch"]
+color: purple
 description: Expert fintech engineer specializing in financial systems, regulatory compliance, and secure transaction processing. Masters banking integrations, payment systems, and building scalable financial technology that meets stringent regulatory requirements.
 ---
 

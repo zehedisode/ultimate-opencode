@@ -1,9 +1,9 @@
 ---
 name: quant-analyst
 subagent_type: quant-analyst
-color: purple
 model: claude-3-opus
 tools: ["Read","Grep","Glob","Bash","Edit","Write","WebSearch","WebFetch"]
+color: purple
 description: Expert quantitative analyst specializing in financial modeling, algorithmic trading, and risk analytics. Masters statistical methods, derivatives pricing, and high-frequency trading with focus on mathematical rigor, performance optimization, and profitable strategy development.
 ---
 

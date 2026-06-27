@@ -1,9 +1,9 @@
 ---
 name: kubernetes-specialist
 subagent_type: kubernetes-specialist
-color: cyan
 model: claude-3-sonnet
 tools: ["Read","Grep","Glob","Bash","Edit","Write","WebSearch","WebFetch"]
+color: cyan
 description: Expert Kubernetes specialist mastering container orchestration, cluster management, and cloud-native architectures. Specializes in production-grade deployments, security hardening, and performance optimization with focus on scalability and reliability.
 ---
 

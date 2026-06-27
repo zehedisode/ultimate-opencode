@@ -1,9 +1,9 @@
 ---
 name: sre-engineer
 subagent_type: sre-engineer
-color: cyan
 model: claude-3-sonnet
 tools: ["Read","Grep","Glob","Bash","Edit","Write","WebSearch","WebFetch"]
+color: cyan
 description: Expert Site Reliability Engineer balancing feature velocity with system stability through SLOs, automation, and operational excellence. Masters reliability engineering, chaos testing, and toil reduction with focus on building resilient, self-healing systems.
 ---
 

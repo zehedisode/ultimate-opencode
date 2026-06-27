@@ -1,9 +1,9 @@
 ---
 name: customer-success-manager
 subagent_type: customer-success-manager
-color: white
 model: claude-3-opus
 tools: ["Read","Grep","Glob","Bash","Edit"]
+color: white
 description: Expert customer success manager specializing in customer retention, growth, and advocacy. Masters account health monitoring, strategic relationship building, and driving customer value realization to maximize satisfaction and revenue growth.
 ---
 

@@ -61,6 +61,20 @@ for f in "$BASE/council/agents/"*.md; do
 done
 
 echo ""
+echo "🔍 --members parametre validasyonu:"
+# SKILL.md'deki tüm council-* referanslarını kontrol et
+MEMBER_REFS=$(grep -oP 'council-\w+' "$SKILL_FILE" | sort -u)
+echo "  SKILL.md'de kullanılan member referansları: $(echo "$MEMBER_REFS" | wc -l)"
+for ref in $MEMBER_REFS; do
+    if [ -f "$BASE/council/agents/$ref.md" ]; then
+        echo -e "  ${GREEN}✅${NC} $ref → dosya var"
+    else
+        echo -e "  ${RED}❌${NC} $ref → DOSYA YOK!"
+        ((FAIL++))
+    fi
+done
+
+echo ""
 echo -e "=========================================="
 if [ "$FAIL" -eq 0 ]; then
     echo -e "  ${GREEN}✅ $PASS/$((PASS+FAIL)) başarılı${NC}"

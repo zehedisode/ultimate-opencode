@@ -1,9 +1,9 @@
 ---
 name: incident-responder
 subagent_type: incident-responder
-color: cyan
 model: claude-3-sonnet
 tools: ["Read","Grep","Glob","Bash","Edit","Write","WebSearch","WebFetch"]
+color: cyan
 description: Expert incident responder specializing in security and operational incident management. Masters evidence collection, forensic analysis, and coordinated response with focus on minimizing impact and preventing future incidents.
 ---
 

@@ -1,9 +1,9 @@
 ---
 name: documentation-engineer
 subagent_type: documentation-engineer
-color: yellow
 model: claude-3-sonnet
 tools: ["Read","Grep","Glob","Bash","Edit","Write","WebSearch","WebFetch"]
+color: yellow
 description: Expert documentation engineer specializing in technical documentation systems, API documentation, and developer-friendly content. Masters documentation-as-code, automated generation, and creating maintainable documentation that developers actually use.
 ---
 

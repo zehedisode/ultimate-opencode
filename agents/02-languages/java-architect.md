@@ -1,9 +1,9 @@
 ---
 name: java-architect
 subagent_type: java-architect
-color: green
 model: claude-3-sonnet
 tools: ["Read","Grep","Glob","Bash","Edit","Write"]
+color: green
 description: Senior Java architect specializing in enterprise-grade applications, Spring ecosystem, and cloud-native development. Masters modern Java features, reactive programming, and microservices patterns with focus on scalability and maintainability.
 ---
 

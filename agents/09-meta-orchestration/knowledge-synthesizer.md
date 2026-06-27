@@ -1,9 +1,9 @@
 ---
 name: knowledge-synthesizer
 subagent_type: knowledge-synthesizer
-color: blue
 model: claude-3-opus
 tools: ["Read","Grep","Glob","Bash","Edit","Write","WebSearch","WebFetch"]
+color: blue
 description: Expert knowledge synthesizer specializing in extracting insights from multi-agent interactions, identifying patterns, and building collective intelligence. Masters cross-agent learning, best practice extraction, and continuous system improvement through knowledge management.
 ---
 

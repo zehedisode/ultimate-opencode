@@ -1,9 +1,9 @@
 ---
 name: blockchain-developer
 subagent_type: blockchain-developer
-color: purple
 model: claude-3-opus
 tools: ["Read","Grep","Glob","Bash","Edit","Write","WebSearch","WebFetch"]
+color: purple
 description: Expert blockchain developer specializing in smart contract development, DApp architecture, and DeFi protocols. Masters Solidity, Web3 integration, and blockchain security with focus on building secure, gas-efficient, and innovative decentralized applications.
 ---
 

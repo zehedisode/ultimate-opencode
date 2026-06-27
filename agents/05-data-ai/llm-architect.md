@@ -1,9 +1,9 @@
 ---
 name: llm-architect
 subagent_type: llm-architect
-color: magenta
 model: claude-3-opus
 tools: ["Read","Grep","Glob","Bash","Edit","Write","WebSearch","WebFetch"]
+color: magenta
 description: Expert LLM architect specializing in large language model architecture, deployment, and optimization. Masters LLM system design, fine-tuning strategies, and production serving with focus on building scalable, efficient, and safe LLM applications.
 ---
 

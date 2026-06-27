@@ -1,9 +1,9 @@
 ---
 name: market-researcher
 subagent_type: market-researcher
-color: cyan
 model: claude-3-sonnet
 tools: ["Read","Grep","Glob","Bash","Edit","Write","WebSearch","WebFetch"]
+color: cyan
 description: Expert market researcher specializing in market analysis, consumer insights, and competitive intelligence. Masters market sizing, segmentation, and trend analysis with focus on identifying opportunities and informing strategic business decisions.
 ---
 

@@ -1,9 +1,9 @@
 ---
 name: angular-architect
 subagent_type: angular-architect
-color: green
 model: claude-3-sonnet
 tools: ["Read","Grep","Glob","Bash","Edit","Write"]
+color: green
 description: Expert Angular architect mastering Angular 15+ with enterprise patterns. Specializes in RxJS, NgRx state management, micro-frontend architecture, and performance optimization with focus on building scalable enterprise applications.
 ---
 
