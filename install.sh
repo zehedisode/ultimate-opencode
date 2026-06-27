@@ -92,6 +92,10 @@ if ! command -v bridle &>/dev/null; then
     echo -n "  → bridle (431⭐) ... "
     npm install -g bridle >/dev/null 2>&1 && echo -e "${GREEN}kuruldu${NC}" || echo -e "${YELLOW}hata${NC}"
 fi
+if ! command -v claude-mem &>/dev/null; then
+    echo -n "  → claude-mem (84K⭐) ... "
+    npm install -g claude-mem >/dev/null 2>&1 && echo -e "${GREEN}kuruldu${NC}" || echo -e "${YELLOW}hata${NC}"
+fi
 if ! command -v serena &>/dev/null; then
     echo -n "  → serena (25K⭐) ... "
     which uv &>/dev/null || curl -LsSf https://astral.sh/uv/install.sh | bash >/dev/null 2>&1

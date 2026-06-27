@@ -103,6 +103,12 @@ Kullanım: `@agent-adı <ne yapmak istiyorsun>`
 
 | Skill | ⭐ | Ne işe yarar |
 |---|---|---|
+| **claude-mem** | 84K | Persistent context across sessions |
+| **get-shit-done** | 64K | Meta-prompting + spec-driven dev |
+| **oh-my-openagent** | 63K | Agent harness (omo/lazycodex) |
+| **gstack** | 117K | 23 opinionated Claude Code tools |
+| **claude-code-best-practice** | 61K | Best practices |
+| **ruflo** | 61K | Multi-agent swarms |
 | **caveman** | 77K | %65 token tasarrufu |
 | **ponytail** | 61K | Kıdemli dev gibi düşün |
 | **ECC** | 222K | Agent harness (skills, memory, security) |
