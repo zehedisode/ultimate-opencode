@@ -1,3 +1,8 @@
+---
+name: ruflo
+description: "AI framework / agent harness 61738⭐"
+---
+
 # Claude Code Configuration - Ruflo v3.5
 
 > **Ruflo v3.6** (2026-04-29) — Stable release with agent federation and comms-first coordination.

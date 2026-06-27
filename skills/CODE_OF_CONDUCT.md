@@ -1,3 +1,8 @@
+---
+name: CODE_OF_CONDUCT
+description: "Skill "
+---
+
 # Contributor Covenant Code of Conduct
 
 ## Our Pledge

@@ -1,3 +1,8 @@
+---
+name: get-shit-done
+description: "AI framework / agent harness 64556⭐"
+---
+
 <!-- GSD 2 - Archived repository redirect -->
 
 # GSD Has Moved

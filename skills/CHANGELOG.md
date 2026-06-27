@@ -1,3 +1,8 @@
+---
+name: CHANGELOG
+description: "Skill "
+---
+
 # Changelog
 
 All notable changes to SocratiCode are documented here.

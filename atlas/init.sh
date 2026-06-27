@@ -1,39 +1,30 @@
 #!/bin/bash
-# 🌍 ATLAS — Proje Bilinç Sistemi Başlatma
+# 🌍 ATLAS — Proje Bilinç Sistemi Başlatma (proje içinde çalıştır)
 
-echo "🌍 ATLAS Project Intelligence System"
-echo "================================"
-echo ""
+BASE="$(cd "$(dirname "$0")" && pwd)"
+TARGET=".opencode/atlas"
 
-# .opencode/atlas yoksa oluştur
-mkdir -p .opencode/atlas
-mkdir -p .opencode/atlas/core
-mkdir -p .opencode/atlas/quality
-mkdir -p .opencode/atlas/metrics
-mkdir -p .opencode/atlas/team
-mkdir -p .opencode/atlas/reports
+echo "🌍 ATLAS Project Intelligence"
+echo "============================="
 
-# ATLAS dosyalarını kopyala
-SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
-SOURCE="$SCRIPT_DIR"
+# Mevcut proje kontrol
+if [ ! -f "package.json" ] && [ ! -f "go.mod" ] && [ ! -f "Cargo.toml" ] && [ ! -f "pyproject.toml" ]; then
+    echo "⚠️  Proje dosyası bulunamadı. Yine de devam edilsin mi? [E/h]"
+    read -r ans
+    [[ "$ans" =~ ^[Hh] ]] && exit 1
+fi
+
+mkdir -p "$TARGET/core" "$TARGET/quality" "$TARGET/metrics" "$TARGET/team" "$TARGET/reports"
 
 echo "📦 Modüller kuruluyor..."
-cp -r "$SOURCE/core/"* .opencode/atlas/core/ 2>/dev/null || true
-cp -r "$SOURCE/quality/"* .opencode/atlas/quality/ 2>/dev/null || true
-cp -r "$SOURCE/metrics/"* .opencode/atlas/metrics/ 2>/dev/null || true
-cp -r "$SOURCE/team/"* .opencode/atlas/team/ 2>/dev/null || true
-cp -r "$SOURCE/reports/"* .opencode/atlas/reports/ 2>/dev/null || true
+cp -r "$BASE/core/"* "$TARGET/core/" 2>/dev/null || true
+cp -r "$BASE/quality/"* "$TARGET/quality/" 2>/dev/null || true
+cp -r "$BASE/metrics/"* "$TARGET/metrics/" 2>/dev/null || true
+cp -r "$BASE/team/"* "$TARGET/team/" 2>/dev/null || true
+cp -r "$BASE/reports/"* "$TARGET/reports/" 2>/dev/null || true
 
-echo "✅ ATLAS hazır!"
+echo "✅ ATLAS bu projede aktif!"
+echo "   📍 $TARGET/"
+echo "   📋 Modüller: core quality metrics team reports"
 echo ""
-echo "📍 Konum: .opencode/atlas/"
-echo "📋 Modüller:"
-echo "  core/     — Proje bilinci + kararlar + değişiklikler"
-echo "  quality/  — Standartlar + review + regresyon"
-echo "  metrics/  — Maliyet + performans + ısı haritası"
-echo "  team/     — Takım koordinasyonu"
-echo "  reports/  — Haftalık rapor + içgörüler"
-echo ""
-echo "🚀 Kullanım:"
-echo "  AI asistanın ATLAS'ı otomatik kullanır"
-echo "  Detaylar: atlas/SKILL.md"
+echo "💡 AI asistanın ATLAS'ı otomatik kullanacak."

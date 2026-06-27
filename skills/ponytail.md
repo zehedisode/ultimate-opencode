@@ -1,3 +1,8 @@
+---
+name: ponytail
+description: "AI framework / agent harness 61629⭐"
+---
+
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="assets/logo-dark.png">

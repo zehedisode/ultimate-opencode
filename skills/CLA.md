@@ -1,3 +1,8 @@
+---
+name: CLA
+description: "Skill "
+---
+
 # SocratiCode — Contributor License Agreement (CLA)
 
 Thank you for your interest in contributing to SocratiCode, owned and maintained

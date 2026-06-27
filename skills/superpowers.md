@@ -1,3 +1,8 @@
+---
+name: superpowers
+description: "AI framework / agent harness 239990⭐"
+---
+
 # Superpowers — Contributor Guidelines
 
 ## If You Are an AI Agent

@@ -1,3 +1,8 @@
+---
+name: claude-code-best-practice
+description: "AI framework / agent harness 61304⭐"
+---
+
 # CLAUDE.md
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.

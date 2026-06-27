@@ -1,3 +1,8 @@
+---
+name: gstack
+description: "AI framework / agent harness 117177⭐"
+---
+
 # gstack development
 
 ## Commands

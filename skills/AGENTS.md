@@ -1,3 +1,8 @@
+---
+name: AGENTS
+description: "Skill "
+---
+
 ## Codebase Search (SocratiCode)
 
 This project is indexed with SocratiCode. Always use its MCP tools to explore the codebase

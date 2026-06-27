@@ -1,3 +1,8 @@
+---
+name: opencode-swarm
+description: "Geliştirme aracı / güvenlik 369⭐"
+---
+
 # Claude Code Swarm Mode
 
 > **For this repository, [AGENTS.md](./AGENTS.md) is the root engineering contract. Read it before any code change.** The long-form rationale and historical failure map live in [`docs/engineering-invariants.md`](./docs/engineering-invariants.md). When swarm mode is enabled, `AGENTS.md` still applies; swarm-mode instructions add workflow structure, not exceptions to the engineering invariants.

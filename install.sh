@@ -4,7 +4,61 @@ set -euo pipefail
 RED='\033[0;31m'; GREEN='\033[0;32m'; YELLOW='\033[1;33m'; CYAN='\033[0;36m'; NC='\033[0m'
 PWD="$(cd "$(dirname "$0")" && pwd)"
 BACKUP_DIR="$HOME/.config/opencode.yedek_$(date +%Y%m%d_%H%M%S)"
-TIMEOUT=30  # saniye
+TIMEOUT=30
+
+# ---- Help ----
+if [ "${1:-}" = "--help" ] || [ "${1:-}" = "-h" ]; then
+    echo "🚀 Ultimate OpenCode Installer"
+    echo ""
+    echo "Kullanım: ./install.sh [SEÇENEK]"
+    echo ""
+    echo "Seçenekler:"
+    echo "  --help, -h    Bu yardım mesajı"
+    echo "  --dry-run     Hiçbir şey yüklemeden simüle et"
+    echo "  --no-plugins  Plugin'leri atla"
+    echo "  --no-mcp      MCP server'ları atla"
+    echo "  --no-atlas    ATLAS'ı atla"
+    echo "  --no-backup   Yedek almadan kur"
+    echo "  --os          Sadece işletim sistemini göster"
+    echo ""
+    echo "Varsayılan: Tüm bileşenler kurulur"
+    exit 0
+fi
+
+# ---- Dry Run ----
+DRY_RUN=0
+if [ "${1:-}" = "--dry-run" ]; then
+    DRY_RUN=1
+    echo -e "${YELLOW}🔍 Dry-run modu: Hiçbir şey yüklenmeyecek${NC}"
+    echo ""
+fi
+
+# ---- OS Only ----
+if [ "${1:-}" = "--os" ]; then
+    case "$(uname -s)" in Linux)
+        if [ -f /etc/arch-release ]; then echo "Arch Linux"
+        elif [ -f /etc/debian_version ]; then echo "Debian/Ubuntu"
+        elif [ -f /etc/fedora-release ]; then echo "Fedora"
+        else echo "Linux"; fi
+        ;;
+    Darwin) echo "macOS" ;;
+    *) echo "Bilinmeyen OS" ;;
+    esac
+    exit 0
+fi
+
+# ---- Parse Flags ----
+SKIP_PLUGINS=0; SKIP_MCP=0; SKIP_ATLAS=0; SKIP_BACKUP=0
+for arg in "$@"; do
+    case "$arg" in
+        --no-plugins) SKIP_PLUGINS=1 ;;
+        --no-mcp) SKIP_MCP=1 ;;
+        --no-atlas) SKIP_ATLAS=1 ;;
+        --no-backup) SKIP_BACKUP=1 ;;
+    esac
+done
+
+set -euo pipefail
 
 trap 'echo -e "${RED}❌ Hata!${NC}"; exit 1' ERR
 
@@ -62,12 +116,32 @@ fi
 echo -e "${GREEN}✅ opencode $(opencode --version 2>/dev/null)${NC}"
 echo ""
 
+# ---- Dry Run: Sadece ne yapılacağını göster ----
+if [ "$DRY_RUN" -eq 1 ]; then
+    echo -e "${CYAN}📋 Yapılacaklar:${NC}"
+    echo "  • Config dosyaları → ~/.config/opencode/"
+    echo "  • $(ls "$PWD/skills/"*.md 2>/dev/null | wc -l) skill → ~/.config/opencode/skills/"
+    echo "  • $(find "$PWD/agents" -name '*.md' 2>/dev/null | wc -l) agent → ~/.config/opencode/agents/"
+    echo "  • $(ls "$PWD/commands/"*.md 2>/dev/null | wc -l) komut → ~/.config/opencode/commands/"
+    echo "  • 18 council agent → ~/.claude/agents/"
+    echo "  • 7 plugin (opencode plugin -g)"
+    echo "  • 4 MCP server"
+    echo "  • ATLAS 7 modül → ~/.opencode/atlas/"
+    echo ""
+    echo -e "${YELLOW}Dry-run tamam. Gerçek kurulum için --dry-run olmadan çalıştır.${NC}"
+    exit 0
+fi
+
 # ---- Backup ----
-echo -e "${YELLOW}💾 Yedek alınıyor...${NC}"
-mkdir -p "$BACKUP_DIR"
-if [ -d "$HOME/.config/opencode" ]; then
-    cp -r "$HOME/.config/opencode"/* "$BACKUP_DIR/" 2>/dev/null || true
-    echo -e "  → $BACKUP_DIR"
+if [ "$SKIP_BACKUP" -eq 0 ]; then
+    echo -e "${YELLOW}💾 Yedek alınıyor...${NC}"
+    mkdir -p "$BACKUP_DIR"
+    if [ -d "$HOME/.config/opencode" ]; then
+        cp -r "$HOME/.config/opencode"/* "$BACKUP_DIR/" 2>/dev/null || true
+        echo -e "  → $BACKUP_DIR"
+    fi
+else
+    echo -e "${YELLOW}💾 Yedek atlandı${NC}"
 fi
 
 # ---- Copy Config ----
@@ -120,8 +194,10 @@ fi
 echo -e "  ${GREEN}18 council agent kuruldu${NC}"
 
 # ---- Plugins ----
+if [ "$SKIP_PLUGINS" -eq 0 ]; then
 echo ""
 echo -e "${YELLOW}📦 Plugin'ler${NC}"
+mkdir -p "$HOME/.config/opencode"
 plugins=(
     "opencode-helicone-session"
     "opencode-gemini-auth"
@@ -140,8 +216,12 @@ for p in "${plugins[@]}"; do
     fi
 done
 echo -e "  ${GREEN}$PLUGIN_OK kuruldu${NC}${YELLOW}, $PLUGIN_FAIL atlandı${NC}"
+else
+    echo -e "${YELLOW}⏭️  Plugin'ler atlandı (--no-plugins)${NC}"
+fi
 
 # ---- MCP Servers ----
+if [ "$SKIP_MCP" -eq 0 ]; then
 echo ""
 echo -e "${YELLOW}📡 MCP Server'lar${NC}"
 
@@ -171,6 +251,9 @@ install_mcp "codegraph"       "55K"  "codegraph"           'npm_install @colbymc
 install_mcp "codebase-memory" "17K"  "codebase-memory-mcp" 'curl -fsSL --max-time 30 https://raw.githubusercontent.com/DeusData/codebase-memory-mcp/main/install.sh | bash'
 install_mcp "context7"        "doc"  "context7-mcp"        'npm_install @upstash/context7-mcp'
 install_mcp "filesystem"      "mcp"  "filesystem-mcp"      'npm_install @modelcontextprotocol/server-filesystem'
+else
+    echo -e "${YELLOW}⏭️  MCP Server'lar atlandı (--no-mcp)${NC}"
+fi
 
 # ---- CLI Tools ----
 echo ""
@@ -207,6 +290,7 @@ if ! command -v gograph &>/dev/null; then
 fi
 
 # ---- ATLAS ----
+if [ "$SKIP_ATLAS" -eq 0 ]; then
 echo ""
 echo -e "${YELLOW}🌍 ATLAS — Proje Bilinç Sistemi${NC}"
 mkdir -p "$HOME/.opencode/atlas"
@@ -215,6 +299,9 @@ if [ -d "$PWD/atlas" ]; then
     echo -e "  ${GREEN}✅ 7 modül kuruldu${NC}"
 else
     echo -e "  ${YELLOW}⚠️ atlas klasörü bulunamadı${NC}"
+fi
+else
+    echo -e "${YELLOW}⏭️  ATLAS atlandı (--no-atlas)${NC}"
 fi
 
 # ---- Themes ----

@@ -1,3 +1,8 @@
+---
+name: free-llm-apis
+description: "Referans / Yardımcı 5363⭐"
+---
+
 # Contributing
 
 Thanks for wanting to add to this list!

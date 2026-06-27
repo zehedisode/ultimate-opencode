@@ -1,0 +1,12 @@
+[Unit]
+Description=Ultimate OpenCode MCP Servers
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=%h/.local/bin/codegraph serve --mcp
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=default.target

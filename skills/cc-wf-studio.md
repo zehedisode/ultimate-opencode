@@ -1,3 +1,8 @@
+---
+name: cc-wf-studio
+description: "Geliştirme aracı / güvenlik 5206⭐"
+---
+
 # cc-wf-studio Development Guidelines
 
 Auto-generated from all feature plans. Last updated: 2025-11-01

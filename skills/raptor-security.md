@@ -1,3 +1,8 @@
+---
+name: raptor-security
+description: "Geliştirme aracı / güvenlik 3200⭐"
+---
+
 # RAPTOR - Autonomous Offensive/Defensive Research Framework
 
 Safe operations (install, scan, read, generate): DO IT.

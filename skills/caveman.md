@@ -1,3 +1,8 @@
+---
+name: caveman
+description: "AI framework / agent harness 77401⭐"
+---
+
 # CLAUDE.md — caveman
 
 ## README is a product artifact
