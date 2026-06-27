@@ -10,4 +10,11 @@ __pycache__/
 dist/
 build/
 .tmp/
-.codegraph/
+*.swp
+*.swo
+*~
+.cache/
+tmp/
+*.local/
+.venv/
+venv/

@@ -81,3 +81,13 @@ Skills: pr-review, jira-planning, workflow-tuning, pr-to-main.
 
 ## AIClient2API (8.3K⭐)
 Gemini, Antigravity, Codex, Grok, Kiro API'lerini OpenAI uyumlu hale getirir.
+
+## Council of High Intelligence (1K⭐)
+18 AI persona tek komutla: `/council <soru>`
+Modlar: `--quick` (hızlı), `--duo` (ikili), `--triad <domain>` (3 kişi)
+Domain'ler: strategy, architecture, decision, ethics, risk, shipping, ai
+
+## ATLAS (Project Intelligence)
+Projen için: `atlas/init.sh` ile başlat.
+7 modül: core, quality, metrics, docs, team, reports
+Her seansta proje bilincini otomatik günceller.

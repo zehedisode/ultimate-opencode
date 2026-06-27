@@ -3,45 +3,28 @@
   "mcp": {
     "codegraph": {
       "type": "local",
-      "command": [
-        "codegraph",
-        "serve",
-        "--mcp"
-      ],
+      "command": ["codegraph", "serve", "--mcp"],
       "enabled": true
     },
     "codebase-memory-mcp": {
       "enabled": true,
       "type": "local",
-      "command": [
-        "/home/soner/.local/bin/codebase-memory-mcp"
-      ]
+      "command": ["codebase-memory-mcp"]
     },
     "context7": {
       "enabled": true,
       "type": "local",
-      "command": [
-        "context7-mcp"
-      ]
+      "command": ["context7-mcp"]
     },
     "filesystem": {
       "enabled": true,
       "type": "local",
-      "command": [
-        "npx",
-        "-y",
-        "@modelcontextprotocol/server-filesystem",
-        "/home/soner"
-      ]
+      "command": ["npx", "-y", "@modelcontextprotocol/server-filesystem", "{env:HOME}"]
     },
     "brave-search": {
       "enabled": false,
       "type": "local",
-      "command": [
-        "npx",
-        "-y",
-        "@brave/brave-search-mcp-server"
-      ]
+      "command": ["npx", "-y", "@brave/brave-search-mcp-server"]
     }
   }
 }
