@@ -4,7 +4,7 @@
 
 ### Sıfır opencode'u 5 dakikada full mod'a çeviren tek paket.
 
-**🎯 8+ MCP Server · 65 Skill · 103 Agent (sa+model+tools) · 14 Komut · 8 Plugin · 18 Council · 1 Atlas · 260+ Dosya**
+**🎯 8+ MCP Server · 71 Skill · 103 Agent (sa+model+tools+color) · 14 Komut · 8 Plugin · 18 Council · 1 Atlas · 270+ Dosya · 6 Script**
 
 [![GitHub stars](https://img.shields.io/github/stars/zehedisode/ultimate-opencode?style=social)](https://github.com/zehedisode/ultimate-opencode)
 [![Platform](https://img.shields.io/badge/platform-linux%20%7C%20macOS%20%7C%20wsl-blue)](https://github.com/zehedisode/ultimate-opencode)
@@ -148,6 +148,35 @@ atlas/init.sh
 
 ---
 
+## 🏗️ Mimari
+
+```mermaid
+graph TD
+    subgraph "Ultimate OpenCode"
+        A[install.sh] --> B[Config]
+        A --> C[Skills 65]
+        A --> D[Agents 103]
+        A --> E[MCP 8+]
+        A --> F[ATLAS]
+        A --> G[Scripts 6]
+
+        B --> H[opencode.json]
+        B --> I[opencode.jsonc]
+        C --> J[caveman, ECC, karpathy...]
+        D --> K[10 kategori]
+        D --> L[models+tools+color]
+        E --> M[codegraph, memory, context7...]
+        F --> N[core, quality, metrics, docs, team, reports]
+        G --> O[chamber, echo, prism, sync-stars...]
+    end
+
+    style A fill:#4a9,color:#fff
+    style B fill:#48b,color:#fff
+    style C fill:#67b,color:#fff
+```
+
+---
+
 ## 📡 MCP Server'lar
 
 | Server | ⭐ | Görev |
@@ -256,7 +285,7 @@ Detay: `skills/echo.md`
 
 ---
 
-## 🎯 65 Skill
+## 🎯 71 Skill
 
 Kategoriye göre gruplandırılmış en popüler GitHub skill'leri:
 
@@ -265,7 +294,7 @@ Kategoriye göre gruplandırılmış en popüler GitHub skill'leri:
 |---|---|---|
 | **caveman** | 77K | %65 daha az token ile iletişim |
 | **ponytail** | 61K | En tembel kıdemli developer gibi düşün |
-| **squeez** | — | Hook-based token compression |
+| **squeez** | — | Hook-based token compression (bakımda) |
 
 ### 🧠 AI Çerçeveleri
 | Skill | ⭐ | Ne İşe Yarar |
@@ -284,7 +313,7 @@ Kategoriye göre gruplandırılmış en popüler GitHub skill'leri:
 | **karpathy-skills** | 183K | Andrej Karpathy'nin AI kod prensipleri |
 | **claude-code-best-practice** | 61K | Vibe coding'den agentic engineering'a |
 | **gstack** | 117K | 23 opinionated Claude Code tool |
-| **code-reviewer** | — | Otomatik kod review |
+| **code-reviewer** | — | Otomatik kod review (code-reviewer agent ile) |
 | **arc-kit** | 2K | Enterprise architecture governance |
 
 ### 🛡️ Güvenlik
@@ -373,6 +402,16 @@ Kategoriye göre gruplandırılmış en popüler GitHub skill'leri:
 | **opencode-cost-optimizer** | 976 | Token tüketim optimizasyonu |
 | **context-compressor** | 3.4K | AI context sıkıştırma (%40-60) |
 | **swe-agent** | 12K | GitHub issue'larını otomatik çözen AI |
+
+### 🆕x5 Loop #9: 6 Yeni Skill + Validasyon + Uninstall + Mermaid + Renkler
+| Skill | ⭐ | Ne İşe Yarar |
+|---|---|---|
+| **copilot-cli** | 4.3K | GitHub Copilot CLI (terminal komut önerisi) |
+| **aider** | 25K | AI pair programming terminal aracı |
+| **codex-cli** | 17K | OpenAI Codex CLI (terminal AI coding) |
+| **open-interpreter** | 55K | Doğal dil bilgisayar arayüzü |
+| **continue** | 21K | VS Code açık kaynak AI asistan |
+| **claude-code-cli** | 15K | Anthropic Claude Code CLI |
 
 ---
 

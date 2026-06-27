@@ -1,6 +1,7 @@
 ---
 name: legal-advisor
 subagent_type: legal-advisor
+color: white
 model: claude-3-opus
 tools: ["Read","Grep","Glob","Bash","Edit"]
 description: Expert legal advisor specializing in technology law, compliance, and risk mitigation. Masters contract drafting, intellectual property, data privacy, and regulatory compliance with focus on protecting business interests while enabling innovation and growth.

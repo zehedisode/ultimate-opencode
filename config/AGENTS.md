@@ -58,6 +58,8 @@ Code intelligence knowledge graph. 14 MCP tools.
 
 **🆕 Loop #8**: agentic-threat-detection (4.8K⭐), opencode-mcp-hub (2.1K⭐), opencode-cost-optimizer (976⭐), context-compressor (3.4K⭐), swe-agent (12K⭐)
 
+**🆕 Loop #9**: copilot-cli (4.3K⭐), aider (25K⭐), codex-cli (17K⭐), open-interpreter (55K⭐), continue (21K⭐), claude-code-cli (15K⭐)
+
 ### 🆕 Özgün Araç Script'leri (scripts/)
 | Script | Açıklama |
 |---|---|

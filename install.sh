@@ -6,6 +6,14 @@ PWD="$(cd "$(dirname "$0")" && pwd)"
 BACKUP_DIR="$HOME/.config/opencode.yedek_$(date +%Y%m%d_%H%M%S)"
 TIMEOUT=30
 TOTAL_STEPS=12; CURRENT=0
+VERSION="1.5.0"
+
+# ---- Version ----
+if [ "${1:-}" = "--version" ] || [ "${1:-}" = "-v" ]; then
+    echo "Ultimate OpenCode v$VERSION"
+    echo "65 skill • 103 agent • 14 komut • 8 plugin • 18 council"
+    exit 0
+fi
 
 # ---- Help ----
 if [ "${1:-}" = "--help" ] || [ "${1:-}" = "-h" ]; then
@@ -164,8 +172,21 @@ if [ "$DRY_RUN" -eq 1 ]; then
     exit 0
 fi
 
+# ---- Backup Rotation (son 5 yedek) ----
+rotate_backups() {
+    local max=5
+    local backups=($(ls -dt "$HOME/.config/opencode.yedek_"* 2>/dev/null))
+    local count=${#backups[@]}
+    if [ "$count" -gt "$max" ]; then
+        for ((i=max; i<count; i++)); do
+            rm -rf "${backups[$i]}" 2>/dev/null || true
+        done
+    fi
+}
+
 # ---- Backup ----
 if [ "$SKIP_BACKUP" -eq 0 ]; then
+    rotate_backups
     echo -e "${YELLOW}💾 Yedek alınıyor...${NC}"
     mkdir -p "$BACKUP_DIR"
     if [ -d "$HOME/.config/opencode" ]; then
@@ -374,5 +395,7 @@ echo "  Ctrl+T → variant     Tab → agent"
 echo ""
 echo -e "${YELLOW}📌 codegraph için:    codegraph init"
 echo "   ATLAS için:         atlas/init.sh"
-echo "   Geri almak için:    cp -r $BACKUP_DIR/* ~/.config/opencode/${NC}"
+echo "   Geri almak için:    cp -r $BACKUP_DIR/* ~/.config/opencode/"
+echo "   Kaldırmak için:     ./uninstall.sh"
+echo "   Script'ler:        chamber/echo/prism${NC}"
 echo ""

@@ -1,6 +1,7 @@
 ---
 name: architect-reviewer
 subagent_type: architect-reviewer
+color: red
 model: claude-3-sonnet
 tools: ["Read","Grep","Glob","Bash","WebSearch","WebFetch"]
 description: Expert architecture reviewer specializing in system design validation, architectural patterns, and technical decision assessment. Masters scalability analysis, technology stack evaluation, and evolutionary architecture with focus on maintainability and long-term viability.

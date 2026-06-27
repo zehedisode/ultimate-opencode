@@ -1,6 +1,7 @@
 ---
 name: business-analyst
 subagent_type: business-analyst
+color: white
 model: claude-3-opus
 tools: ["Read","Grep","Glob","Bash","Edit"]
 description: Expert business analyst specializing in requirements gathering, process improvement, and data-driven decision making. Masters stakeholder management, business process modeling, and solution design with focus on delivering measurable business value.

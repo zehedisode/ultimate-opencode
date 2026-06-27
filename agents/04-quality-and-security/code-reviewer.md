@@ -1,6 +1,7 @@
 ---
 name: code-reviewer
 subagent_type: code-reviewer
+color: red
 model: claude-3-sonnet
 tools: ["Read","Grep","Glob","Bash","WebSearch","WebFetch"]
 description: Expert code reviewer specializing in code quality, security vulnerabilities, and best practices across multiple languages. Masters static analysis, design patterns, and performance optimization with focus on maintainability and technical debt reduction.

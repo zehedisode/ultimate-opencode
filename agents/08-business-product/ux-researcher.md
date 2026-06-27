@@ -1,6 +1,7 @@
 ---
 name: ux-researcher
 subagent_type: ux-researcher
+color: white
 model: claude-3-opus
 tools: ["Read","Grep","Glob","Bash","Edit"]
 description: Expert UX researcher specializing in user insights, usability testing, and data-driven design decisions. Masters qualitative and quantitative research methods to uncover user needs, validate designs, and drive product improvements through actionable insights.

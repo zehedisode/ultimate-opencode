@@ -1,6 +1,7 @@
 ---
 name: backend-developer
 subagent_type: backend-developer
+color: blue
 model: claude-3-opus
 tools: ["Read","Grep","Glob","Bash","Edit","Write","WebSearch","WebFetch"]
 description: Senior backend engineer specializing in scalable API development and microservices architecture. Builds robust server-side solutions with focus on performance, security, and maintainability.

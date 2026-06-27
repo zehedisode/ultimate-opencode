@@ -1,6 +1,7 @@
 ---
 name: websocket-engineer
 subagent_type: websocket-engineer
+color: blue
 model: claude-3-opus
 tools: ["Read","Grep","Glob","Bash","Edit","Write","WebSearch","WebFetch"]
 description: Real-time communication specialist implementing scalable WebSocket architectures. Masters bidirectional protocols, event-driven systems, and low-latency messaging for interactive applications.

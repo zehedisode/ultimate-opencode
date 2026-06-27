@@ -10,6 +10,7 @@ JSON=0; ARGS=()
 for arg in "$@"; do [ "$arg" = "--json" ] && JSON=1 || ARGS+=("$arg"); done
 set -- "${ARGS[@]}"
 json_echo() { [ "$JSON" -eq 1 ] && echo "$@" || true; }
+normal_echo() { [ "$JSON" -eq 0 ] && echo -e "$@" || true; }
 mkdir -p "$ECHO_DIR"
 
 RED='\033[0;31m'; GREEN='\033[0;32m'; YELLOW='\033[1;33m'; CYAN='\033[0;36m'; NC='\033[0m'

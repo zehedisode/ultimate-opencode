@@ -1,6 +1,7 @@
 ---
 name: music-agent
 subagent_type: music-agent
+color: purple
 model: claude-3-opus
 tools: ["Read","Grep","Glob","Bash","Edit","Write","WebSearch","WebFetch"]
 description: Expert music agent specializing in music library analysis, ID3 tag extraction, and playlist generation. Masters audio feature analysis and mood-based classification to create curated music experiences.

@@ -1,5 +1,19 @@
 # Changelog
 
+## v1.5.0 (2026-06-28)
+### 🔧 Loop #9: 12 Düzeltme + Uninstall + Validate + Mermaid + Colors + 6 Skill
+- ✅ Tüm script'lerde normal_echo tutarlılığı + JSON output tamamlandı
+- ✅ scripts/validate-council.sh — council agent validasyonu (model, polarity, SKILL.md)
+- ✅ uninstall.sh — temiz kaldırma aracı (--force/--purge)
+- ✅ README'ye Mermaid mimari diyagramı eklendi
+- ✅ 103 agent'a color alanı eklendi (kategori bazlı: blue/red/green/cyan/magenta/yellow/purple)
+- ✅ 18 council agent'a provider_affinity alanı eklendi
+- ✅ install.sh --version flag + backup rotation (son 5 yedek korunur)
+- ✅ README'de squeez/code-reviewer referansları düzeltildi
+- ✅ 6 yeni skill: copilot-cli, aider(25K⭐), codex-cli(17K⭐), open-interpreter(55K⭐), continue(21K⭐), claude-code-cli(15K⭐)
+- ✅ AGENTS.md: Loop #9 kategorisi
+- ✅ Toplam: 71 skill, 103 agent (sa+model+tools+color), 6 script, 270+ dosya
+
 ## v1.4.0 (2026-06-28)
 ### 🔧 Loop #8: 10 Düzeltme + Star Sync + JSON Output + Badges + 5 Yeni Skill
 - ✅ sync-stars.sh geliştirildi: rate-limit koruması, sleep, hata yönetimi

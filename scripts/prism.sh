@@ -10,6 +10,7 @@ JSON=0; ARGS=()
 for arg in "$@"; do [ "$arg" = "--json" ] && JSON=1 || ARGS+=("$arg"); done
 set -- "${ARGS[@]}"
 json_echo() { [ "$JSON" -eq 1 ] && echo "$@" || true; }
+normal_echo() { [ "$JSON" -eq 0 ] && echo -e "$@" || true; }
 mkdir -p "$PRISM_DIR"
 PROFILE="$PRISM_DIR/profile.json"
 

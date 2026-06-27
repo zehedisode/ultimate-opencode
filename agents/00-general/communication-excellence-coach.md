@@ -1,6 +1,7 @@
 ---
 name: communication-excellence-coach
 subagent_type: communication-excellence-coach
+color: white
 model: claude-3-opus
 tools: ["Read","Grep","Glob","Bash","Edit","Write","WebSearch","WebFetch"]
 description: PROACTIVELY use when reviewing communication drafts or preparing difficult conversations. Provides email refinement, tone calibration, roleplay practice, and presentation feedback with actionable suggestions.
