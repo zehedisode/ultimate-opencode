@@ -1,5 +1,21 @@
 # Changelog
 
+## v1.2.0 (2026-06-28)
+### 🔧 Loop #6: 11 Düzeltme + 3 Özgün Özellik + 8 Yeni Skill
+- ✅ 103 agent dosyasına `subagent_type` alanı eklendi (opencode uyumluluğu)
+- ✅ 18 council agent model adı `claude-3-opus`/`claude-3-sonnet` olarak güncellendi
+- ✅ Council SKILL.md model tablosu güncellendi
+- ✅ **🧠 PRISM 2.0** özgün özellik: kod stili profiling + fingerprint sistemi
+- ✅ **⚡ CHAMBER** özgün özellik: multi-session orchestrator & state manager
+- ✅ **🔊 ECHO** özgün özellik: cross-session context mirroring
+- ✅ 8 yeni popüler GitHub skill: dify (147K⭐), n8n (194K⭐), chrome-devtools-mcp (44K⭐), uv (40K⭐), ripgrep (51K⭐), lazygit (55K⭐), antigravity-awesome-skills (41K⭐), awesome-mcp-servers (89K⭐)
+- ✅ README'ye özgün özellikler bölümü eklendi + council SKILL.md referansı
+- ✅ MCP tablosuna chrome-devtools eklendi, 5+ → 6+ MCP olarak güncellendi
+- ✅ install.sh'ye curl_progress fonksiyonu eklendi, yeni MCP server tanımlandı
+- ✅ atlas/init.sh docs/ ve team/sync modülü kurulumu dahil edildi
+- ✅ AGENTS.md: yeni skill kategorileri, subagent_type ve council model duyurusu
+- ✅ Toplam: 54 skill, 103 agent (tümü subagent_type'lı), 14 komut, 8 plugin, 18 council, 6+ MCP, 231 dosya
+
 ## v1.1.0 (2026-06-28)
 ### 🔧 Loop #5: 10 Hata Düzeltmesi + Yeni Özellikler
 - ✅ Skills klasöründen meta dosyaları temizlendi (CLA, CHANGELOG, CLAUDE, CODE_OF_CONDUCT, AGENTS → skills/)

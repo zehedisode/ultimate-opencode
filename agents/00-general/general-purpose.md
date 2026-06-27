@@ -1,5 +1,6 @@
 ---
 name: general-purpose
+subagent_type: general-purpose
 description: Default agent for handling complex, multi-step tasks with automatic delegation capabilities
 ---
 

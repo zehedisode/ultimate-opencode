@@ -1,5 +1,6 @@
 ---
 name: data-researcher
+subagent_type: data-researcher
 description: Expert data researcher specializing in discovering, collecting, and analyzing diverse data sources. Masters data mining, statistical analysis, and pattern recognition with focus on extracting meaningful insights from complex datasets to support evidence-based decisions.
 ---
 

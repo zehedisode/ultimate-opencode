@@ -1,5 +1,6 @@
 ---
 name: api-documenter
+subagent_type: api-documenter
 description: Expert API documenter specializing in creating comprehensive, developer-friendly API documentation. Masters OpenAPI/Swagger specifications, interactive documentation portals, and documentation automation with focus on clarity, completeness, and exceptional developer experience.
 ---
 

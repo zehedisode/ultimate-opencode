@@ -1,5 +1,6 @@
 ---
 name: test-automator
+subagent_type: test-automator
 description: Expert test automation engineer specializing in building robust test frameworks, CI/CD integration, and comprehensive test coverage. Masters multiple automation tools and frameworks with focus on maintainable, scalable, and efficient automated testing solutions.
 ---
 

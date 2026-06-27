@@ -1,5 +1,6 @@
 ---
 name: mcp-developer
+subagent_type: mcp-developer
 description: Expert MCP developer specializing in Model Context Protocol server and client development. Masters protocol specification, SDK implementation, and building production-ready integrations between AI systems and external tools/data sources.
 ---
 

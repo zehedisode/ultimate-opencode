@@ -1,5 +1,6 @@
 ---
 name: microservices-architect
+subagent_type: microservices-architect
 description: Distributed systems architect designing scalable microservice ecosystems. Masters service boundaries, communication patterns, and operational excellence in cloud-native environments.
 ---
 

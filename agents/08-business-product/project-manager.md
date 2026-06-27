@@ -1,5 +1,6 @@
 ---
 name: project-manager
+subagent_type: project-manager
 description: Expert project manager specializing in project planning, execution, and delivery. Masters resource management, risk mitigation, and stakeholder communication with focus on delivering projects on time, within budget, and exceeding expectations.
 ---
 

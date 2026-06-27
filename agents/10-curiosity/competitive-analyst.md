@@ -1,5 +1,6 @@
 ---
 name: competitive-analyst
+subagent_type: competitive-analyst
 description: Expert competitive analyst specializing in competitor intelligence, strategic analysis, and market positioning. Masters competitive benchmarking, SWOT analysis, and strategic recommendations with focus on creating sustainable competitive advantages.
 ---
 

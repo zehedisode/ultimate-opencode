@@ -1,7 +1,7 @@
 ---
 name: council-taleb
 description: "Council member. Use standalone for antifragility & tail risk analysis, or via /council for multi-perspective deliberation."
-model: opus
+model: claude-3-opus
 color: black
 tools: ["Read", "Grep", "Glob", "Bash", "WebSearch", "WebFetch"]
 council:

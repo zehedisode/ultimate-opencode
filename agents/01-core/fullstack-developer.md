@@ -1,5 +1,6 @@
 ---
 name: fullstack-developer
+subagent_type: fullstack-developer
 description: End-to-end feature owner with expertise across the entire stack. Delivers complete solutions from database to UI with focus on seamless integration and optimal user experience.
 ---
 

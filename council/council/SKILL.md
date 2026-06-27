@@ -45,24 +45,24 @@ Flag priority: `--quick` / `--duo` set the mode. `--full` / `--triad` / `--membe
 
 | Agent | Figure | Domain | Model | Polarity |
 |-------|--------|--------|-------|----------|
-| `council-aristotle` | Aristotle | Categorization & structure | opus | Classifies everything |
-| `council-socrates` | Socrates | Assumption destruction | opus | Questions everything |
-| `council-sun-tzu` | Sun Tzu | Adversarial strategy | sonnet | Reads terrain & competition |
-| `council-ada` | Ada Lovelace | Formal systems & abstraction | sonnet | What can/can't be mechanized |
-| `council-aurelius` | Marcus Aurelius | Resilience & moral clarity | opus | Control vs acceptance |
-| `council-machiavelli` | Machiavelli | Power dynamics & realpolitik | sonnet | How actors actually behave |
-| `council-lao-tzu` | Lao Tzu | Non-action & emergence | opus | When less is more |
-| `council-feynman` | Feynman | First-principles debugging | sonnet | Refuses unexplained complexity |
-| `council-torvalds` | Linus Torvalds | Pragmatic engineering | sonnet | Ship it or shut up |
-| `council-musashi` | Miyamoto Musashi | Strategic timing | sonnet | The decisive strike |
-| `council-watts` | Alan Watts | Perspective & reframing | opus | Dissolves false problems |
-| `council-karpathy` | Andrej Karpathy | Neural network intuition & empirical ML | sonnet | How models actually learn and fail |
-| `council-sutskever` | Ilya Sutskever | Scaling frontier & AI safety | opus | When capability becomes risk |
-| `council-kahneman` | Daniel Kahneman | Cognitive bias & decision science | opus | Your own thinking is the first error |
-| `council-meadows` | Donella Meadows | Systems thinking & feedback loops | sonnet | Redesign the system, not the symptom |
-| `council-munger` | Charlie Munger | Multi-model reasoning & economics | sonnet | Invert — what guarantees failure? |
-| `council-taleb` | Nassim Taleb | Antifragility & tail risk | opus | Design for the tail, not the average |
-| `council-rams` | Dieter Rams | User-centered design | sonnet | Less, but better — the user decides |
+| `council-aristotle` | Aristotle | Categorization & structure | claude-3-opus | Classifies everything |
+| `council-socrates` | Socrates | Assumption destruction | claude-3-opus | Questions everything |
+| `council-sun-tzu` | Sun Tzu | Adversarial strategy | claude-3-sonnet | Reads terrain & competition |
+| `council-ada` | Ada Lovelace | Formal systems & abstraction | claude-3-sonnet | What can/can't be mechanized |
+| `council-aurelius` | Marcus Aurelius | Resilience & moral clarity | claude-3-opus | Control vs acceptance |
+| `council-machiavelli` | Machiavelli | Power dynamics & realpolitik | claude-3-sonnet | How actors actually behave |
+| `council-lao-tzu` | Lao Tzu | Non-action & emergence | claude-3-opus | When less is more |
+| `council-feynman` | Feynman | First-principles debugging | claude-3-sonnet | Refuses unexplained complexity |
+| `council-torvalds` | Linus Torvalds | Pragmatic engineering | claude-3-sonnet | Ship it or shut up |
+| `council-musashi` | Miyamoto Musashi | Strategic timing | claude-3-sonnet | The decisive strike |
+| `council-watts` | Alan Watts | Perspective & reframing | claude-3-opus | Dissolves false problems |
+| `council-karpathy` | Andrej Karpathy | Neural network intuition & empirical ML | claude-3-sonnet | How models actually learn and fail |
+| `council-sutskever` | Ilya Sutskever | Scaling frontier & AI safety | claude-3-opus | When capability becomes risk |
+| `council-kahneman` | Daniel Kahneman | Cognitive bias & decision science | claude-3-opus | Your own thinking is the first error |
+| `council-meadows` | Donella Meadows | Systems thinking & feedback loops | claude-3-sonnet | Redesign the system, not the symptom |
+| `council-munger` | Charlie Munger | Multi-model reasoning & economics | claude-3-sonnet | Invert — what guarantees failure? |
+| `council-taleb` | Nassim Taleb | Antifragility & tail risk | claude-3-opus | Design for the tail, not the average |
+| `council-rams` | Dieter Rams | User-centered design | claude-3-sonnet | Less, but better — the user decides |
 
 ## Polarity Pairs
 

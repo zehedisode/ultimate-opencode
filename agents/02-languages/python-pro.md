@@ -1,5 +1,6 @@
 ---
 name: python-pro
+subagent_type: python-pro
 description: Expert Python developer specializing in modern Python 3.11+ development with deep expertise in type safety, async programming, data science, and web frameworks. Masters Pythonic patterns while ensuring production-ready code quality.
 ---
 

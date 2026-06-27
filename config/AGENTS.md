@@ -20,6 +20,10 @@ Code intelligence knowledge graph. 14 MCP tools.
 - `query_graph('MATCH (f:Function) WHERE NOT EXISTS { (f)<-[:CALLS]-() } RETURN f.name')` — dead code
 <!-- codebase-memory-mcp:end -->
 
+> 💡 Tüm 103 agent artık `subagent_type` alanı içerir. Council agent'ları `claude-3-opus`/`claude-3-sonnet` modellerini kullanır.
+>
+> 🆕 **PRISM 2.0** — kod stili profiling. **CHAMBER** — multi-session yöneticisi. **ECHO** — cross-session context mirroring.
+
 ## 🛠️ Bu Projede Kullanılan Tüm Araçlar
 
 ### 📡 MCP Server'lar
@@ -47,6 +51,8 @@ Code intelligence knowledge graph. 14 MCP tools.
 **📚 Referans**: awesome-free-llm-apis (5.3K⭐), ask-user-questions, ultimate-opencode
 
 **🆕 Yeni Eklenenler (Loop #5)**: cursor-tools (8.6K⭐), claude-code-memory-mcp (3.2K⭐), repomix (5.1K⭐), screenshot-to-code (64K⭐), claude-code-sync (1.2K⭐), mcp-router (890⭐), opencode-installer (450⭐)
+
+**🆕 Loop #6**: PRISM 2.0 (özgün), CHAMBER (özgün), ECHO (özgün), dify (147K⭐), n8n (194K⭐), chrome-devtools-mcp (44K⭐), uv (40K⭐), ripgrep (51K⭐), lazygit (55K⭐), antigravity-awesome-skills (41K⭐), awesome-mcp-servers (89K⭐)
 
 ### 👥 Council of High Intelligence
 `/council <soru>` — 18 AI persona ile multi-perspektif müzakere. Detaylı kullanım için: `council/council/SKILL.md`

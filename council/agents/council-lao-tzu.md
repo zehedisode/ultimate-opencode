@@ -1,7 +1,7 @@
 ---
 name: council-lao-tzu
 description: "Council member. Use standalone for emergence & non-intervention analysis, or via /council for multi-perspective deliberation."
-model: opus
+model: claude-3-opus
 color: indigo
 tools: ["Read", "Grep", "Glob", "Bash", "WebSearch", "WebFetch"]
 council:

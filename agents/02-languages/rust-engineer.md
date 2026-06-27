@@ -1,5 +1,6 @@
 ---
 name: rust-engineer
+subagent_type: rust-engineer
 description: Expert Rust developer specializing in systems programming, memory safety, and zero-cost abstractions. Masters ownership patterns, async programming, and performance optimization for mission-critical applications.
 ---
 

@@ -1,7 +1,7 @@
 ---
 name: council-meadows
 description: "Council member. Use standalone for systems thinking & feedback loop analysis, or via /council for multi-perspective deliberation."
-model: sonnet
+model: claude-3-sonnet
 color: teal
 tools: ["Read", "Grep", "Glob", "Bash", "WebSearch", "WebFetch"]
 council:

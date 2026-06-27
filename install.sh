@@ -112,6 +112,13 @@ progress() {
     printf "${CYAN}]${NC} %3d%% ${label}  " "$pct"
 }
 
+# ---- Curl with progress bar ----
+curl_progress() {
+    local url=$1 output=$2 label=$3
+    echo -n "  → $label ... "
+    curl -# --max-time 30 -L "$url" -o "$output" 2>/dev/null && echo -e "${GREEN}tamam${NC}" || echo -e "${YELLOW}atlandı${NC}"
+}
+
 # ---- Self-Update Check ----
 self_update() {
     local remote latest
@@ -268,6 +275,10 @@ install_mcp "codegraph"       "55K"  "codegraph"           'npm_install @colbymc
 install_mcp "codebase-memory" "17K"  "codebase-memory-mcp" 'curl -fsSL --max-time 30 https://raw.githubusercontent.com/DeusData/codebase-memory-mcp/main/install.sh | bash'
 install_mcp "context7"        "doc"  "context7-mcp"        'npm_install @upstash/context7-mcp'
 install_mcp "filesystem"      "mcp"  "filesystem-mcp"      'npm_install @modelcontextprotocol/server-filesystem'
+install_mcp "chrome-devtools" "44K"  "chrome-devtools-mcp" 'npx -y @anthropic/chrome-devtools-mcp --version'
+echo ""
+echo -e "${YELLOW}ℹ️  İsteğe bağlı MCP'ler:${NC}"
+echo "   brave-search: npx -y @anthropic/brave-search-mcp-server"
 else
     echo -e "${YELLOW}⏭️  MCP Server'lar atlandı (--no-mcp)${NC}"
 fi

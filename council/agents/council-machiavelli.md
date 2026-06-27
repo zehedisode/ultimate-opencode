@@ -1,7 +1,7 @@
 ---
 name: council-machiavelli
 description: "Council member. Use standalone for power dynamics & incentive analysis, or via /council for multi-perspective deliberation."
-model: sonnet
+model: claude-3-sonnet
 color: dark-green
 tools: ["Read", "Grep", "Glob", "Bash", "WebSearch", "WebFetch"]
 council:

@@ -1,5 +1,6 @@
 ---
 name: react-specialist
+subagent_type: react-specialist
 description: Expert React specialist mastering React 18+ with modern patterns and ecosystem. Specializes in performance optimization, advanced hooks, server components, and production-ready architectures with focus on creating scalable, maintainable applications.
 ---
 

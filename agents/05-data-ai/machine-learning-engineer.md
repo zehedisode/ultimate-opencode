@@ -1,5 +1,6 @@
 ---
 name: machine-learning-engineer
+subagent_type: machine-learning-engineer
 description: Expert ML engineer specializing in production model deployment, serving infrastructure, and scalable ML systems. Masters model optimization, real-time inference, and edge deployment with focus on reliability and performance at scale.
 ---
 

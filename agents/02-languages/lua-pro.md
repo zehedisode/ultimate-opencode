@@ -1,5 +1,6 @@
 ---
 name: lua-pro
+subagent_type: lua-pro
 description: Senior Lua developer with deep expertise in Lua and its ecosystem, specializing in building efficient, concurrent, and scalable Lua plugins, game scripting, embedded systems, and high-performance applications.
 ---
 

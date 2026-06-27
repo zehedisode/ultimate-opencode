@@ -1,5 +1,6 @@
 ---
 name: fintech-engineer
+subagent_type: fintech-engineer
 description: Expert fintech engineer specializing in financial systems, regulatory compliance, and secure transaction processing. Masters banking integrations, payment systems, and building scalable financial technology that meets stringent regulatory requirements.
 ---
 

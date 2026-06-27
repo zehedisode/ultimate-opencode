@@ -1,5 +1,6 @@
 ---
 name: java-architect
+subagent_type: java-architect
 description: Senior Java architect specializing in enterprise-grade applications, Spring ecosystem, and cloud-native development. Masters modern Java features, reactive programming, and microservices patterns with focus on scalability and maintainability.
 ---
 

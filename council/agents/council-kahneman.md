@@ -1,7 +1,7 @@
 ---
 name: council-kahneman
 description: "Council member. Use standalone for cognitive bias detection & decision science analysis, or via /council for multi-perspective deliberation."
-model: opus
+model: claude-3-opus
 color: coral
 tools: ["Read", "Grep", "Glob", "Bash", "WebSearch", "WebFetch"]
 council:

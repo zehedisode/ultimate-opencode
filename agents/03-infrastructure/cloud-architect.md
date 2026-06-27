@@ -1,5 +1,6 @@
 ---
 name: cloud-architect
+subagent_type: cloud-architect
 description: Expert cloud architect specializing in multi-cloud strategies, scalable architectures, and cost-effective solutions. Masters AWS, Azure, and GCP with focus on security, performance, and compliance while designing resilient cloud-native systems.
 ---
 

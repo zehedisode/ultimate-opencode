@@ -1,5 +1,6 @@
 ---
 name: chaos-engineer
+subagent_type: chaos-engineer
 description: Expert chaos engineer specializing in controlled failure injection, resilience testing, and building antifragile systems. Masters chaos experiments, game day planning, and continuous resilience improvement with focus on learning from failure.
 ---
 

@@ -4,15 +4,17 @@
 
 ### Sıfır opencode'u 5 dakikada full mod'a çeviren tek paket.
 
-**🎯 5+ MCP Server · 43 Skill · 103 Agent · 14 Slash Komut · 8 Plugin · 18 Council · 1 Atlas · 220+ Dosya**
+**🎯 6+ MCP Server · 54 Skill · 103 Agent · 14 Slash Komut · 8 Plugin · 18 Council · 1 Atlas · 240+ Dosya**
 
 [![GitHub stars](https://img.shields.io/github/stars/zehedisode/ultimate-opencode?style=social)](https://github.com/zehedisode/ultimate-opencode)
 [![Platform](https://img.shields.io/badge/platform-linux%20%7C%20macOS%20%7C%20wsl-blue)](https://github.com/zehedisode/ultimate-opencode)
 [![License](https://img.shields.io/badge/license-MIT-green)](https://github.com/zehedisode/ultimate-opencode)
 [![One-Click Install](https://img.shields.io/badge/install-one--click-orange)](https://github.com/zehedisode/ultimate-opencode)
 
-> **25+ farklı GitHub reposundan toplanmış, test edilmiş ve optimize edilmiş en iyi opencode eklentileri.**
+> **35+ farklı GitHub reposundan toplanmış, test edilmiş ve optimize edilmiş en iyi opencode eklentileri.**
 > **Hiçbiri API key gerektirmez. Her şey tek komutla kurulur.**
+>
+> **🧠 3 ÖZGÜN ÖZELLİK**: PRISM 2.0 (kod stili profiling) · CHAMBER (session manager) · ECHO (context mirroring)
 
 </div>
 
@@ -152,6 +154,7 @@ atlas/init.sh
 | **filesystem** | — | Gelişmiş dosya sistemi işlemleri |
 | **brave-search** | — | Web araması (opsiyonel) |
 | **serena** | 25K | Semantik kod retriever, refactoring |
+| **chrome-devtools** | 44K | Chrome DevTools MCP |
 
 ---
 
@@ -181,7 +184,7 @@ atlas/init.sh
 
 ## 👥 Council of High Intelligence
 
-18 tarihi figür AI persona olarak tartışır, sen karar verirsin.
+18 tarihi figür AI persona olarak tartışır, sen karar verirsin. Detaylı kullanım için: `council/council/SKILL.md`
 
 | Persona | Uzmanlık | Persona | Uzmanlık |
 |---|---|---|---|
@@ -200,9 +203,56 @@ atlas/init.sh
 /council --triad strategy Rakibimize karşı nasıl rekabet edelim?
 ```
 
+> 🔧 Loop #6: Tüm council agent modelleri `claude-3-opus`/`claude-3-sonnet` olarak güncellendi.
+
 ---
 
-## 🎯 43 Skill
+## 🧠 Özgün Özellikler (Başka Hiçbir Repoda Yok)
+
+Bu özellikler Ultimate OpenCode'a özeldir. Hiçbir opencode paketinde bulamazsın.
+
+### 🧠 PRISM 2.0 — Kod Stili Profiling
+
+PRISM 2.0, kod yazma stilini otomatik analiz eder, fingerprint çıkarır ve tüm subagent'ların sana göre davranmasını sağlar.
+
+```bash
+prism analyze src/           # Kod stilini analiz et
+prism profile                # Profilini göster
+prism suggest <dosya>        # Stil önerisi al
+```
+
+Detay: `skills/prism-v2.md`
+
+### ⚡ CHAMBER — Session Manager
+
+CHAMBER, opencode oturumlarını yöneten, snapshot alan ve paralel ajanları orchestre eden session yöneticisidir.
+
+```bash
+chamber new "feature-x"      # Yeni session
+chamber list                  # Tüm session'lar
+chamber snapshot              # State kaydet
+chamber parallel "a" "b"     # Paralel çalıştır
+```
+
+Detay: `skills/chamber.md`
+
+### 🔊 ECHO — Cross-Session Context Mirroring
+
+ECHO, bir session'da keşfedilen bilgiyi tüm diğer session'lara anında yansıtır. Ajanlar arası iletişimde devrim.
+
+```bash
+echo share "API endpoint keşfedildi: /api/v2/users"
+echo broadcast "Uyarı: .env dosyasında secret var!"
+echo status                   # Context durumu
+```
+
+Detay: `skills/echo.md`
+
+---
+
+---
+
+## 🎯 54 Skill
 
 Kategoriye göre gruplandırılmış en popüler GitHub skill'leri:
 
@@ -286,6 +336,21 @@ Kategoriye göre gruplandırılmış en popüler GitHub skill'leri:
 | **mcp-router** | 890 | Çoklu MCP server yönlendirici |
 | **opencode-installer** | 450 | Tek adımda opencode + plugin kurulumu |
 
+### 🆕🆕 Özgün Özellikler & Yeni Skill'ler (Loop #6)
+| Skill | ⭐ | Ne İşe Yarar |
+|---|---|---|
+| **🧠 PRISM 2.0** | — | **ÖZGÜN** Kod stili profiling + otomatik analiz |
+| **⚡ CHAMBER** | — | **ÖZGÜN** Multi-session orchestrator & state manager |
+| **🔊 ECHO** | — | **ÖZGÜN** Cross-session context mirroring |
+| **dify** | 147K | Production-ready agentic workflow platform |
+| **n8n** | 194K | Workflow automation CLI (400+ entegrasyon) |
+| **chrome-devtools-mcp** | 44K | Chrome DevTools MCP server |
+| **uv** | 40K | Ultra hızlı Python package manager |
+| **ripgrep** | 51K | En hızlı kod arama CLI aracı |
+| **lazygit** | 55K | Terminal UI git client |
+| **antigravity-awesome-skills** | 41K | 1600+ agentic skill kütüphanesi |
+| **awesome-mcp-servers** | 89K | En kapsamlı MCP server koleksiyonu |
+
 ---
 
 ## ⚡ 14 Slash Komut
@@ -340,7 +405,7 @@ Kategoriye göre gruplandırılmış en popüler GitHub skill'leri:
 
 | Soru | Cevap |
 |---|---|
-| **Neden 43 skill var?** | Çünkü her durum için doğru araç |
+| **Neden 54 skill var?** | Çünkü her durum için doğru araç |
 | **Neden 103 agent var?** | Çünkü her dil/alan için uzman gerek |
 | **Neden ATLAS var?** | Çünkü projeni anlayan TEK sistem |
 | **Neden tek komut?** | Çünkü vaktin skill kurmaktan değerli |
