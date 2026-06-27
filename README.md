@@ -54,25 +54,46 @@ Ardından: `opencode` 🎉
 
 ---
 
-## 🧠 PRISM — Buharlaşmayan Tek Akıl
+---
 
-**Diğer tüm araçlar statiktir. PRISM her seansta SANA göre evrilir.**
+## 🌍 ATLAS — Dünyada İlk ve Tek Proje Bilinç Sistemi
 
-PRISM, her AI oturumunda senin kod stilini, tercihlerini ve hatalarını öğrenen **kendini güncelleyen** bir sistemdir. 10 seans sonra seni herkesten daha iyi tanır.
+**AI ajanını tek başına bir kod yazara dönüştüren tüm sistemler statiktir. ATLAS projenin BEYNİ olur.**
 
-| Özellik | PRISM | Diğer Skill'ler |
+ATLAS, AI ajanına **tam proje bilinci** kazandıran 7 modüllü devrim niteliğinde bir sistemdir. Sadece kod yazmaz — projeni anlar, kaliteni kontrol eder, maliyetini ölçer, dokümanını canlı tutar, takımını koordine eder ve geçmiş hatalarının tekrarını engeller.
+
+### 🏗️ 7 Modül
+
+| Modül | Dosya | Ne Yapar |
 |---|---|---|
-| Kişiselleşme | Sana özel evrilir | Herkes için aynı |
-| Güncellenme | Her seans otomatik | Statik, asla değişmez |
-| Hafıza | Geçmiş kararları hatırlar | Hiçbir şey hatırlamaz |
-| Hata önleme | Aynı hatayı iki kere yapmaz | Hataları tekrarlar |
-| Adaptasyon | 10 seansta uzmanlaşır | 100 seansta da aynı |
+| **core/** | `project.md`, `decisions.md`, `changelog.md` | Proje yapısı, mimari kararlar, değişiklik takibi |
+| **quality/** | `standards.md`, `review-checklist.md`, `regression.md` | Kalite gates, code review, bug tekrarını engelleme |
+| **metrics/** | `costs.md`, `heatmap.md` | Token maliyeti, dosya değişim ısı haritası |
+| **docs/** | `api.md`, `architecture.md` | Yaşayan dökümantasyon, otomatik güncellenir |
+| **team/** | `agents.md`, `sync.md` | Çoklu ajan koordinasyonu |
+| **reports/** | `insights.md` | Haftalık rapor, trend analizi |
+
+### ATLAS'ı Rakiplerinden Ayıranlar
+
+| Özellik | ATLAS | GitHub Copilot | Claude Code | Diğer Skill'ler |
+|---|---|---|---|---|
+| Proje bilinci | ✅ Tam | ❌ | ❌ | ❌ |
+| Regresyon engelleme | ✅ Otomatik | ❌ | ❌ | ❌ |
+| Maliyet takibi | ✅ Token + USD | ❌ | ❌ | ❌ |
+| Yaşayan doküman | ✅ Otomatik | ❌ | ❌ | ❌ |
+| Kalite gates | ✅ Her değişiklik | ❌ | ❌ | ❌ |
+| Takım koordinasyonu | ✅ Çoklu ajan | ❌ | ❌ | ❌ |
+| Etki analizi | ✅ X→Y değişirse | ❌ | ❌ | ❌ |
+| Isı haritası | ✅ Hangi dosya riskli | ❌ | ❌ | ❌ |
+| ADR takibi | ✅ Otomatik | ❌ | ❌ | ❌ |
 
 ```bash
-~/.opencode/prism/
-├── profile.md    # Senin kod profilin (otomatik güncellenir)
-├── lessons.md    # Öğrenilen dersler
-└── stats.md      # Adaptasyon skoru
+# Projende ATLAS'ı başlat
+cd projen
+atlas/init.sh
+
+# ATLAS artık aktif.
+# Her seansta projeni tanır, hatalarını hatırlar, maliyetini ölçer.
 ```
 
 ---

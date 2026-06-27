@@ -111,12 +111,12 @@ if ! command -v gograph &>/dev/null; then
 fi
 
 echo ""
-echo -e "${YELLOW}🧠 PRISM — Kişisel AI Evrim Sistemi${NC}"
-echo -n "  → Başlatılıyor... "
-mkdir -p ~/.opencode/prism
-if [ -d ".opencode/prism" ]; then
-    cp -r .opencode/prism/* ~/.opencode/prism/ 2>/dev/null
-    echo -e "${GREEN}kuruldu${NC}"
+echo -e "${YELLOW}🌍 ATLAS — Proje Bilinç Sistemi${NC}"
+echo -n "  → Kuruluyor... "
+mkdir -p ~/.opencode/atlas
+if [ -d "atlas" ]; then
+    cp -r atlas/* ~/.opencode/atlas/ 2>/dev/null
+    echo -e "${GREEN}kuruldu (7 modül)${NC}"
 else
     echo -e "${YELLOW}atlandı${NC}"
 fi
