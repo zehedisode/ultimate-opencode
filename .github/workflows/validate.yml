@@ -1,0 +1,17 @@
+name: validate
+on: [push, pull_request]
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check install.sh syntax
+        run: bash -n install.sh
+      - name: Check README exists
+        run: test -f README.md
+      - name: Count files
+        run: |
+          echo "Skills: $(ls skills/*.md 2>/dev/null | wc -l)"
+          echo "Agents: $(find agents -name '*.md' 2>/dev/null | wc -l)"
+          echo "Commands: $(ls commands/*.md 2>/dev/null | wc -l)"
+          echo "Council: $(ls council/agents/*.md 2>/dev/null | wc -l)"

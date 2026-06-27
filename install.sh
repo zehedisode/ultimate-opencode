@@ -1,46 +1,49 @@
 #!/bin/bash
-set -e
 
+set -e
+RED='\033[0;31m'; GREEN='\033[0;32m'; YELLOW='\033[1;33m'; CYAN='\033[0;36m'; NC='\033[0m'
+
+echo -e "${CYAN}"
 echo "=========================================="
 echo "  🚀 Ultimate OpenCode - Kurulum"
 echo "=========================================="
-echo ""
+echo -e "${NC}"
 
-# opencode var mı?
+# opencode kontrol
 if ! command -v opencode &>/dev/null; then
-    echo "❌ opencode bulunamadı! Önce opencode'u kur:"
+    echo -e "${RED}❌ opencode bulunamadı!${NC}"
     echo "   curl -fsSL https://opencode.ai/install | bash"
     exit 1
 fi
+echo -e "${GREEN}✅ opencode $(opencode --version 2>/dev/null)${NC}"
+echo ""
 
-echo "📁 Config dosyaları kopyalanıyor..."
+# Config
+echo -e "${YELLOW}📁 Config dosyaları${NC}"
 mkdir -p ~/.config/opencode
-cp -v config/opencode.jsonc ~/.config/opencode/ 2>/dev/null || true
-cp -v config/opencode.json ~/.config/opencode/ 2>/dev/null || true
-cp -v config/cost-guard.config.jsonc ~/.config/opencode/ 2>/dev/null || true
-cp -v config/tui.jsonc ~/.config/opencode/ 2>/dev/null || true
+for f in config/*; do
+    cp -v "$f" ~/.config/opencode/ 2>/dev/null || true
+done
 
 echo ""
-echo "📄 AGENTS.md kopyalanıyor..."
-cp -v config/AGENTS.md ~/.config/opencode/AGENTS.md 2>/dev/null || true
-
-echo ""
-echo "🎯 Skills kopyalanıyor..."
+echo -e "${YELLOW}🎯 Skills (24 adet)${NC}"
 mkdir -p ~/.config/opencode/skills
-cp -v skills/*.md ~/.config/opencode/skills/ 2>/dev/null || true
+for f in skills/*.md; do
+    cp -v "$f" ~/.config/opencode/skills/ 2>/dev/null || true
+done
 
 echo ""
-echo "👤 Agent personlar kopyalanıyor..."
+echo -e "${YELLOW}👤 Agent personlar (103 adet)${NC}"
 mkdir -p ~/.config/opencode/agents
 cp -r agents/* ~/.config/opencode/agents/ 2>/dev/null || true
 
 echo ""
-echo "⚡ Slash komutlar kopyalanıyor..."
+echo -e "${YELLOW}⚡ Slash komutlar (14 adet)${NC}"
 mkdir -p ~/.config/opencode/commands
 cp -v commands/*.md ~/.config/opencode/commands/ 2>/dev/null || true
 
 echo ""
-echo "👥 Council of High Intelligence kuruluyor..."
+echo -e "${YELLOW}👥 Council of High Intelligence (18 agent)${NC}"
 if [ -d "council/agents" ]; then
     mkdir -p ~/.claude/agents
     cp -v council/agents/*.md ~/.claude/agents/ 2>/dev/null || true
@@ -51,7 +54,7 @@ if [ -d "council/council" ]; then
 fi
 
 echo ""
-echo "📦 Plugin'ler yükleniyor..."
+echo -e "${YELLOW}📦 Plugin'ler${NC}"
 plugins=(
     "opencode-helicone-session"
     "opencode-gemini-auth"
@@ -61,51 +64,56 @@ plugins=(
     "opencode-websearch"
 )
 for p in "${plugins[@]}"; do
-    echo "  → $p"
-    opencode plugin "$p" -g 2>/dev/null || echo "  ⚠️  $p yüklenemedi, atlanıyor"
+    echo -n "  → $p ... "
+    opencode plugin "$p" -g 2>/dev/null && echo -e "${GREEN}OK${NC}" || echo -e "${YELLOW}atlandı${NC}"
 done
 
 echo ""
-echo "📡 MCP Server'lar yükleniyor..."
-# codegraph
-if ! command -v codegraph &>/dev/null; then
-    echo "  → codegraph (55K⭐) npm install..."
-    npm install -g @colbymchenry/codegraph 2>/dev/null || true
-fi
+echo -e "${YELLOW}📡 MCP Server'lar${NC}"
 
-# codebase-memory-mcp
-if ! command -v codebase-memory-mcp &>/dev/null; then
-    echo "  → codebase-memory-mcp (17K⭐) curl install..."
-    curl -fsSL https://raw.githubusercontent.com/DeusData/codebase-memory-mcp/main/install.sh | bash 2>/dev/null || true
-fi
+install_mcp() {
+    local name=$1 stars=$2 cmd=$3 install_cmd=$4
+    echo -n "  → $name ($stars⭐) ... "
+    if command -v "$cmd" &>/dev/null; then
+        echo -e "${GREEN}zaten var${NC}"
+    else
+        eval "$install_cmd" 2>/dev/null && echo -e "${GREEN}kuruldu${NC}" || echo -e "${YELLOW}hata${NC}"
+    fi
+}
 
-# context7
-if ! command -v context7-mcp &>/dev/null; then
-    echo "  → context7 (dökümantasyon MCP)..."
-    npm install -g @upstash/context7-mcp 2>/dev/null || true
-fi
+install_mcp "codegraph"       "55K"  "codegraph"         'npm install -g @colbymchenry/codegraph'
+install_mcp "codebase-memory" "17K"  "codebase-memory-mcp" 'curl -fsSL https://raw.githubusercontent.com/DeusData/codebase-memory-mcp/main/install.sh | bash'
+install_mcp "context7"        "doc"  "context7-mcp"      'npm install -g @upstash/context7-mcp'
+install_mcp "filesystem"      "mcp"  "filesystem-mcp"    'npm install -g @modelcontextprotocol/server-filesystem'
 
-# serena
+echo ""
+echo -e "${YELLOW}🔧 CLI Araçlar${NC}"
 if ! command -v serena &>/dev/null; then
-    echo "  → serena (25K⭐) uv install..."
-    which uv &>/dev/null || curl -LsSf https://astral.sh/uv/install.sh | bash
-    uv tool install -p 3.13 serena-agent 2>/dev/null || true
+    echo -n "  → serena (25K⭐) ... "
+    which uv &>/dev/null || curl -LsSf https://astral.sh/uv/install.sh | bash >/dev/null 2>&1
+    uv tool install -p 3.13 serena-agent >/dev/null 2>&1 && echo -e "${GREEN}kuruldu${NC}" || echo -e "${YELLOW}hata${NC}"
+fi
+if ! command -v opencli &>/dev/null; then
+    echo -n "  → OpenCLI (25K⭐) ... "
+    npm install -g @jackwener/opencli >/dev/null 2>&1 && echo -e "${GREEN}kuruldu${NC}" || echo -e "${YELLOW}hata${NC}"
+fi
+if ! command -v gograph &>/dev/null; then
+    echo -n "  → gograph (Go AST) ... "
+    go install github.com/ozgurcd/gograph/cmd/gograph@latest >/dev/null 2>&1 && echo -e "${GREEN}kuruldu${NC}" || echo -e "${YELLOW}hata${NC}"
 fi
 
 echo ""
+echo -e "${GREEN}"
 echo "=========================================="
 echo "  ✅ Ultimate OpenCode kuruldu!"
 echo "=========================================="
+echo -e "${NC}"
+echo "📖 Kullan: opencode"
+echo "👥  /council <soru>        — 18 AI persona"
+echo "👤  @agent-adı             — uzman subagent"
+echo "⚡  /komut                 — slash komut"
+echo "⌨️   Ctrl+T → variant  |  Tab → agent"
 echo ""
-echo "📖 Kullanım:"
-echo "  opencode                  # TUI'yi başlat"
-echo "  /council <soru>           # 18 AI persona karar"
-echo "  @python-expert <soru>     # Uzman subagent çağır"
-echo "  /commit                   # commit mesajı yaz"
-echo "  /review                   # kod review"
-echo "  Ctrl+T                    # model variant değiştir"
-echo "  Tab                       # build/plan arası geç"
-echo ""
-echo "📌 Not: codegraph için projende 'codegraph init' çalıştır"
-echo "   Brave Search için BRAVE_API_KEY ortam değişkeni gerekli"
+echo -e "${YELLOW}📌 codegraph için projende: codegraph init"
+echo "   Brave Search API: BRAVE_API_KEY=<key> opencode${NC}"
 echo ""
