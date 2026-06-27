@@ -100,12 +100,38 @@ detect_os() {
 }
 OS=$(detect_os)
 
+# ---- Progress Bar ----
+progress() {
+    local current=$1 total=$2 label=$3
+    local pct=$((current * 100 / total))
+    local filled=$((pct / 2))
+    local empty=$((50 - filled))
+    printf "\r  ${CYAN}[${GREEN}"
+    printf '%*s' "$filled" | tr ' ' '█'
+    printf "${CYAN}${NC}"
+    printf '%*s' "$empty" | tr ' ' '░'
+    printf "${CYAN}]${NC} %3d%% ${label}  " "$pct"
+}
+
+# ---- Self-Update Check ----
+self_update() {
+    local remote latest
+    remote=$(curl -s --max-time 5 "https://api.github.com/repos/zehedisode/ultimate-opencode/commits/main" 2>/dev/null | python3 -c "import json,sys; d=json.load(sys.stdin); print(d['sha'][:7])" 2>/dev/null || echo "")
+    latest=$(git rev-parse --short HEAD 2>/dev/null || echo "")
+    if [ -n "$remote" ] && [ "$remote" != "$latest" ]; then
+        echo -e "${YELLOW}⚠️  Yeni sürüm var! (${remote})${NC}"
+        echo "   git pull ile güncelleyebilirsin."
+        echo ""
+    fi
+}
+
+# ---- Banner ----
 echo -e "${CYAN}"
-echo "=========================================="
-echo "  🚀 Ultimate OpenCode - Kurulum"
-echo "  OS: $OS"
-echo "=========================================="
+cat banner.txt 2>/dev/null || echo "Ultimate OpenCode - Kurulum"
 echo -e "${NC}"
+
+# ---- Self Update ----
+self_update
 
 # ---- Prerequisites ----
 if ! command -v opencode &>/dev/null; then
@@ -144,45 +170,39 @@ else
     echo -e "${YELLOW}💾 Yedek atlandı${NC}"
 fi
 
+TOTAL_STEPS=10; CURRENT=0
+
 # ---- Copy Config ----
-echo ""
-echo -e "${YELLOW}📁 Config dosyaları${NC}"
+((CURRENT++)); progress $CURRENT $TOTAL_STEPS "Config"
 mkdir -p "$HOME/.config/opencode"
 for f in "$PWD/config/"*; do
-    [ -f "$f" ] && cp -v "$f" "$HOME/.config/opencode/" 2>/dev/null || true
+    [ -f "$f" ] && cp "$f" "$HOME/.config/opencode/" 2>/dev/null || true
 done
 
 # ---- Copy Skills ----
-echo ""
-echo -e "${YELLOW}🎯 Skills${NC}"
+((CURRENT++)); progress $CURRENT $TOTAL_STEPS "Skills ($(ls "$PWD/skills/"*.md 2>/dev/null | wc -l) adet)"
 mkdir -p "$HOME/.config/opencode/skills"
 for f in "$PWD/skills/"*.md; do
-    [ -f "$f" ] && cp -v "$f" "$HOME/.config/opencode/skills/" 2>/dev/null || true
+    [ -f "$f" ] && cp "$f" "$HOME/.config/opencode/skills/" 2>/dev/null || true
 done
 SKILL_COUNT=$(ls "$HOME/.config/opencode/skills/"*.md 2>/dev/null | wc -l)
-echo -e "  ${GREEN}$SKILL_COUNT skill kuruldu${NC}"
 
 # ---- Copy Agents ----
-echo ""
-echo -e "${YELLOW}👤 Agent personlar${NC}"
+((CURRENT++)); progress $CURRENT $TOTAL_STEPS "Agents"
 mkdir -p "$HOME/.config/opencode/agents"
 cp -r "$PWD/agents/"* "$HOME/.config/opencode/agents/" 2>/dev/null || true
 AGENT_COUNT=$(find "$HOME/.config/opencode/agents" -name '*.md' 2>/dev/null | wc -l)
-echo -e "  ${GREEN}$AGENT_COUNT agent kuruldu${NC}"
 
 # ---- Copy Commands ----
-echo ""
-echo -e "${YELLOW}⚡ Slash komutlar${NC}"
+((CURRENT++)); progress $CURRENT $TOTAL_STEPS "Commands"
 mkdir -p "$HOME/.config/opencode/commands"
 for f in "$PWD/commands/"*.md; do
-    [ -f "$f" ] && cp -v "$f" "$HOME/.config/opencode/commands/" 2>/dev/null || true
+    [ -f "$f" ] && cp "$f" "$HOME/.config/opencode/commands/" 2>/dev/null || true
 done
 CMD_COUNT=$(ls "$HOME/.config/opencode/commands/"*.md 2>/dev/null | wc -l)
-echo -e "  ${GREEN}$CMD_COUNT komut kuruldu${NC}"
 
 # ---- Council ----
-echo ""
-echo -e "${YELLOW}👥 Council of High Intelligence${NC}"
+((CURRENT++)); progress $CURRENT $TOTAL_STEPS "Council (18 agent)"
 if [ -d "$PWD/council/agents" ]; then
     mkdir -p "$HOME/.claude/agents"
     cp -v "$PWD/council/agents/"*.md "$HOME/.claude/agents/" 2>/dev/null || true
@@ -191,12 +211,11 @@ if [ -d "$PWD/council/council" ]; then
     mkdir -p "$HOME/.claude/skills/council"
     cp -rv "$PWD/council/council/"* "$HOME/.claude/skills/council/" 2>/dev/null || true
 fi
-echo -e "  ${GREEN}18 council agent kuruldu${NC}"
+echo ""
 
 # ---- Plugins ----
 if [ "$SKIP_PLUGINS" -eq 0 ]; then
-echo ""
-echo -e "${YELLOW}📦 Plugin'ler${NC}"
+((CURRENT++)); progress $CURRENT $TOTAL_STEPS "Plugins"
 mkdir -p "$HOME/.config/opencode"
 plugins=(
     "opencode-helicone-session"
@@ -222,8 +241,7 @@ fi
 
 # ---- MCP Servers ----
 if [ "$SKIP_MCP" -eq 0 ]; then
-echo ""
-echo -e "${YELLOW}📡 MCP Server'lar${NC}"
+((CURRENT++)); progress $CURRENT $TOTAL_STEPS "MCP Servers"
 
 npm_install() {
     if [ -n "${NPM_CMD:-}" ]; then
@@ -256,8 +274,7 @@ else
 fi
 
 # ---- CLI Tools ----
-echo ""
-echo -e "${YELLOW}🔧 CLI Araçlar${NC}"
+((CURRENT++)); progress $CURRENT $TOTAL_STEPS "CLI Tools"
 for tool in \
     "bridle|431⭐|bridle" \
     "claude-mem|84K⭐|claude-mem" \
@@ -291,8 +308,7 @@ fi
 
 # ---- ATLAS ----
 if [ "$SKIP_ATLAS" -eq 0 ]; then
-echo ""
-echo -e "${YELLOW}🌍 ATLAS — Proje Bilinç Sistemi${NC}"
+((CURRENT++)); progress $CURRENT $TOTAL_STEPS "ATLAS"
 mkdir -p "$HOME/.opencode/atlas"
 if [ -d "$PWD/atlas" ]; then
     cp -r "$PWD/atlas/"* "$HOME/.opencode/atlas/" 2>/dev/null
@@ -305,8 +321,7 @@ else
 fi
 
 # ---- Themes ----
-echo ""
-echo -e "${YELLOW}🎨 Temalar${NC}"
+((CURRENT++)); progress $CURRENT $TOTAL_STEPS "Themes"
 mkdir -p "$HOME/.config/opencode/themes"
 for f in "$PWD/themes/"*; do
     [ -f "$f" ] && cp -v "$f" "$HOME/.config/opencode/themes/" 2>/dev/null || true
