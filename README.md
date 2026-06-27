@@ -4,14 +4,18 @@
 
 ### Sıfır opencode'u 5 dakikada full mod'a çeviren tek paket.
 
-**🎯 7+ MCP Server · 60 Skill · 103 Agent (tümü sa) · 14 Slash Komut · 8 Plugin · 18 Council · 1 Atlas · 250+ Dosya**
+**🎯 8+ MCP Server · 65 Skill · 103 Agent (sa+model+tools) · 14 Komut · 8 Plugin · 18 Council · 1 Atlas · 260+ Dosya**
 
 [![GitHub stars](https://img.shields.io/github/stars/zehedisode/ultimate-opencode?style=social)](https://github.com/zehedisode/ultimate-opencode)
 [![Platform](https://img.shields.io/badge/platform-linux%20%7C%20macOS%20%7C%20wsl-blue)](https://github.com/zehedisode/ultimate-opencode)
 [![License](https://img.shields.io/badge/license-MIT-green)](https://github.com/zehedisode/ultimate-opencode)
 [![One-Click Install](https://img.shields.io/badge/install-one--click-orange)](https://github.com/zehedisode/ultimate-opencode)
+[![CI](https://img.shields.io/github/actions/workflow/status/zehedisode/ultimate-opencode/validate.yml?branch=main&label=CI)](https://github.com/zehedisode/ultimate-opencode/actions)
+[![Skills](https://img.shields.io/badge/skills-65-blueviolet)](https://github.com/zehedisode/ultimate-opencode)
+[![Agents](https://img.shields.io/badge/agents-103-success)](https://github.com/zehedisode/ultimate-opencode)
+[![Last Commit](https://img.shields.io/github/last-commit/zehedisode/ultimate-opencode)](https://github.com/zehedisode/ultimate-opencode)
 
-> **35+ farklı GitHub reposundan toplanmış, test edilmiş ve optimize edilmiş en iyi opencode eklentileri.**
+> **45+ farklı GitHub reposundan toplanmış, test edilmiş ve optimize edilmiş en iyi opencode eklentileri.**
 > **Hiçbiri API key gerektirmez. Her şey tek komutla kurulur.**
 >
 > **🧠 3 ÖZGÜN ÖZELLİK**: PRISM 2.0 (kod stili profiling) · CHAMBER (session manager) · ECHO (context mirroring)
@@ -252,7 +256,7 @@ Detay: `skills/echo.md`
 
 ---
 
-## 🎯 60 Skill
+## 🎯 65 Skill
 
 Kategoriye göre gruplandırılmış en popüler GitHub skill'leri:
 
@@ -361,6 +365,15 @@ Kategoriye göre gruplandırılmış en popüler GitHub skill'leri:
 | **wshobson-agents** | 37K | Multi-harness plugin marketplace |
 | **agent-reach** | 43K | AI agent'lara internet görüşü |
 
+### 🆕🆕🆕🆕 Loop #8: 5 Yeni Skill + Star Sync + JSON Output + Badges
+| Skill | ⭐ | Ne İşe Yarar |
+|---|---|---|
+| **agentic-threat-detection** | 4.8K | AI agent güvenlik tehdit tespiti |
+| **opencode-mcp-hub** | 2.1K | MCP server marketplace & yönetici |
+| **opencode-cost-optimizer** | 976 | Token tüketim optimizasyonu |
+| **context-compressor** | 3.4K | AI context sıkıştırma (%40-60) |
+| **swe-agent** | 12K | GitHub issue'larını otomatik çözen AI |
+
 ---
 
 ## ⚡ 14 Slash Komut
@@ -418,7 +431,7 @@ Kategoriye göre gruplandırılmış en popüler GitHub skill'leri:
 
 | Soru | Cevap |
 |---|---|
-| **Neden 60 skill var?** | Çünkü her durum için doğru araç |
+| **Neden 65 skill var?** | Çünkü her durum için doğru araç |
 | **Neden 103 agent var?** | Çünkü her dil/alan için uzman gerek |
 | **Neden ATLAS var?** | Çünkü projeni anlayan TEK sistem |
 | **Neden tek komut?** | Çünkü vaktin skill kurmaktan değerli |

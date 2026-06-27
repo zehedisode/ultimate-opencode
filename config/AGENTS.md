@@ -56,6 +56,8 @@ Code intelligence knowledge graph. 14 MCP tools.
 
 **🆕 Loop #7**: pydantic-ai (18K⭐), microsoft-agent-framework (11K⭐), deepseek-reasonix (25K⭐), cc-switch (109K⭐), wshobson-agents (37K⭐), agent-reach (43K⭐)
 
+**🆕 Loop #8**: agentic-threat-detection (4.8K⭐), opencode-mcp-hub (2.1K⭐), opencode-cost-optimizer (976⭐), context-compressor (3.4K⭐), swe-agent (12K⭐)
+
 ### 🆕 Özgün Araç Script'leri (scripts/)
 | Script | Açıklama |
 |---|---|

@@ -46,6 +46,16 @@
       "enabled": false,
       "type": "local",
       "command": ["npx", "-y", "@brave/brave-search-mcp-server"]
+    },
+    "chrome-devtools": {
+      "enabled": false,
+      "type": "local",
+      "command": ["npx", "-y", "@anthropic/chrome-devtools-mcp"]
     }
+  },
+  "scripts": {
+    "chamber": "~/.config/opencode/scripts/chamber.sh",
+    "echo": "~/.config/opencode/scripts/echo.sh",
+    "prism": "~/.config/opencode/scripts/prism.sh"
   }
 }

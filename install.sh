@@ -337,6 +337,21 @@ for f in "$PWD/themes/"*; do
     [ -f "$f" ] && cp -v "$f" "$HOME/.config/opencode/themes/" 2>/dev/null || true
 done
 
+# ---- Add Scripts to PATH ----
+if [ -f "$HOME/.bashrc" ] || [ -f "$HOME/.zshrc" ]; then
+    SCRIPTS_DIR="$HOME/.config/opencode/scripts"
+    mkdir -p "$SCRIPTS_DIR"
+    for script in "$PWD/scripts/"*.sh; do
+        [ -f "$script" ] && cp "$script" "$SCRIPTS_DIR/" 2>/dev/null || true
+    done
+    # Add to PATH if not already there
+    PATH_LINE='export PATH="$PATH:$HOME/.config/opencode/scripts"'
+    for rc in "$HOME/.bashrc" "$HOME/.zshrc"; do
+        [ -f "$rc" ] && grep -q "opencode/scripts" "$rc" 2>/dev/null || echo "$PATH_LINE" >> "$rc"
+    done
+    echo -e "  ${GREEN}✅ Scripts PATH'e eklendi${NC}"
+fi
+
 # ---- Restart Warning ----
 echo ""
 echo -e "${GREEN}"

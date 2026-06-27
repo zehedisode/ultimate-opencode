@@ -1,9 +1,15 @@
 #!/bin/bash
 # 🔊 ECHO — Cross-Session Context Mirroring
 # Kullanım: echo <komut> [mesaj]
+# --json flag: JSON çıktı
 
 set -euo pipefail
 ECHO_DIR="$HOME/.opencode/echo"
+
+JSON=0; ARGS=()
+for arg in "$@"; do [ "$arg" = "--json" ] && JSON=1 || ARGS+=("$arg"); done
+set -- "${ARGS[@]}"
+json_echo() { [ "$JSON" -eq 1 ] && echo "$@" || true; }
 mkdir -p "$ECHO_DIR"
 
 RED='\033[0;31m'; GREEN='\033[0;32m'; YELLOW='\033[1;33m'; CYAN='\033[0;36m'; NC='\033[0m'
@@ -44,11 +50,12 @@ case "${1:-help}" in
         echo -e "${YELLOW}📢 TÜM SESSION'LARA DUYURULDU:${NC} $2"
         ;;
     status|st)
-        echo -e "${CYAN}🔊 ECHO Context Durumu:${NC}"
-        echo -e "  ${GREEN}Keşifler:${NC} $(jq length "$DISCOVERIES" 2>/dev/null || echo 0)"
-        echo -e "  ${RED}Bug'lar:${NC} $(jq length "$BUGS" 2>/dev/null || echo 0)"
-        echo -e "  ${YELLOW}Uyarılar:${NC} $(jq length "$WARNINGS" 2>/dev/null || echo 0)"
-        echo -e "  Toplam: $(wc -l < "$CONTEXT_DB" 2>/dev/null || echo 0) kayıt"
+        D=$(jq length "$DISCOVERIES" 2>/dev/null || echo 0)
+        B=$(jq length "$BUGS" 2>/dev/null || echo 0)
+        W=$(jq length "$WARNINGS" 2>/dev/null || echo 0)
+        T=$(wc -l < "$CONTEXT_DB" 2>/dev/null || echo 0)
+        json_echo "{\"discoveries\":$D,\"bugs\":$B,\"warnings\":$W,\"total\":$T}"
+        normal_echo "${CYAN}🔊 ECHO Context:${NC} ${GREEN}Keşif:$D${NC} ${RED}Bug:$B${NC} ${YELLOW}Uyarı:$W${NC} Toplam:$T"
         ;;
     history|h)
         tail -20 "$CONTEXT_DB" 2>/dev/null | while read -r line; do

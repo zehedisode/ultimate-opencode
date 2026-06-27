@@ -1,9 +1,15 @@
 #!/bin/bash
 # 🧠 PRISM 2.0 — Kişisel AI Evrim Sistemi
 # Kullanım: prism <komut> [args]
+# --json flag: JSON çıktı
 
 set -euo pipefail
 PRISM_DIR="$HOME/.opencode/prism"
+
+JSON=0; ARGS=()
+for arg in "$@"; do [ "$arg" = "--json" ] && JSON=1 || ARGS+=("$arg"); done
+set -- "${ARGS[@]}"
+json_echo() { [ "$JSON" -eq 1 ] && echo "$@" || true; }
 mkdir -p "$PRISM_DIR"
 PROFILE="$PRISM_DIR/profile.json"
 

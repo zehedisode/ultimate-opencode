@@ -1,5 +1,19 @@
 # Changelog
 
+## v1.4.0 (2026-06-28)
+### 🔧 Loop #8: 10 Düzeltme + Star Sync + JSON Output + Badges + 5 Yeni Skill
+- ✅ sync-stars.sh geliştirildi: rate-limit koruması, sleep, hata yönetimi
+- ✅ install.sh: scripts PATH'e eklendi, bashrc/zshrc otomatik yapılandırma
+- ✅ ATLAS: performance.md metrik modülü + metrics/README.md eklendi
+- ✅ chamber.sh/echo.sh/prism.sh: --json output modu eklendi
+- ✅ config/opencode.jsonc: chrome-devtools MCP + CHAMBER/ECHO/PRISM script referansları
+- ✅ 5 yeni skill: agentic-threat-detection, opencode-mcp-hub, opencode-cost-optimizer, context-compressor, swe-agent (12K⭐)
+- ✅ README: 8 badge (CI, Skills, Agents, Last Commit), 65 skill, 260+ dosya
+- ✅ AGENTS.md: Loop #8 skill kategorisi
+- ✅ 4 yeni skill dosyası (toplam 65 skill)
+- ✅ Tüm script'ler chmod +x, syntax test geçti
+- ✅ Toplam: 65 skill, 103 agent (sa+model+tools), 6 script, 260+ dosya
+
 ## v1.3.0 (2026-06-28)
 ### 🔧 Loop #7: 11 Düzeltme + 3 CLI Script + 6 Yeni Skill + GitHub Template
 - ✅ 103 agent'a `tools` ve `model` alanları eklendi (kategori bazlı: opus/sonnet + tools set)
