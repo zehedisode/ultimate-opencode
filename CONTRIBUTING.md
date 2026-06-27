@@ -1,65 +1,71 @@
-# Katkıda Bulunma
+# Contributing
 
-Ultimate OpenCode'a katkıda bulunduğun için teşekkürler! 🚀
+Thanks for contributing to Ultimate OpenCode! 🚀
 
-## Ortam Kurulumu
+## Environment Setup
 
 ```bash
 git clone https://github.com/zehedisode/ultimate-opencode.git
 cd ultimate-opencode
-# Geliştirme için hiçbir şey kurmana gerek yok
-# verify.sh --self ile bütünlüğü kontrol edebilirsin
+# No dependencies needed for development
+# Run ./verify.sh --self to check integrity
 ```
 
-## Yeni Skill Ekleme
+## Adding a New Skill
 
-1. `skills/` klasörüne `.md` dosyası ekle
-2. YAML frontmatter ekle (zorunlu):
+1. Add `.md` file to `skills/`
+2. Include YAML frontmatter (required):
    ```yaml
    ---
-   name: skill-adi
-   description: "Kategori / Açıklama — ⭐"
+   name: skill-name
+   description: "Category / Description — ⭐"
    ---
    ```
-3. `README.md`'deki skill tablosuna ekle
-4. `AGENTS.md`'deki skill listesine ekle (eğer varsa)
-5. `verify.sh`'e kontrol satırı ekle (opsiyonel)
-6. `install.sh` otomatik kopyalar (skills/ altındaki tüm .md dosyaları)
+3. Add to skill table in `README.md`
+4. Add to skill list in `AGENTS.md` (if present)
+5. Add check to `verify.sh` (optional)
+6. `install.sh` auto-copies all `.md` files from `skills/`
 
-## Yeni Agent Ekleme
+## Adding a New Agent
 
-1. `agents/XX-kategori/` altına `.md` ekle
-2. YAML frontmatter ekle:
+1. Add `.md` file under `agents/XX-category/`
+2. Include YAML frontmatter:
    ```yaml
    ---
-   name: agent-adi
-   description: "Kısa açıklama"
+   name: agent-name
+   subagent_type: agent-name
+   model: claude-3-opus
+   tools: ["Read","Grep","Glob","Bash","Edit","Write"]
+   color: blue
+   description: "Short description"
    ---
    ```
-3. README'deki agent sayısını güncelle
+3. Update agent count in README
 
-## Yeni MCP Server Ekleme
+## Adding a New MCP Server
 
-1. `install.sh`'e `install_mcp` çağrısı ekle
-2. `config/opencode.jsonc`'ye MCP tanımı ekle
-3. README'deki MCP tablosuna ekle
+1. Add `install_mcp` call to `install.sh`
+2. Add MCP definition to `config/opencode.jsonc`
+3. Add to MCP table in README
 
-## Kod Standartları
+## Code Standards
 
-- Shell script'lerde: `set -euo pipefail` kullan
-- Frontmatter tüm .md dosyalarında zorunlu
-- "404: Not Found" içeriği asla olmamalı
-- README sayıları gerçek dosya sayılarıyla eşleşmeli
+- Shell scripts: use `set -euo pipefail`
+- All `.md` files must have YAML frontmatter
+- No "404: Not Found" content allowed
+- README counts must match actual file counts
+- Agent frontmatter: name → subagent_type → model → tools → color → desc
 
-## Doğrulama
+## Verification
 
 ```bash
-./verify.sh --self    # Repo bütünlüğü kontrolü
-bash -n install.sh    # Bash syntax kontrolü
+./verify.sh --self      # Repository integrity check
+bash -n install.sh      # Bash syntax check
+bats tests/test_basics.bats  # Run test suite
 ```
 
-## PR Süreci
+## PR Process
 
-1. Açıklayıcı bir branch adı: `fix/sorun-adi` veya `feature/yeni-ozellik`
-2. Commit: `🔧 loop #N: yapılan değişiklikler`
-3. PR aç ve `--self` doğrulamasının geçtiğinden emin ol
+1. Descriptive branch name: `fix/issue-name` or `feature/new-feature`
+2. Commit: `🔧 loop #N: description of changes`
+3. Open PR and ensure `--self` validation passes

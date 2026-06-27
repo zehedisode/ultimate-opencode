@@ -3,7 +3,7 @@
 set -euo pipefail
 RED='\033[0;31m'; GREEN='\033[0;32m'; YELLOW='\033[1;33m'; CYAN='\033[0;36m'; NC='\033[0m'
 PWD="$(cd "$(dirname "$0")" && pwd)"
-BACKUP_DIR="$HOME/.config/opencode.yedek_$(date +%Y%m%d_%H%M%S)"
+BACKUP_DIR="$HOME/.config/opencode.backup_$(date +%Y%m%d_%H%M%S)"
 TIMEOUT=30
 TOTAL_STEPS=12; CURRENT=0
 VERSION="1.7.0"
@@ -11,7 +11,7 @@ VERSION="1.7.0"
 # ---- Version ----
 if [ "${1:-}" = "--version" ] || [ "${1:-}" = "-v" ]; then
     echo "Ultimate OpenCode v$VERSION"
-    echo "65 skill • 103 agent • 14 komut • 8 plugin • 18 council"
+    echo "83 skills • 103 agents • 14 commands • 8 plugins • 18 council"
     exit 0
 fi
 
@@ -19,18 +19,19 @@ fi
 if [ "${1:-}" = "--help" ] || [ "${1:-}" = "-h" ]; then
     echo "🚀 Ultimate OpenCode Installer"
     echo ""
-    echo "Kullanım: ./install.sh [SEÇENEK]"
+    echo "Usage: ./install.sh [OPTION]"
     echo ""
-    echo "Seçenekler:"
-    echo "  --help, -h    Bu yardım mesajı"
-    echo "  --dry-run     Hiçbir şey yüklemeden simüle et"
-    echo "  --no-plugins  Plugin'leri atla"
-    echo "  --no-mcp      MCP server'ları atla"
-    echo "  --no-atlas    ATLAS'ı atla"
-    echo "  --no-backup   Yedek almadan kur"
-    echo "  --os          Sadece işletim sistemini göster"
+    echo "Options:"
+    echo "  --help, -h    Show this help"
+    echo "  --dry-run     Simulate without installing"
+    echo "  --no-plugins  Skip plugins"
+    echo "  --no-mcp      Skip MCP servers"
+    echo "  --no-atlas    Skip ATLAS"
+    echo "  --no-backup   Skip backup"
+    echo "  --os          Show OS only"
+    echo "  --version, -v Show version"
     echo ""
-    echo "Varsayılan: Tüm bileşenler kurulur"
+    echo "Default: All components installed"
     exit 0
 fi
 
@@ -38,7 +39,7 @@ fi
 DRY_RUN=0
 if [ "${1:-}" = "--dry-run" ]; then
     DRY_RUN=1
-    echo -e "${YELLOW}🔍 Dry-run modu: Hiçbir şey yüklenmeyecek${NC}"
+    echo -e "${YELLOW}🔍 Dry-run mode: Nothing will be installed${NC}"
     echo ""
 fi
 
@@ -51,7 +52,7 @@ if [ "${1:-}" = "--os" ]; then
         else echo "Linux"; fi
         ;;
     Darwin) echo "macOS" ;;
-    *) echo "Bilinmeyen OS" ;;
+    *) echo "Unknown OS" ;;
     esac
     exit 0
 fi
@@ -67,27 +68,27 @@ for arg in "$@"; do
     esac
 done
 
-trap 'echo -e "${RED}❌ Hata!${NC}"; exit 1' ERR
+trap 'echo -e "${RED}❌ Error!${NC}"; exit 1' ERR
 
 # ---- Network Check ----
 if ! curl -s --max-time 5 https://github.com >/dev/null 2>&1; then
-    echo -e "${RED}❌ İnternet bağlantısı yok!${NC}"
+    echo -e "${RED}❌ No internet connection!${NC}"
     exit 1
 fi
 
-# ---- SELinux / AppArmor Uyarısı ----
+# ---- SELinux / AppArmor Warning ----
 if command -v getenforce &>/dev/null && [ "$(getenforce 2>/dev/null)" = "Enforcing" ]; then
-    echo -e "${YELLOW}⚠️  SELinux Enforcing modunda. MCP server'larda sorun yaşarsan:${NC}"
+    echo -e "${YELLOW}⚠️  SELinux Enforcing mode. If MCP servers have issues:${NC}"
     echo "   sudo setsebool -P domain_can_mmap_files 1"
 fi
 
-# ---- NPM Destek Kontrol ----
+# ---- NPM Support Check ----
 NPM_CMD="npm"
 if ! command -v npm &>/dev/null; then
     if command -v pnpm &>/dev/null; then NPM_CMD="pnpm"
     elif command -v yarn &>/dev/null; then NPM_CMD="yarn"
     else
-        echo -e "${YELLOW}⚠️  npm bulunamadı! MCP server'lar manuel kurulmalı.${NC}"
+        echo -e "${YELLOW}⚠️  npm not found! MCP servers must be installed manually.${NC}"
         NPM_CMD=""
     fi
 fi
@@ -120,11 +121,11 @@ progress() {
     printf "${CYAN}]${NC} %3d%% ${label}  " "$pct"
 }
 
-# ---- Curl with progress bar ----
+# ---- Curl with progress ----
 curl_progress() {
     local url=$1 output=$2 label=$3
     echo -n "  → $label ... "
-    curl -# --max-time 30 -L "$url" -o "$output" 2>/dev/null && echo -e "${GREEN}tamam${NC}" || echo -e "${YELLOW}atlandı${NC}"
+    curl -# --max-time 30 -L "$url" -o "$output" 2>/dev/null && echo -e "${GREEN}done${NC}" || echo -e "${YELLOW}skipped${NC}"
 }
 
 # ---- Self-Update Check ----
@@ -133,15 +134,15 @@ self_update() {
     remote=$(curl -s --max-time 5 "https://api.github.com/repos/zehedisode/ultimate-opencode/commits/main" 2>/dev/null | grep -o '"sha":"[a-f0-9]*"' | head -1 | grep -o '[a-f0-9]\{7\}' || echo "")
     latest=$(git -C "$PWD" rev-parse --short HEAD 2>/dev/null || echo "")
     if [ -n "$remote" ] && [ -n "$latest" ] && [ "$remote" != "$latest" ]; then
-        echo -e "${YELLOW}⚠️  Yeni sürüm var! (${remote})${NC}"
-        echo "   git pull ile güncelleyebilirsin."
+        echo -e "${YELLOW}⚠️  New version available! (${remote})${NC}"
+        echo "   Run 'git pull' to update."
         echo ""
     fi
 }
 
 # ---- Banner ----
 echo -e "${CYAN}"
-cat banner.txt 2>/dev/null || echo "Ultimate OpenCode - Kurulum"
+cat banner.txt 2>/dev/null || echo "Ultimate OpenCode - Installer"
 echo -e "${NC}"
 
 # ---- Self Update ----
@@ -149,33 +150,34 @@ self_update
 
 # ---- Prerequisites ----
 if ! command -v opencode &>/dev/null; then
-    echo -e "${RED}❌ opencode bulunamadı!${NC}"
+    echo -e "${RED}❌ opencode not found!${NC}"
     echo "   curl -fsSL https://opencode.ai/install | bash"
     exit 1
 fi
 echo -e "${GREEN}✅ opencode $(opencode --version 2>/dev/null)${NC}"
 echo ""
 
-# ---- Dry Run: Sadece ne yapılacağını göster ----
+# ---- Dry Run: Show what will be done ----
 if [ "$DRY_RUN" -eq 1 ]; then
-    echo -e "${CYAN}📋 Yapılacaklar:${NC}"
-    echo "  • Config dosyaları → ~/.config/opencode/"
-    echo "  • $(ls "$PWD/skills/"*.md 2>/dev/null | wc -l) skill → ~/.config/opencode/skills/"
-    echo "  • $(find "$PWD/agents" -name '*.md' 2>/dev/null | wc -l) agent → ~/.config/opencode/agents/"
-    echo "  • $(ls "$PWD/commands/"*.md 2>/dev/null | wc -l) komut → ~/.config/opencode/commands/"
-    echo "  • 18 council agent → ~/.claude/agents/"
-    echo "  • 7 plugin (opencode plugin -g)"
-    echo "  • 4 MCP server"
-    echo "  • ATLAS 7 modül → ~/.opencode/atlas/"
+    echo -e "${CYAN}📋 Will install:${NC}"
+    echo "  • Config files → ~/.config/opencode/"
+    echo "  • $(ls "$PWD/skills/"*.md 2>/dev/null | wc -l) skills → ~/.config/opencode/skills/"
+    echo "  • $(find "$PWD/agents" -name '*.md' 2>/dev/null | wc -l) agents → ~/.config/opencode/agents/"
+    echo "  • $(ls "$PWD/commands/"*.md 2>/dev/null | wc -l) commands → ~/.config/opencode/commands/"
+    echo "  • 18 council agents → ~/.claude/agents/"
+    echo "  • 8 plugins (opencode plugin -g)"
+    echo "  • 4+ MCP servers"
+    echo "  • ATLAS 7 modules → ~/.opencode/atlas/"
+    echo "  • 11 scripts → ~/.config/opencode/scripts/ + PATH"
     echo ""
-    echo -e "${YELLOW}Dry-run tamam. Gerçek kurulum için --dry-run olmadan çalıştır.${NC}"
+    echo -e "${YELLOW}Dry-run complete. Run without --dry-run to install.${NC}"
     exit 0
 fi
 
-# ---- Backup Rotation (son 5 yedek) ----
+# ---- Backup Rotation (keeps last 5) ----
 rotate_backups() {
     local max=5
-    local backups=($(ls -dt "$HOME/.config/opencode.yedek_"* 2>/dev/null))
+    local backups=($(ls -dt "$HOME/.config/opencode.backup_"* 2>/dev/null))
     local count=${#backups[@]}
     if [ "$count" -gt "$max" ]; then
         for ((i=max; i<count; i++)); do
@@ -187,14 +189,14 @@ rotate_backups() {
 # ---- Backup ----
 if [ "$SKIP_BACKUP" -eq 0 ]; then
     rotate_backups
-    echo -e "${YELLOW}💾 Yedek alınıyor...${NC}"
+    echo -e "${YELLOW}💾 Creating backup...${NC}"
     mkdir -p "$BACKUP_DIR"
     if [ -d "$HOME/.config/opencode" ]; then
         cp -r "$HOME/.config/opencode"/* "$BACKUP_DIR/" 2>/dev/null || true
         echo -e "  → $BACKUP_DIR"
     fi
 else
-    echo -e "${YELLOW}💾 Yedek atlandı${NC}"
+    echo -e "${YELLOW}💾 Backup skipped${NC}"
 fi
 
 # ---- Copy Config ----
@@ -205,7 +207,7 @@ for f in "$PWD/config/"*; do
 done
 
 # ---- Copy Skills ----
-((CURRENT++)); progress $CURRENT $TOTAL_STEPS "Skills ($(ls "$PWD/skills/"*.md 2>/dev/null | wc -l) adet)"
+((CURRENT++)); progress $CURRENT $TOTAL_STEPS "Skills ($(ls "$PWD/skills/"*.md 2>/dev/null | wc -l) files)"
 mkdir -p "$HOME/.config/opencode/skills"
 for f in "$PWD/skills/"*.md; do
     [ -f "$f" ] && cp "$f" "$HOME/.config/opencode/skills/" 2>/dev/null || true
@@ -227,7 +229,7 @@ done
 CMD_COUNT=$(ls "$HOME/.config/opencode/commands/"*.md 2>/dev/null | wc -l)
 
 # ---- Council ----
-((CURRENT++)); progress $CURRENT $TOTAL_STEPS "Council (18 agent)"
+((CURRENT++)); progress $CURRENT $TOTAL_STEPS "Council (18 agents)"
 if [ -d "$PWD/council/agents" ]; then
     mkdir -p "$HOME/.claude/agents"
     cp -v "$PWD/council/agents/"*.md "$HOME/.claude/agents/" 2>/dev/null || true
@@ -249,8 +251,6 @@ plugins=(
     "opencode-poe-auth"
     "opencode-subagent-statusline"
     "opencode-websearch"
-    "opencode-bridge"
-    "opencode-cost-tracker"
 )
 PLUGIN_OK=0; PLUGIN_FAIL=0
 for p in "${plugins[@]}"; do
@@ -258,12 +258,12 @@ for p in "${plugins[@]}"; do
     if opencode plugin "$p" -g 2>/dev/null; then
         echo -e "${GREEN}OK${NC}"; ((PLUGIN_OK++))
     else
-        echo -e "${YELLOW}atlandı${NC}"; ((PLUGIN_FAIL++))
+        echo -e "${YELLOW}skipped${NC}"; ((PLUGIN_FAIL++))
     fi
 done
-echo -e "  ${GREEN}$PLUGIN_OK kuruldu${NC}${YELLOW}, $PLUGIN_FAIL atlandı${NC}"
+echo -e "  ${GREEN}$PLUGIN_OK installed${NC}${YELLOW}, $PLUGIN_FAIL skipped${NC}"
 else
-    echo -e "${YELLOW}⏭️  Plugin'ler atlandı (--no-plugins)${NC}"
+    echo -e "${YELLOW}⏭️  Plugins skipped (--no-plugins)${NC}"
 fi
 
 # ---- MCP Servers ----
@@ -282,13 +282,13 @@ install_mcp() {
     local name=$1 stars=$2 cmd=$3 install_cmd=$4
     echo -n "  → $name ($stars⭐) ... "
     if command -v "$cmd" &>/dev/null; then
-        echo -e "${GREEN}zaten var${NC}"
+        echo -e "${GREEN}already exists${NC}"
         return
     fi
     if timeout "$TIMEOUT" bash -c "$install_cmd" 2>/dev/null; then
-        echo -e "${GREEN}kuruldu${NC}"
+        echo -e "${GREEN}installed${NC}"
     else
-        echo -e "${YELLOW}önerildi (manuel: ${install_cmd%%|*})${NC}"
+        echo -e "${YELLOW}recommended (manual: ${install_cmd%%|*})${NC}"
     fi
 }
 
@@ -298,10 +298,10 @@ install_mcp "context7"        "doc"  "context7-mcp"        'npm_install @upstash
 install_mcp "filesystem"      "mcp"  "filesystem-mcp"      'npm_install @modelcontextprotocol/server-filesystem'
 install_mcp "chrome-devtools" "44K"  "chrome-devtools-mcp" 'npx -y @anthropic/chrome-devtools-mcp --version'
 echo ""
-echo -e "${YELLOW}ℹ️  İsteğe bağlı MCP'ler:${NC}"
+echo -e "${YELLOW}ℹ️  Optional MCPs:${NC}"
 echo "   brave-search: npx -y @anthropic/brave-search-mcp-server"
 else
-    echo -e "${YELLOW}⏭️  MCP Server'lar atlandı (--no-mcp)${NC}"
+    echo -e "${YELLOW}⏭️  MCP Servers skipped (--no-mcp)${NC}"
 fi
 
 # ---- CLI Tools ----
@@ -314,9 +314,9 @@ for tool in \
     IFS='|' read -r cmd stars pkg <<< "$tool"
     echo -n "  → $cmd ($stars) ... "
     if command -v "$cmd" &>/dev/null; then
-        echo -e "${GREEN}zaten var${NC}"
+        echo -e "${GREEN}already exists${NC}"
     else
-        npm_install "$pkg" && echo -e "${GREEN}kuruldu${NC}" || echo -e "${YELLOW}hata${NC}"
+        npm_install "$pkg" && echo -e "${GREEN}installed${NC}" || echo -e "${YELLOW}error${NC}"
     fi
 done
 
@@ -324,17 +324,31 @@ done
 if ! command -v serena &>/dev/null; then
     echo -n "  → serena (25K⭐) ... "
     which uv &>/dev/null || curl -LsSf https://astral.sh/uv/install.sh | bash >/dev/null 2>&1
-    uv tool install -p 3.13 serena-agent >/dev/null 2>&1 && echo -e "${GREEN}kuruldu${NC}" || echo -e "${YELLOW}hata${NC}"
+    uv tool install -p 3.13 serena-agent >/dev/null 2>&1 && echo -e "${GREEN}installed${NC}" || echo -e "${YELLOW}error${NC}"
 fi
 
 # gograph (special - needs go)
 if ! command -v gograph &>/dev/null; then
     echo -n "  → gograph (Go AST) ... "
     if command -v go &>/dev/null; then
-        go install github.com/ozgurcd/gograph/cmd/gograph@latest >/dev/null 2>&1 && echo -e "${GREEN}kuruldu${NC}" || echo -e "${YELLOW}hata${NC}"
+        go install github.com/ozgurcd/gograph/cmd/gograph@latest >/dev/null 2>&1 && echo -e "${GREEN}installed${NC}" || echo -e "${YELLOW}error${NC}"
     else
-        echo -e "${YELLOW}Go gerekli${NC}"
+        echo -e "${YELLOW}Go required${NC}"
     fi
+fi
+
+# ---- Add Scripts to PATH ----
+if [ -f "$HOME/.bashrc" ] || [ -f "$HOME/.zshrc" ]; then
+    SCRIPTS_DIR="$HOME/.config/opencode/scripts"
+    mkdir -p "$SCRIPTS_DIR"
+    for script in "$PWD/scripts/"*.sh; do
+        [ -f "$script" ] && cp "$script" "$SCRIPTS_DIR/" 2>/dev/null || true
+    done
+    PATH_LINE='export PATH="$PATH:$HOME/.config/opencode/scripts"'
+    for rc in "$HOME/.bashrc" "$HOME/.zshrc"; do
+        [ -f "$rc" ] && grep -q "opencode/scripts" "$rc" 2>/dev/null || echo "$PATH_LINE" >> "$rc"
+    done
+    echo -e "  ${GREEN}✅ Scripts added to PATH${NC}"
 fi
 
 # ---- ATLAS ----
@@ -343,12 +357,12 @@ if [ "$SKIP_ATLAS" -eq 0 ]; then
 mkdir -p "$HOME/.opencode/atlas"
 if [ -d "$PWD/atlas" ]; then
     cp -r "$PWD/atlas/"* "$HOME/.opencode/atlas/" 2>/dev/null
-    echo -e "  ${GREEN}✅ 7 modül kuruldu${NC}"
+    echo -e "  ${GREEN}✅ 7 modules installed${NC}"
 else
-    echo -e "  ${YELLOW}⚠️ atlas klasörü bulunamadı${NC}"
+    echo -e "  ${YELLOW}⚠️ atlas directory not found${NC}"
 fi
 else
-    echo -e "${YELLOW}⏭️  ATLAS atlandı (--no-atlas)${NC}"
+    echo -e "${YELLOW}⏭️  ATLAS skipped (--no-atlas)${NC}"
 fi
 
 # ---- Themes ----
@@ -358,44 +372,29 @@ for f in "$PWD/themes/"*; do
     [ -f "$f" ] && cp -v "$f" "$HOME/.config/opencode/themes/" 2>/dev/null || true
 done
 
-# ---- Add Scripts to PATH ----
-if [ -f "$HOME/.bashrc" ] || [ -f "$HOME/.zshrc" ]; then
-    SCRIPTS_DIR="$HOME/.config/opencode/scripts"
-    mkdir -p "$SCRIPTS_DIR"
-    for script in "$PWD/scripts/"*.sh; do
-        [ -f "$script" ] && cp "$script" "$SCRIPTS_DIR/" 2>/dev/null || true
-    done
-    # Add to PATH if not already there
-    PATH_LINE='export PATH="$PATH:$HOME/.config/opencode/scripts"'
-    for rc in "$HOME/.bashrc" "$HOME/.zshrc"; do
-        [ -f "$rc" ] && grep -q "opencode/scripts" "$rc" 2>/dev/null || echo "$PATH_LINE" >> "$rc"
-    done
-    echo -e "  ${GREEN}✅ Scripts PATH'e eklendi${NC}"
-fi
-
 # ---- Restart Warning ----
 echo ""
 echo -e "${GREEN}"
 echo "=========================================="
-echo "  ✅ Ultimate OpenCode kuruldu!"
+echo "  ✅ Ultimate OpenCode installed!"
 echo "=========================================="
 echo -e "${NC}"
-echo "📊 ÖZET:"
-echo "  🎯 $SKILL_COUNT skill  👤 $AGENT_COUNT agent"
-echo "  ⚡ $CMD_COUNT komut    🔌 $PLUGIN_OK plugin"
-echo "  👥 18 council          🌍 7 atlas modül"
-echo "  💾 Yedek: $BACKUP_DIR"
+echo "📊 SUMMARY:"
+echo "  🎯 $SKILL_COUNT skills  👤 $AGENT_COUNT agents"
+echo "  ⚡ $CMD_COUNT commands  🔌 $PLUGIN_OK plugins"
+echo "  👥 18 council          🌍 7 atlas modules"
+echo "  💾 Backup: $BACKUP_DIR"
 echo ""
-echo "📖 KULLANIM:"
-echo "  opencode              → TUI'yi başlat"
-echo "  /council <soru>       → 18 AI persona"
-echo "  @python-expert <soru> → uzman subagent"
-echo "  /komut                → slash komut"
-echo "  Ctrl+T → variant     Tab → agent"
+echo "📖 USAGE:"
+echo "  opencode              → Launch TUI"
+echo "  /council <question>   → 18 AI personas"
+echo "  @python-expert        → Expert subagent"
+echo "  /command              → Slash command"
+echo "  Ctrl+T → variant      Tab → agent"
 echo ""
-echo -e "${YELLOW}📌 codegraph için:    codegraph init"
-echo "   ATLAS için:         atlas/init.sh"
-echo "   Geri almak için:    cp -r $BACKUP_DIR/* ~/.config/opencode/"
-echo "   Kaldırmak için:     ./uninstall.sh"
-echo "   Script'ler:        chamber/echo/prism${NC}"
+echo -e "${YELLOW}📌 codegraph:        codegraph init"
+echo "   ATLAS:             atlas/init.sh"
+echo "   Restore:           cp -r $BACKUP_DIR/* ~/.config/opencode/"
+echo "   Uninstall:         ./uninstall.sh"
+echo "   Scripts:           chamber/echo/prism${NC}"
 echo ""

@@ -1,6 +1,6 @@
 #!/bin/bash
-# 🗑️ Ultimate OpenCode - Kaldırma Aracı
-# Kullanım: ./uninstall.sh [--force] [--purge]
+# 🗑️ Ultimate OpenCode - Uninstaller
+# Usage: ./uninstall.sh [--force] [--purge]
 
 set -euo pipefail
 RED='\033[0;31m'; GREEN='\033[0;32m'; YELLOW='\033[1;33m'; CYAN='\033[0;36m'; NC='\033[0m'
@@ -11,32 +11,32 @@ for arg in "$@"; do
         --force|-f) FORCE=1 ;;
         --purge|-p) PURGE=1 ;;
         --help|-h)
-            echo "🗑️ Ultimate OpenCode - Kaldırma Aracı"
+            echo "🗑️ Ultimate OpenCode - Uninstaller"
             echo ""
-            echo "Kullanım: ./uninstall.sh [SEÇENEK]"
+            echo "Usage: ./uninstall.sh [OPTION]"
             echo ""
-            echo "Seçenekler:"
-            echo "  --force, -f   Onay sormadan kaldır"
-            echo "  --purge, -p   Tüm yedekleri ve verileri sil"
-            echo "  --help, -h    Bu yardım mesajı"
+            echo "Options:"
+            echo "  --force, -f   Uninstall without confirmation"
+            echo "  --purge, -p   Remove all backups and data"
+            echo "  --help, -h    Show this help"
             exit 0
             ;;
     esac
 done
 
 echo -e "${YELLOW}========================================${NC}"
-echo -e "${YELLOW}  🗑️ Ultimate OpenCode - Kaldırma ${NC}"
+echo -e "${YELLOW}  🗑️ Ultimate OpenCode - Uninstaller ${NC}"
 echo -e "${YELLOW}========================================${NC}"
 echo ""
 
 if [ "$FORCE" -eq 0 ]; then
-    echo -n "⚠️  Ultimate OpenCode kaldırılsın mı? [E/h]: "
+    echo -n "⚠️  Uninstall Ultimate OpenCode? [y/N]: "
     read -r ans
-    [[ "$ans" =~ ^[Hh] ]] && echo "İptal edildi." && exit 0
+    [[ "$ans" =~ ^[Nn] ]] && echo "Cancelled." && exit 0
 fi
 
-# Kaldırılacaklar
-echo -e "${CYAN}📋 Kaldırılacaklar:${NC}"
+# What will be removed
+echo -e "${CYAN}📋 Will remove:${NC}"
 echo "  • ~/.config/opencode/ (config, skills, agents, commands, themes)"
 echo "  • ~/.config/opencode/scripts/"
 echo "  • ~/.opencode/atlas/"
@@ -48,106 +48,97 @@ echo "  • ~/.claude/skills/council/"
 echo ""
 
 if [ "$FORCE" -eq 0 ]; then
-    echo -n "Devam edilsin mi? [E/h]: "
+    echo -n "Continue? [y/N]: "
     read -r ans2
-    [[ "$ans2" =~ ^[Hh] ]] && echo "İptal edildi." && exit 0
+    [[ "$ans2" =~ ^[Nn] ]] && echo "Cancelled." && exit 0
 fi
 
 # Opencode config
 echo -n "  → opencode config ... "
 if [ -d "$HOME/.config/opencode" ]; then
     rm -rf "$HOME/.config/opencode"
-    echo -e "${GREEN}silindi${NC}"
+    echo -e "${GREEN}removed${NC}"
 else
-    echo -e "${YELLOW}yok${NC}"
-fi
-
-# Opencode scripts
-echo -n "  → opencode scripts ... "
-if [ -d "$HOME/.config/opencode/scripts" ]; then
-    rm -rf "$HOME/.config/opencode/scripts"
-    echo -e "${GREEN}silindi${NC}"
-else
-    echo -e "${YELLOW}yok${NC}"
+    echo -e "${YELLOW}not found${NC}"
 fi
 
 # ATLAS
 echo -n "  → ATLAS ... "
 if [ -d "$HOME/.opencode/atlas" ]; then
     rm -rf "$HOME/.opencode/atlas"
-    echo -e "${GREEN}silindi${NC}"
+    echo -e "${GREEN}removed${NC}"
 else
-    echo -e "${YELLOW}yok${NC}"
+    echo -e "${YELLOW}not found${NC}"
 fi
 
 # PRISM
-echo -n "  → PRISM profili ... "
+echo -n "  → PRISM profile ... "
 if [ -d "$HOME/.opencode/prism" ]; then
     rm -rf "$HOME/.opencode/prism"
-    echo -e "${GREEN}silindi${NC}"
+    echo -e "${GREEN}removed${NC}"
 else
-    echo -e "${YELLOW}yok${NC}"
+    echo -e "${YELLOW}not found${NC}"
 fi
 
 # CHAMBER
-echo -n "  → CHAMBER session'ları ... "
+echo -n "  → CHAMBER sessions ... "
 if [ -d "$HOME/.opencode/chamber" ]; then
     rm -rf "$HOME/.opencode/chamber"
-    echo -e "${GREEN}silindi${NC}"
+    echo -e "${GREEN}removed${NC}"
 else
-    echo -e "${YELLOW}yok${NC}"
+    echo -e "${YELLOW}not found${NC}"
 fi
 
 # ECHO
 echo -n "  → ECHO context ... "
 if [ -d "$HOME/.opencode/echo" ]; then
     rm -rf "$HOME/.opencode/echo"
-    echo -e "${GREEN}silindi${NC}"
+    echo -e "${GREEN}removed${NC}"
 else
-    echo -e "${YELLOW}yok${NC}"
+    echo -e "${YELLOW}not found${NC}"
 fi
 
 # Council
-echo -n "  → council agent'ları ... "
+echo -n "  → council agents ... "
 COUNT=$(ls "$HOME/.claude/agents/council-"*.md 2>/dev/null | wc -l)
 if [ "$COUNT" -gt 0 ]; then
     rm -f "$HOME/.claude/agents/council-"*.md
-    echo -e "${GREEN}$COUNT dosya silindi${NC}"
+    echo -e "${GREEN}$COUNT files removed${NC}"
 else
-    echo -e "${YELLOW}yok${NC}"
+    echo -e "${YELLOW}not found${NC}"
 fi
 
 echo -n "  → council skill ... "
 if [ -d "$HOME/.claude/skills/council" ]; then
     rm -rf "$HOME/.claude/skills/council"
-    echo -e "${GREEN}silindi${NC}"
+    echo -e "${GREEN}removed${NC}"
 else
-    echo -e "${YELLOW}yok${NC}"
+    echo -e "${YELLOW}not found${NC}"
 fi
 
-# PATH'ten temizle
+# Clean PATH
 for rc in "$HOME/.bashrc" "$HOME/.zshrc"; do
     [ -f "$rc" ] && sed -i '/opencode\/scripts/d' "$rc" 2>/dev/null || true
 done
 
-# Purge: tüm yedekleri sil
+# Purge: remove all backups
 if [ "$PURGE" -eq 1 ]; then
     echo ""
-    echo -e "${YELLOW}🧹 Purge modu: Tüm yedekler siliniyor...${NC}"
-    BAK_COUNT=$(ls -d "$HOME/.config/opencode.yedek_"* 2>/dev/null | wc -l)
+    echo -e "${YELLOW}🧹 Purge mode: Removing all backups...${NC}"
+    BAK_COUNT=$(ls -d "$HOME/.config/opencode.backup_"* 2>/dev/null | wc -l)
     if [ "$BAK_COUNT" -gt 0 ]; then
-        rm -rf "$HOME/.config/opencode.yedek_"*
-        echo -e "  ${GREEN}$BAK_COUNT yedek silindi${NC}"
+        rm -rf "$HOME/.config/opencode.backup_"*
+        echo -e "  ${GREEN}$BAK_COUNT backups removed${NC}"
     else
-        echo -e "  ${YELLOW}yedek yok${NC}"
+        echo -e "  ${YELLOW}no backups${NC}"
     fi
 fi
 
 echo ""
 echo -e "${GREEN}========================================${NC}"
-echo -e "${GREEN}  ✅ Ultimate OpenCode kaldırıldı! ${NC}"
+echo -e "${GREEN}  ✅ Ultimate OpenCode uninstalled! ${NC}"
 echo -e "${GREEN}========================================${NC}"
 echo ""
-echo "📌 Tekrar kurmak için: git clone ve ./install.sh"
-[ "$PURGE" -eq 0 ] && echo "💾 Yedekler korundu: ~/.config/opencode.yedek_*"
+echo "📌 To reinstall: git clone and run ./install.sh"
+[ "$PURGE" -eq 0 ] && echo "💾 Backups kept: ~/.config/opencode.backup_*"
 echo ""

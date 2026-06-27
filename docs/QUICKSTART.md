@@ -1,6 +1,6 @@
-# 🚀 Ultimate OpenCode — Hızlı Başlangıç
+# 🚀 Ultimate OpenCode — Quick Start
 
-## 1. Kurulum
+## 1. Install
 
 ```bash
 git clone https://github.com/zehedisode/ultimate-opencode.git
@@ -8,39 +8,43 @@ cd ultimate-opencode
 ./install.sh
 ```
 
-## 2. Kullanım
+## 2. Usage
 
 ```bash
-# TUI'yi aç
+# Launch TUI
 opencode
 
-# Slash komutlar
-/commit              # Commit mesajı yaz
-/review              # Kod review
-/council <soru>      # 18 AI persona topla
+# Slash commands
+/commit              # Write commit message
+/review              # Code review
+/council <question>  # Convene 18 AI personas
 
-# Agent çağır
-@python-expert "Bu fonksiyonu optimize et"
-@security-auditor "Bu kodu güvenlik açısından kontrol et"
+# Call agents
+@python-expert "Optimize this function"
+@security-auditor "Audit this code for vulnerabilities"
 
-# Özgün araçlar
-chamber new feature-x    # Yeni session
-echo share "keşif"       # Context paylaş
-prism analyze src/       # Kod stili analiz
+# Original tools
+chamber new feature-x    # New session
+echo share "discovery"   # Share context
+prism analyze src/       # Code style analysis
+
+# Master launcher
+./scripts/opencode.sh status   # System status
+./scripts/opencode.sh help     # All commands
 ```
 
-## 3. ATLAS Başlatma
+## 3. Start ATLAS
 
 ```bash
-cd projen
+cd your-project
 atlas/init.sh
 ```
 
-## 4. Önemli Komutlar
+## 4. Key Commands
 
 ```bash
-./verify.sh --self       # Repo bütünlüğü
-./scripts/benchmark.sh   # Performans testi
-./scripts/sync-stars.sh  # Star güncelleme
-./uninstall.sh           # Kaldırma
+./verify.sh --self        # Repo integrity check
+./scripts/benchmark.sh    # Performance test
+./scripts/sync-stars.sh   # Update star counts
+./uninstall.sh            # Remove everything
 ```

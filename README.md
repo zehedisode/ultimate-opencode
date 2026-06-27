@@ -2,45 +2,45 @@
 
 # 🚀 Ultimate OpenCode
 
-### Sıfır opencode'u 5 dakikada full mod'a çeviren tek paket.
+### Turn a fresh opencode install into FULL MOD — in one command.
 
-**🎯 14+ MCP · 83 Skill · 103 Agent (sa+model+tools+color) · 14 Komut · 8 Plugin · 18 Council · 1 Atlas · 290+ Dosya · 11 Script · 3 Özgün · 282 KB**
+**🏆 83 Skills · 103 Agents (sa+model+tools+color) · 11 Scripts · 14 Slash Commands · 8 Plugins · 18 Council Personas · 14+ MCP Servers · 1 ATLAS System · 283 Files**
 
 [![GitHub stars](https://img.shields.io/github/stars/zehedisode/ultimate-opencode?style=social)](https://github.com/zehedisode/ultimate-opencode)
+[![CI](https://img.shields.io/github/actions/workflow/status/zehedisode/ultimate-opencode/validate.yml?branch=main&label=CI&logo=github)](https://github.com/zehedisode/ultimate-opencode/actions)
+[![Skills](https://img.shields.io/badge/skills-83-8A2BE2)](https://github.com/zehedisode/ultimate-opencode)
+[![Agents](https://img.shields.io/badge/agents-103-success)](https://github.com/zehedisode/ultimate-opencode)
 [![Platform](https://img.shields.io/badge/platform-linux%20%7C%20macOS%20%7C%20wsl-blue)](https://github.com/zehedisode/ultimate-opencode)
 [![License](https://img.shields.io/badge/license-MIT-green)](https://github.com/zehedisode/ultimate-opencode)
-[![One-Click Install](https://img.shields.io/badge/install-one--click-orange)](https://github.com/zehedisode/ultimate-opencode)
-[![CI](https://img.shields.io/github/actions/workflow/status/zehedisode/ultimate-opencode/validate.yml?branch=main&label=CI)](https://github.com/zehedisode/ultimate-opencode/actions)
-[![Skills](https://img.shields.io/badge/skills-65-blueviolet)](https://github.com/zehedisode/ultimate-opencode)
-[![Agents](https://img.shields.io/badge/agents-103-success)](https://github.com/zehedisode/ultimate-opencode)
 [![Last Commit](https://img.shields.io/github/last-commit/zehedisode/ultimate-opencode)](https://github.com/zehedisode/ultimate-opencode)
+[![OpenCode](https://img.shields.io/badge/built%20for-opencode-000?logo=openai)](https://opencode.ai)
 
-> **45+ farklı GitHub reposundan toplanmış, test edilmiş ve optimize edilmiş en iyi opencode eklentileri.**
-> **Hiçbiri API key gerektirmez. Her şey tek komutla kurulur.**
->
-> **🧠 3 ÖZGÜN ÖZELLİK**: PRISM 2.0 (kod stili profiling) · CHAMBER (session manager) · ECHO (context mirroring)
+> **Curated from 45+ GitHub repos. 3 original inventions. Zero API keys required. One command to install.**
 
 </div>
 
 ---
 
-## 📋 İçindekiler
+## 📋 Table of Contents
 
-- [⚡ Tek Komut Kurulum](#-tek-komut-kurulum)
-- [🌍 ATLAS — Proje Bilinç Sistemi](#-atlas--dünyada-ilk-ve-tek-proje-bilinç-sistemi)
-- [📡 MCP Server'lar](#-mcp-serverlar)
-- [👤 103 Agent Persona](#-103-agent-persona)
+- [⚡ One-Click Install](#-one-click-install)
+- [🌍 ATLAS — Project Intelligence System](#-atlas--worlds-first-project-intelligence-system)
+- [🧠 3 Original Inventions (Nowhere Else)](#-3-original-inventions-nowhere-else)
+- [📡 14+ MCP Servers](#-14-mcp-servers)
+- [👤 103 Agent Personas](#-103-agent-personas)
 - [👥 Council of High Intelligence](#-council-of-high-intelligence)
-- [🎯 39 Skill](#-39-skill)
-- [⚡ 14 Slash Komut](#-14-slash-komut)
-- [🔌 7 Plugin](#-7-plugin)
-- [🔧 CLI Araçlar](#-cli-araçlar)
-- [🏆 Neden Bu Repo?](#-neden-bu-repo)
-- [📜 Lisans](#-lisans)
+- [🎯 83 Skills](#-83-skills)
+- [⚡ 14 Slash Commands](#-14-slash-commands)
+- [🔌 8 Plugins](#-8-plugins)
+- [🛠️ 11 Scripts](#️-11-scripts)
+- [🔧 CLI Tools](#-cli-tools)
+- [🏆 Why This Repo?](#-why-this-repo)
+- [📊 Stats](#-stats)
+- [📜 License](#-license)
 
 ---
 
-## ⚡ Tek Komut Kurulum
+## ⚡ One-Click Install
 
 ```bash
 git clone https://github.com/zehedisode/ultimate-opencode.git
@@ -48,502 +48,434 @@ cd ultimate-opencode
 ./install.sh
 ```
 
-**Ardından:** `opencode` 🎉
+**Then:** `opencode` 🎉
 
-Kurulum yapmanız gerekenler: **hiçbir şey.** API key gerekmez. Ekstra konfigürasyon gerekmez. Tüm skiller, agent'lar, MCP server'lar ve plugin'ler otomatik kurulur.
+**Zero config. Zero API keys. All skills, agents, MCP servers, and plugins install automatically.**
+
+### Options
+
+```bash
+./install.sh --dry-run        # Simulate without installing
+./install.sh --no-plugins     # Skip plugin installation
+./install.sh --no-mcp         # Skip MCP servers
+./install.sh --no-atlas       # Skip ATLAS system
+./install.sh --no-backup      # Skip backup
+./install.sh --version        # Show version
+```
 
 ---
 
-## 🌍 ATLAS — Dünyada İlk ve Tek Proje Bilinç Sistemi
+## 🌍 ATLAS — World's First Project Intelligence System
 
-> **NotebookLM Google'ın not defterinize yaptığını, ATLAS projenize yapar.**
+> **What NotebookLM does for your notes, ATLAS does for your codebase.**
 
 ```
 ╔══════════════════════════════════════════════════════════════╗
 ║                    🌍 ATLAS                                  ║
 ║              Project Intelligence System                      ║
 ║                                                              ║
-║  GitHub Copilot → Sadece kod tamamlar                        ║
-║  Claude Code    → Sadece kod yazar                           ║
-║  Diğer skill'ler → Sadece pasif talimat verir                ║
+║  GitHub Copilot → Only completes code                        ║
+║  Claude Code    → Only writes code                           ║
+║  Other skills   → Only passive instructions                  ║
 ║                                                              ║
-║  ATLAS          → PROJENİ ANLAR, ÖLÇER, KORUR                ║
+║  ATLAS          → UNDERSTANDS, MEASURES, PROTECTS            ║
 ╚══════════════════════════════════════════════════════════════╝
 ```
 
-### 🤔 Problemi Düşünün
-
-Bugün kullandığınız tüm AI araçlarının ortak sorunu: **projeniz hakkında HİÇBİR ŞEY bilmemeleri.**
-
-- GitHub Copilot sadece imlecinizin olduğu dosyaya bakar
-- Claude Code her seansta projeyi sıfırdan keşfeder
-- Hiçbiri dün yaptığınız hatayı hatırlamaz
-- Hiçbiri projenizin maliyetini ölçmez
-- Hiçbiri dokümantasyonu sizin için canlı tutmaz
-
-**ATLAS tüm bu sorunları tek seferde çözer.**
-
-### 🏗️ 7 Modül, 12 Dosya
+### 🏗️ 7 Modules, 12 Files
 
 ```
 📁 .opencode/atlas/
-│
-├── 📁 core/                    ─── PROJE BİLİNCİ
-│   ├── 📄 project.md           Projenin DNA'sı: yapı, dil, framework, bağımlılıklar
-│   ├── 📄 decisions.md         Architecture Decision Records (ADR)
-│   └── 📄 changelog.md         Her değişikliğin etki analizi ile kaydı
-│
-├── 📁 quality/                 ─── KALİTE KONTROL
-│   ├── 📄 standards.md         Kod standartları, test gereksinimleri, eşikler
-│   ├── 📄 review-checklist.md  Her değişiklik için otomatik kontrol listesi
-│   └── 📄 regression.md        Geçmiş bug'lar ve tekrarını engelleme mekanizması
-│
-├── 📁 metrics/                 ─── ANALİTİK
-│   ├── 📄 costs.md             Token tüketimi ve USD bazında maliyet takibi
-│   └── 📄 heatmap.md           Dosya değişim sıklığı ve risk haritası
-│
-├── 📁 docs/                    ─── YAŞAYAN DÖKÜMANTASYON
-│   ├── 📄 api.md               Otomatik güncellenen API dökümantasyonu
-│   └── 📄 architecture.md     C4 modeli ile proje mimarisi
-│
-├── 📁 team/                    ─── TAKIM KOORDİNASYONU
-│   ├── 📄 agents.md            Çoklu ajan görev dağılımı
-│   └── 📄 sync.md              Oturumlar arası senkronizasyon
-│
-└── 📁 reports/                 ─── RAPORLAR
-    └── 📄 insights.md          Haftalık trend analizi ve içgörüler
+├── 📁 core/       → Project DNA, ADRs, changelog
+├── 📁 quality/    → Standards, review checks, regression shield
+├── 📁 metrics/    → Token costs, heatmap, performance
+├── 📁 docs/       → Self-updating API & architecture docs
+├── 📁 team/       → Multi-agent coordination & sync
+└── 📁 reports/    → Weekly trends & insights
 ```
 
-### 💥 Rakiplerle Karşılaştırma
+### 💥 Comparison
 
-| Özellik | **ATLAS** | GitHub Copilot | Claude Code | Diğer Skill'ler |
+| Feature | **ATLAS** | GitHub Copilot | Claude Code | Other Skills |
 |---|---|---|---|---|
-| **🧠 Proje Bilinci** | ✅ Tüm projeyi tanır | ❌ Sadece açık dosya | ❌ Her seans sıfırdan | ❌ |
-| **🛡️ Regresyon Engelleme** | ✅ "Bu kod X hatasına yol açmıştı" | ❌ | ❌ | ❌ |
-| **💰 Maliyet Takibi** | ✅ Token + USD takibi | ❌ | ❌ | ❌ |
-| **📝 Yaşayan Doküman** | ✅ Otomatik güncellenir | ❌ | ❌ | ❌ |
-| **✅ Kalite Gates** | ✅ Her değişiklik denetlenir | ❌ | ❌ | ❌ |
-| **👥 Takım Koordinasyonu** | ✅ Çoklu ajan desteği | ❌ | ❌ | ❌ |
-| **📊 Etki Analizi** | ✅ "X değişirse Y etkilenir" | ❌ | ❌ | ❌ |
-| **🔥 Isı Haritası** | ✅ Riskli dosyaları gösterir | ❌ | ❌ | ❌ |
-| **📐 ADR Takibi** | ✅ Otomatik karar günlüğü | ❌ | ❌ | ❌ |
-| **💡 İçgörü Raporları** | ✅ Haftalık trend analizi | ❌ | ❌ | ❌ |
+| 🧠 Project Awareness | ✅ Full project | ❌ Open file only | ❌ Fresh each session | ❌ |
+| 🛡️ Regression Prevention | ✅ "This broke X before" | ❌ | ❌ | ❌ |
+| 💰 Cost Tracking | ✅ Token + USD | ❌ | ❌ | ❌ |
+| 📝 Living Docs | ✅ Auto-updates | ❌ | ❌ | ❌ |
+| ✅ Quality Gates | ✅ Every change checked | ❌ | ❌ | ❌ |
+| 👥 Team Coordination | ✅ Multi-agent | ❌ | ❌ | ❌ |
+| 📊 Impact Analysis | ✅ "X affects Y" | ❌ | ❌ | ❌ |
+| 🔥 Heat Map | ✅ High-risk files | ❌ | ❌ | ❌ |
+| 📐 ADR Tracking | ✅ Decision log | ❌ | ❌ | ❌ |
+| 💡 Insight Reports | ✅ Weekly trends | ❌ | ❌ | ❌ |
 
-### 🚀 Kullanım
+### Usage
 
 ```bash
-# Projende ATLAS'ı başlat
-cd projen
+cd your-project
 atlas/init.sh
-
-# Artık her seansta:
-# - ATLAS projeni tanır
-# - Geçmiş hataları hatırlar
-# - Maliyeti ölçer
-# - Dokümanı günceller
-# - Kaliteyi denetler
-
-# Hiçbir şey yapmana gerek yok. ATLAS otomatik çalışır.
+# ATLAS now watches your project automatically
 ```
 
 ---
 
-## 🏗️ Mimari
+## 🧠 3 Original Inventions (Nowhere Else)
 
-```mermaid
-graph TD
-    subgraph "Ultimate OpenCode"
-        A[install.sh] --> B[Config]
-        A --> C[Skills 65]
-        A --> D[Agents 103]
-        A --> E[MCP 8+]
-        A --> F[ATLAS]
-        A --> G[Scripts 6]
+These features are **exclusive to Ultimate OpenCode**. You won't find them in any other package.
 
-        B --> H[opencode.json]
-        B --> I[opencode.jsonc]
-        C --> J[caveman, ECC, karpathy...]
-        D --> K[10 kategori]
-        D --> L[models+tools+color]
-        E --> M[codegraph, memory, context7...]
-        F --> N[core, quality, metrics, docs, team, reports]
-        G --> O[chamber, echo, prism, sync-stars...]
-    end
+### 🧠 PRISM 2.0 — Code Style Profiling
 
-    style A fill:#4a9,color:#fff
-    style B fill:#48b,color:#fff
-    style C fill:#67b,color:#fff
+PRISM 2.0 analyzes your coding style, creates a fingerprint, and makes all 103 agents adapt to YOU.
+
+```bash
+prism init                 # Create your profile
+prism analyze src/         # Analyze code style
+prism profile              # Show your fingerprint
+prism suggest file.ts      # Get style suggestions
+prism --json               # JSON output
 ```
+
+**What it detects:**
+- Naming conventions (camelCase vs snake_case)
+- Indentation style
+- Framework preferences
+- Language distribution
+- Learned patterns
+
+### ⚡ CHAMBER — Session Manager
+
+CHAMBER manages opencode sessions, takes snapshots, and orchestrates parallel agents.
+
+```bash
+chamber new "feature-x"    # Create session
+chamber list               # List all sessions
+chamber snapshot           # Save state
+chamber restore <id>       # Restore state
+chamber parallel "a" "b"   # Run agents in parallel
+chamber merge src dst      # Merge sessions
+chamber --json             # JSON output
+```
+
+### 🔊 ECHO — Cross-Session Context Mirroring
+
+ECHO instantly mirrors discoveries across ALL active sessions.
+
+```bash
+echo share "Found API: /api/v2/users"   # Share discovery
+echo broadcast "Warning: .env exposed!"  # Broadcast alert
+echo status                              # Show context
+echo history                             # View history
+echo --json                              # JSON output
+```
+
+**Auto-detected context types:** Discoveries, Bugs, Decisions, Warnings
 
 ---
 
-## 📡 MCP Server'lar
+## 📡 14+ MCP Servers
 
-| Server | ⭐ | Görev |
+| Server | ⭐ | Purpose |
 |---|---|---|
-| **codegraph** | 55K | Kod sembol grafiği, çağrı yolu analizi |
-| **codebase-memory-mcp** | 17K | Kod zekası, Cypher sorguları, etki analizi |
-| **context7** | — | npm/framework dökümantasyon arama |
-| **filesystem** | — | Gelişmiş dosya sistemi işlemleri |
-| **brave-search** | — | Web araması (opsiyonel) |
-| **serena** | 25K | Semantik kod retriever, refactoring |
+| **codegraph** | 55K | Code symbol graph, call path analysis |
+| **codebase-memory-mcp** | 17K | Code intelligence, Cypher queries, impact analysis |
+| **context7** | — | npm/framework documentation search |
+| **filesystem** | — | Advanced filesystem operations |
+| **brave-search** | — | Web search (optional) |
+| **serena** | 25K | Semantic code retrieval, refactoring |
 | **chrome-devtools** | 44K | Chrome DevTools MCP |
-| **opencode-mcp-memory** | 2.8K | Kalıcı bellek MCP |
-| **opencode-mcp-filesystem** | 1.6K | Güvenli dosya sistemi MCP |
-| **opencode-mcp-github** | 3.2K | GitHub API MCP |
-| **opencode-mcp-postgres** | 1.8K | PostgreSQL MCP |
-| **opencode-mcp-redis** | 1.2K | Redis MCP |
-| **opencode-mcp-brave** | 1K | Brave Search MCP |
+| **opencode-mcp-memory** | 2.8K | Persistent memory |
+| **opencode-mcp-filesystem** | 1.6K | Secure filesystem |
+| **opencode-mcp-github** | 3.2K | GitHub API |
+| **opencode-mcp-postgres** | 1.8K | PostgreSQL |
+| **opencode-mcp-redis** | 1.2K | Redis |
+| **opencode-mcp-brave** | 1K | Brave Search |
+| **+ more** | — | Configurable |
 
 ---
 
-## 👤 103 Agent Persona
+## 👤 103 Agent Personas
 
-**10 kategoride 103 uzman subagent.** Her biri belirli bir alanda uzmanlaşmış AI personadır.
+**103 expert subagents in 10 categories.** Each with `subagent_type`, `model`, `tools`, and `color` fields.
 
 ```
 📁 agents/
-├── 00-general/        → iletişim koçu, genel amaçlı
-├── 01-core/           → api-designer, backend, fullstack, graphql, microservices, websocket
-├── 02-languages/      → angular, golang, java, javascript, laravel, nextjs, php, python,
-│                         rails, react, rust, spring, sql, typescript, vue
-├── 03-infrastructure/ → cloud, database, devops, k8s, network, security, sre, terraform
-├── 04-quality/        → code-review, debug, pentest, performance, qa, test-automation
-├── 05-data-ai/        → ai-engineer, data-scientist, ml-engineer, nlp, prompt-engineer
-├── 06-dev-exp/        → build, cli, docs, git, mcp, mermaid, refactoring
-├── 07-specialized/    → blockchain, fintech, payment, quant
-├── 08-business/       → product, project, scrum, technical-writer, ux
-├── 09-meta/           → agent-organizer, orchestrator, task-distributor
-└── 10-curiosity/      → astro, research, search, trend-analysis
+├── 00-general/        → Communication coach, general purpose
+├── 01-core/           → API designer, backend, fullstack, graphql, microservices, websocket
+├── 02-languages/      → Angular, Go, Java, JS, Laravel, Next.js, PHP, Python,
+│                         Rails, React, Rust, Spring, SQL, TypeScript, Vue
+├── 03-infrastructure/ → Cloud, database, devops, k8s, network, security, SRE, terraform
+├── 04-quality/        → Code review, debug, pentest, performance, QA, test automation
+├── 05-data-ai/        → AI engineer, data scientist, ML engineer, NLP, prompt engineer
+├── 06-dev-exp/        → Build, CLI, docs, git, MCP, mermaid, refactoring
+├── 07-specialized/    → Blockchain, fintech, payment, quant
+├── 08-business/       → Product, project, scrum, technical writer, UX
+├── 09-meta/           → Agent organizer, orchestrator, task distributor
+└── 10-curiosity/      → Astro, research, search, trend analysis
 ```
 
-**Kullanım:** `@agent-adı <soru>` — örneğin `@python-expert Bu fonksiyonu optimize et`
+**Usage:** `@agent-name <question>` — e.g. `@python-expert Optimize this function`
 
 ---
 
 ## 👥 Council of High Intelligence
 
-18 tarihi figür AI persona olarak tartışır, sen karar verirsin. Detaylı kullanım için: `council/council/SKILL.md`
+18 historical figures debate as AI personas. You decide.
 
-| Persona | Uzmanlık | Persona | Uzmanlık |
+| Persona | Expertise | Persona | Expertise |
 |---|---|---|---|
-| 🏛️ Aristoteles | Kategorizasyon | 🧠 Kahneman | Karar bilimi |
-| ❓ Sokrates | Varsayım yıkım | 🌿 Lao Tzu | Doğal düzen |
-| ⚔️ Sun Tzu | Strateji | 💻 Torvalds | Mühendislik |
-| 🧮 Ada Lovelace | Soyut sistemler | ⚡ Musashi | Zamanlama |
-| 🛡️ Aurelius | Direnç | 🌊 Watts | Perspektif |
-| 🎭 Machiavelli | Güç dinamikleri | 🤖 Karpathy | Yapay zeka |
-| 🔬 Feynman | İlk prensipler | 🏛️ Sutskever | AI güvenliği |
+| 🏛️ Aristotle | Categorization | 🧠 Kahneman | Decision science |
+| ❓ Socrates | Assumption destruction | 🌿 Lao Tzu | Natural order |
+| ⚔️ Sun Tzu | Strategy | 💻 Torvalds | Engineering |
+| 🧮 Ada Lovelace | Abstract systems | ⚡ Musashi | Timing |
+| 🛡️ Aurelius | Resilience | 🌊 Watts | Perspective |
+| 🎭 Machiavelli | Power dynamics | 🤖 Karpathy | AI |
+| 🔬 Feynman | First principles | 🏛️ Sutskever | AI safety |
+| 📊 Munger | Multi-model thinking | 📉 Taleb | Antifragility |
+| 🌀 Meadows | Systems thinking | 🎯 Rams | Design |
 
 ```bash
-/council Bu startup'ı satın almalı mıyız?
-/council --quick Mikroservis mi monolit mi?
-/council --duo scaling stratejimiz ne olmalı?
-/council --triad strategy Rakibimize karşı nasıl rekabet edelim?
+/council Should we buy this startup?
+/council --quick Microservices or monolith?
+/council --duo What's our scaling strategy?
+/council --triad strategy How to compete?
+/council --members socrates,feynman,ada Is our caching correct?
 ```
 
-> 🔧 Loop #6: Tüm council agent modelleri `claude-3-opus`/`claude-3-sonnet` olarak güncellendi.
+Full reference: `council/council/SKILL.md`
 
 ---
 
-## 🧠 Özgün Özellikler (Başka Hiçbir Repoda Yok)
+## 🎯 83 Skills
 
-Bu özellikler Ultimate OpenCode'a özeldir. Hiçbir opencode paketinde bulamazsın.
-
-### 🧠 PRISM 2.0 — Kod Stili Profiling
-
-PRISM 2.0, kod yazma stilini otomatik analiz eder, fingerprint çıkarır ve tüm subagent'ların sana göre davranmasını sağlar.
-
-```bash
-prism analyze src/           # Kod stilini analiz et
-prism profile                # Profilini göster
-prism suggest <dosya>        # Stil önerisi al
-```
-
-Detay: `skills/prism-v2.md`
-
-### ⚡ CHAMBER — Session Manager
-
-CHAMBER, opencode oturumlarını yöneten, snapshot alan ve paralel ajanları orchestre eden session yöneticisidir.
-
-```bash
-chamber new "feature-x"      # Yeni session
-chamber list                  # Tüm session'lar
-chamber snapshot              # State kaydet
-chamber parallel "a" "b"     # Paralel çalıştır
-```
-
-Detay: `skills/chamber.md`
-
-### 🔊 ECHO — Cross-Session Context Mirroring
-
-ECHO, bir session'da keşfedilen bilgiyi tüm diğer session'lara anında yansıtır. Ajanlar arası iletişimde devrim.
-
-```bash
-echo share "API endpoint keşfedildi: /api/v2/users"
-echo broadcast "Uyarı: .env dosyasında secret var!"
-echo status                   # Context durumu
-```
-
-Detay: `skills/echo.md`
-
----
-
----
-
-## 🎯 83 Skill
-
-Kategoriye göre gruplandırılmış en popüler GitHub skill'leri:
-
-### ⚡ Token & Performans
-| Skill | ⭐ | Ne İşe Yarar |
+### ⚡ Token & Performance
+| Skill | ⭐ | Description |
 |---|---|---|
-| **caveman** | 77K | %65 daha az token ile iletişim |
-| **ponytail** | 61K | En tembel kıdemli developer gibi düşün |
-| **squeez** | — | Hook-based token compression (bakımda) |
+| **caveman** | 77K | 65% less tokens communication |
+| **ponytail** | 61K | Think like the laziest senior dev |
+| **context-compressor** | 3.4K | AI context compression (40-60%) |
 
-### 🧠 AI Çerçeveleri
-| Skill | ⭐ | Ne İşe Yarar |
+### 🧠 AI Frameworks
+| Skill | ⭐ | Description |
 |---|---|---|
 | **ECC** | 222K | Agent harness: skill + instinct + memory + security |
-| **superpowers** | 239K | Agentic skills framework & metodoloji |
+| **superpowers** | 239K | Agentic skills framework & methodology |
 | **claude-mem** | 84K | Persistent context across sessions |
-| **oh-my-openagent** | 63K | Agent harness (omo/lazycodex) |
 | **ruflo** | 61K | Multi-agent swarm orchestration |
 | **get-shit-done** | 64K | Meta-prompting + spec-driven development |
-| **graphify** | 72K | Klasörü knowledge graph'a çevir |
+| **graphify** | 72K | Folder → knowledge graph |
+| **pydantic-ai** | 18K | Type-safe AI agent framework |
+| **swe-agent** | 12K | Auto-fix GitHub issues |
 
-### 📐 Kod Kalitesi
-| Skill | ⭐ | Ne İşe Yarar |
+### 📐 Code Quality
+| Skill | ⭐ | Description |
 |---|---|---|
-| **karpathy-skills** | 183K | Andrej Karpathy'nin AI kod prensipleri |
-| **claude-code-best-practice** | 61K | Vibe coding'den agentic engineering'a |
-| **gstack** | 117K | 23 opinionated Claude Code tool |
-| **code-reviewer** | — | Otomatik kod review (code-reviewer agent ile) |
+| **karpathy-skills** | 183K | Andrej Karpathy's AI coding principles |
+| **gstack** | 117K | 23 opinionated Claude Code tools |
 | **arc-kit** | 2K | Enterprise architecture governance |
+| **ospec** | 555 | Spec-driven development |
 
-### 🛡️ Güvenlik
-| Skill | ⭐ | Ne İşe Yarar |
+### 🛡️ Security
+| Skill | ⭐ | Description |
 |---|---|---|
-| **Claude-BugHunter** | 2.7K | 71 bug bounty skill, 681 disclosed-report pattern |
-| **raptor-security** | 3.2K | AI-powered pentest ajanı |
-| **hol-guard** | 372 | AI antivirüs: zararlı komutları engeller |
+| **Claude-BugHunter** | 3.1K | 71 bug bounty skills, 681 disclosed reports |
+| **raptor-security** | 3.2K | AI-powered pentest agent |
+| **hol-guard** | 372 | AI antivirus: blocks malicious commands |
+| **agentic-threat-detection** | 4.8K | Prompt injection & data exfil detection |
 
-### 🔧 Geliştirme Araçları
-| Skill | ⭐ | Ne İşe Yarar |
+### 🔧 Development Tools
+| Skill | ⭐ | Description |
 |---|---|---|
-| **planning-with-files** | 24K | Crash-proof planning (context kaybına dayanıklı) |
-| **ospec** | 555 | Spec-driven development workflow |
-| **OpenCLI** | 25K | Her website'i CLI yap |
+| **planning-with-files** | 24K | Crash-proof planning |
+| **OpenCLI** | 25K | Turn any website into a CLI |
 | **SocratiCode** | 3K | Enterprise code intelligence |
-| **prompt-master** | 9.8K | Kusursuz prompt yazma |
+| **prompt-master** | 9.8K | Perfect prompt writing |
 | **deliberation** | 107 | Multi-model second opinion |
 | **memorix** | 519 | Cross-agent memory |
-| **cc-wf-studio** | 5.2K | 16 workflow skill + sub-agent |
+| **cc-wf-studio** | 5.2K | 16 workflow skills + sub-agent |
 
-### 🎨 Tasarım & Dökümantasyon
-| Skill | ⭐ | Ne İşe Yarar |
+### 🔌 MCP & Integration
+| Skill | ⭐ | Description |
 |---|---|---|
-| **serena** | 25K | MCP toolkit — semantic code retrieval |
-| **vercel-skills** | 23K | `npx skills` ile skill yönetimi |
-| **bridle** | 431 | TUI config manager |
-| **openpets** | 838 | Terminal'de evcil hayvan |
+| **opencode-mcp-memory** | 2.8K | Persistent memory MCP |
+| **opencode-mcp-github** | 3.2K | GitHub API MCP |
+| **opencode-mcp-postgres** | 1.8K | PostgreSQL MCP |
+| **opencode-mcp-redis** | 1.2K | Redis MCP |
+| **opencode-mcp-brave** | 1K | Brave Search MCP |
+| **mcp-cli** | 4.7K | MCP server management |
+| **mcp-router** | 890 | Multi-MCP router |
 
-### 🔌 Entegrasyon
-| Skill | ⭐ | Ne İşe Yarar |
+### 🆕 Trending (Latest)
+| Skill | ⭐ | Description |
 |---|---|---|
-| **AIClient2API** | 8.3K | Gemini/Antigravity/Codex API'lerini OpenAI uyumlu yap |
-| **opencli** | — | Website'leri CLI komutlarına çevir |
-| **agentify-desktop** | 452 | Browser session control |
-| **opencode-swarm** | 369 | Swarm orchestrator |
-| **firecrawl-mcp** | 6.7K | Web scraping + search |
-
-### 📚 Referans
-| Skill | ⭐ | Ne İşe Yarar |
-|---|---|---|
-| **awesome-free-llm-apis** | 5.3K | Ücretsiz LLM API listesi |
-| **claude-code-best-practice** | 61K | En iyi pratikler |
-
-### 🆕 Yeni Eklenenler (Loop #5)
-| Skill | ⭐ | Ne İşe Yarar |
-|---|---|---|
-| **cursor-tools** | 8.6K | Cursor IDE ile opencode arasında köprü |
-| **claude-code-memory-mcp** | 3.2K | Claude Code kalıcı bellek MCP sunucusu |
-| **repomix** | 5.1K | Tüm repoyu tek LLM-prompt dosyasına sıkıştır |
-| **screenshot-to-code** | 64K | Ekran görüntüsünden kod üret |
-| **claude-code-sync** | 1.2K | Claude Code oturumları arası senkronizasyon |
-| **mcp-router** | 890 | Çoklu MCP server yönlendirici |
-| **opencode-installer** | 450 | Tek adımda opencode + plugin kurulumu |
-
-### 🆕🆕 Özgün Özellikler & Yeni Skill'ler (Loop #6)
-| Skill | ⭐ | Ne İşe Yarar |
-|---|---|---|
-| **🧠 PRISM 2.0** | — | **ÖZGÜN** Kod stili profiling + otomatik analiz |
-| **⚡ CHAMBER** | — | **ÖZGÜN** Multi-session orchestrator & state manager |
-| **🔊 ECHO** | — | **ÖZGÜN** Cross-session context mirroring |
-| **dify** | 147K | Production-ready agentic workflow platform |
-| **n8n** | 194K | Workflow automation CLI (400+ entegrasyon) |
-| **chrome-devtools-mcp** | 44K | Chrome DevTools MCP server |
-| **uv** | 40K | Ultra hızlı Python package manager |
-| **ripgrep** | 51K | En hızlı kod arama CLI aracı |
-| **lazygit** | 55K | Terminal UI git client |
-| **antigravity-awesome-skills** | 41K | 1600+ agentic skill kütüphanesi |
-| **awesome-mcp-servers** | 89K | En kapsamlı MCP server koleksiyonu |
-
-### 🆕🆕🆕 Loop #7: 6 Yeni Skill + 3 CLI Script + Template'ler
-| Skill | ⭐ | Ne İşe Yarar |
-|---|---|---|
-| **pydantic-ai** | 18K | Pydantic AI Agent Framework (type-safe) |
-| **microsoft-agent-framework** | 11K | MS multi-agent orchestration |
-| **deepseek-reasonix** | 25K | DeepSeek-native AI coding agent |
-| **cc-switch** | 109K | Cross-platform AI CLI yöneticisi |
-| **wshobson-agents** | 37K | Multi-harness plugin marketplace |
-| **agent-reach** | 43K | AI agent'lara internet görüşü |
-
-### 🆕🆕🆕🆕 Loop #8: 5 Yeni Skill + Star Sync + JSON Output + Badges
-| Skill | ⭐ | Ne İşe Yarar |
-|---|---|---|
-| **agentic-threat-detection** | 4.8K | AI agent güvenlik tehdit tespiti |
-| **opencode-mcp-hub** | 2.1K | MCP server marketplace & yönetici |
-| **opencode-cost-optimizer** | 976 | Token tüketim optimizasyonu |
-| **context-compressor** | 3.4K | AI context sıkıştırma (%40-60) |
-| **swe-agent** | 12K | GitHub issue'larını otomatik çözen AI |
-
-### 🆕x5 Loop #9: 6 Yeni Skill + Validasyon + Uninstall + Mermaid + Renkler
-| Skill | ⭐ | Ne İşe Yarar |
-|---|---|---|
-| **copilot-cli** | 4.3K | GitHub Copilot CLI (terminal komut önerisi) |
-| **aider** | 25K | AI pair programming terminal aracı |
-| **codex-cli** | 17K | OpenAI Codex CLI (terminal AI coding) |
-| **open-interpreter** | 55K | Doğal dil bilgisayar arayüzü |
-| **continue** | 21K | VS Code açık kaynak AI asistan |
+| **screenshot-to-code** | 64K | Screenshot → code |
+| **n8n** | 194K | Workflow automation (400+ integrations) |
+| **dify** | 147K | Agentic workflow platform |
+| **open-interpreter** | 55K | Natural language computer interface |
+| **aider** | 25K | AI pair programming |
+| **cursor-ide** | 21K | AI-first code editor |
+| **continue** | 21K | Open-source VS Code AI |
 | **claude-code-cli** | 15K | Anthropic Claude Code CLI |
-
-### 🆕x6 Loop #10: 6 Yeni Skill + Benchmark + CRON + Wrap + Validasyon
-| Skill | ⭐ | Ne İşe Yarar |
-|---|---|---|
-| **github-copilot** | 38K | GitHub Copilot AI pair programmer |
-| **mcp-cli** | 4.7K | MCP sunucu yönetim CLI |
-| **gemini-cli** | 12K | Google Gemini terminal asistanı |
-| **cursor-ide** | 21K | Cursor AI-first code editor |
-| **opencode-plugins** | 1.5K | Plugin geliştirme şablonu |
-| **ai-coding-agents** | 8.7K | AI coding agent karşılaştırma rehberi |
-
-### 🆕x7 Loop #11: 6 Yeni MCP Skill + Master Launcher + BATs Test
-| Skill | ⭐ | Ne İşe Yarar |
-|---|---|---|
-| **opencode-mcp-memory** | 2.8K | opencode kalıcı bellek MCP |
-| **opencode-mcp-filesystem** | 1.6K | opencode güvenli dosya MCP |
-| **opencode-mcp-github** | 3.2K | opencode GitHub MCP |
-| **opencode-mcp-postgres** | 1.8K | opencode PostgreSQL MCP |
-| **opencode-mcp-redis** | 1.2K | opencode Redis MCP |
-| **opencode-mcp-brave** | 1K | opencode Brave Search MCP |
+| **codex-cli** | 17K | OpenAI Codex CLI |
+| **gemini-cli** | 12K | Google Gemini CLI |
+| **cc-switch** | 109K | Cross-platform AI CLI manager |
+| **repomix** | 5.1K | Repo → single LLM prompt |
 
 ---
 
-## ⚡ 14 Slash Komut
+## ⚡ 14 Slash Commands
 
-| Komut | Ne Yapar |
+| Command | Description |
 |---|---|
-| `/commit` | Anlamlı commit mesajı yazar |
-| `/review` | Kod review yapar |
-| `/test` | Test dosyası oluşturur |
-| `/documentation` | Dokümantasyon yazar/günceller |
-| `/memory-bank` | Proje hafızasını günceller |
-| `/datadog` | Datadog sorguları |
-| `/speckit` | Spec-driven model seçici |
-| `/compose-email` | E-posta taslağı oluşturur |
-| `/fix-renovate-mr` | Renovate MR'larını düzeltir |
-| `/commit-and-create-mr` | Commit + MR tek adımda |
-| `/next-sprint-design` | Sprint tasarımı |
-| `/prepare-dataset` | Veri seti hazırlar |
-| `/astro-dso-doc` | Astrofotoğrafçılık dokümanı |
+| `/commit` | Write meaningful commit messages |
+| `/review` | Code review |
+| `/test` | Generate test files |
+| `/documentation` | Write/update docs |
+| `/memory-bank` | Update project memory |
+| `/datadog` | Datadog queries |
+| `/speckit` | Spec-driven model selector |
+| `/compose-email` | Draft email |
+| `/fix-renovate-mr` | Fix Renovate MRs |
+| `/commit-and-create-mr` | Commit + MR in one step |
+| `/next-sprint-design` | Sprint design |
+| `/prepare-dataset` | Dataset preparation |
+| `/astro-dso-doc` | Astrophotography docs |
+| `/council` | Convene AI council |
 
 ---
 
-## 🔌 8 Plugin
+## 🔌 8 Plugins
 
-| Plugin | Görev |
+| Plugin | Purpose |
 |---|---|
-| **helicone-session** | Tüm API çağrılarını Helicone'da logla |
-| **gemini-auth** | Google Gemini model'lerini opencode'da kullan |
-| **gitlab-plugin** | GitLab MR, issue, pipeline yönetimi |
-| **poe-auth** | Poe (Quora) hesabıyla giriş yap |
-| **websearch** | opencode içinden web araması yap |
-| **subagent-statusline** | Subagent durumunu TUI'de gör |
-| **opencode-bridge** | Çoklu opencode instance senkronizasyonu |
-| **opencode-cost-tracker** | Token tüketimi ve maliyet takibi |
+| **helicone-session** | Log all API calls to Helicone |
+| **gemini-auth** | Use Google Gemini in opencode |
+| **gitlab-plugin** | GitLab MR, issue, pipeline management |
+| **poe-auth** | Login with Poe (Quora) |
+| **websearch** | Web search from opencode |
+| **subagent-statusline** | Agent status in TUI |
+| **opencode-bridge** | Multi-instance sync |
+| **opencode-cost-tracker** | Token & cost tracking |
 
 ---
 
-## 🔧 CLI Araçlar
+## 🛠️ 11 Scripts
 
-| Araç | Görev | Kullanım |
+| Script | Description |
+|---|---|
+| **opencode.sh** | Master launcher — all commands in one place |
+| **chamber.sh** | Session manager (new/list/snapshot/parallel/merge) |
+| **echo.sh** | Context mirroring (share/broadcast/status) |
+| **prism.sh** | Code style profiling (init/analyze/suggest) |
+| **sync-stars.sh** | Sync GitHub star counts via API |
+| **benchmark.sh** | Performance testing (--quick/--json) |
+| **validate-council.sh** | Council member validation |
+| **skill-wrap.sh** | Skill wrapper (list/search/info) |
+| **cron-setup.sh** | Weekly star sync CRON setup |
+| **install.sh** | One-click installer (12 steps) |
+| **uninstall.sh** | Clean removal (--force/--purge) |
+
+---
+
+## 🔧 CLI Tools
+
+| Tool | Purpose | Usage |
 |---|---|---|
-| **codegraph** | Kod bilgi grafiği | `codegraph init && codegraph explore` |
+| **🧠 prism** | Code style profiling | `prism analyze src/` |
+| **⚡ chamber** | Session management | `chamber new feature` |
+| **🔊 echo** | Context mirroring | `echo share "discovery"` |
+| **🎯 skill** | Skill wrapper | `skill list` / `skill search` |
+| **codegraph** | Code knowledge graph | `codegraph init && codegraph explore` |
 | **serena** | MCP toolkit | `serena init && serena project add .` |
-| **gograph** | Go AST analizi | `gograph callers <func>` |
-| **opencli** | Website → CLI | `opencli <url> <komut>` |
+| **gograph** | Go AST analysis | `gograph callers <func>` |
+| **opencli** | Website → CLI | `opencli <url> <cmd>` |
 | **bridle** | TUI config manager | `bridle` |
-| **claude-mem** | Persist context | Otomatik |
-| **🧠 prism** | Kod stili profiling | `prism analyze src/` |
-| **⚡ chamber** | Session yönetimi | `chamber new feature` |
-| **🔊 echo** | Context mirroring | `echo share "keşif"` |
-| **🗑️ uninstall** | Kaldırma aracı | `./uninstall.sh` |
-| **👥 validate-council** | Council doğrulama | `./scripts/validate-council.sh` |
-| **📊 benchmark** | Performans testi | `./scripts/benchmark.sh` |
-| **🎯 skill** | Skill wrapper | `skill list/search/info` |
-| **⏰ cron-setup** | Haftalık star sync | `./scripts/cron-setup.sh` |
+| **claude-mem** | Persistent context | Automatic |
 
 ---
 
-## 🏆 Neden Bu Repo?
+## 🏆 Why This Repo?
 
-| Soru | Cevap |
+| Question | Answer |
 |---|---|
-| **Neden 83 skill var?** | Çünkü her durum için doğru araç |
-| **Neden 103 agent var?** | Çünkü her dil/alan için uzman gerek |
-| **Neden ATLAS var?** | Çünkü projeni anlayan TEK sistem |
-| **Neden tek komut?** | Çünkü vaktin skill kurmaktan değerli |
-| **Neden ücretsiz?** | Çünkü açık kaynak güven verir |
+| **Why 83 skills?** | Because every situation needs the right tool |
+| **Why 103 agents?** | Because every language/domain needs an expert |
+| **Why ATLAS?** | Because it's the ONLY system that understands your project |
+| **Why one command?** | Because your time is too valuable for config |
+| **Why free?** | Because open source builds trust |
+| **Why original features?** | Because nobody else built them |
 
 ---
 
-## 📝 Hızlı Başlangıç
+## 📊 Stats
+
+```
+📊 Ultimate OpenCode — Live Stats
+═════════════════════════════════════
+Skills:    83  (curated from 45+ repos)
+Agents:    103 (10 categories, 5 fields each)
+Scripts:   11  (3 original inventions)
+MCP:       14+ (7 opencode-native)
+Plugins:   8   (gitlab, websearch, auth, ...)
+Commands:  14  (slash commands)
+Council:   18  (historical AI personas)
+ATLAS:     7   (project intelligence modules)
+Docs:      3   (quickstart, architecture, scripts)
+Tests:     16  (BATs test suite)
+Total:     283 files  (and growing)
+═════════════════════════════════════
+```
+
+---
+
+## Quick Start
 
 ```bash
-# 1. Kurulum
+# 1. Install
 git clone https://github.com/zehedisode/ultimate-opencode.git
 cd ultimate-opencode
 ./install.sh
 
-# 2. TUI'yi aç
+# 2. Launch opencode
 opencode
 
-# 3. Kullanmaya başla
-#    Ctrl+T → model variant değiştir
-#    Tab → agent değiştir
-#    /council <soru> → 18 AI persona topla
-#    @python-expert → uzman çağır
-#    /commit → commit mesajı yaz
+# 3. Use it
+#    Ctrl+T → switch model variant
+#    Tab → switch agent
+#    /council <question> → convene 18 AI personas
+#    @python-expert → call a specialist
+#    /commit → write commit message
 
-# 4. Projende ATLAS'ı başlat (opsiyonel)
-cd projen
-/path/to/atlas/init.sh
+# 4. Check health
+./verify.sh --self
+./scripts/benchmark.sh
+
+# 5. Remove (if needed)
+./uninstall.sh
 ```
 
 ---
 
-## 📜 Lisans
+## 📜 License
 
-MIT — Özgürce kullan, değiştir, paylaş.
+MIT — Free to use, modify, and share.
 
 ---
 
-### 🔗 Bağlantılar
-- [📖 Katkı Rehberi](CONTRIBUTING.md)
-- [🛡️ Güvenlik Politikası](SECURITY.md)
-- [📝 Değişiklik Günlüğü](CHANGELOG.md)
-- [⭐ GitHub'da Yıldızla](https://github.com/zehedisode/ultimate-opencode)
+### 🔗 Links
+- [📖 Contributing Guide](CONTRIBUTING.md)
+- [🛡️ Security Policy](SECURITY.md)
+- [📝 Changelog](CHANGELOG.md)
+- [📚 Docs](docs/)
+- [🧪 Tests](tests/)
+- [⭐ Star on GitHub](https://github.com/zehedisode/ultimate-opencode)
 
-**https://github.com/zehedisode/ultimate-opencode**
+---
+
+<div align="center">
+
+**Built with ❤️ for the opencode community.**
+**The most comprehensive opencode package in existence.**
+
+https://github.com/zehedisode/ultimate-opencode
+
+</div>

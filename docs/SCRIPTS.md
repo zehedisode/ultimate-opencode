@@ -1,76 +1,76 @@
-# Script Referansı
+# Script Reference
 
 ## opencode.sh — Master Launcher
 
 ```bash
-./scripts/opencode.sh <komut> [args]
+./scripts/opencode.sh <command> [args]
 ```
 
-Tüm script'leri tek yerden yönetir.
+Manage all scripts from one place.
 
 ## chamber.sh — Session Manager
 
 ```bash
-chamber new <ad>              # Yeni session
-chamber list                  # Listele
-chamber snapshot              # State kaydet
-chamber parallel "a" "b"     # Paralel çalıştır
-chamber --json                # JSON çıktı
+chamber new <name>              # Create session
+chamber list                    # List sessions
+chamber snapshot                # Save state
+chamber parallel "a" "b"       # Run parallel
+chamber --json                  # JSON output
 ```
 
 ## echo.sh — Context Mirroring
 
 ```bash
-echo share "mesaj"            # Bilgi paylaş
-echo broadcast "duyuru"       # Tüm session'lara duyur
-echo status                   # Durum göster
-echo history                  # Geçmiş
-echo --json                   # JSON çıktı
+echo share "message"            # Share info
+echo broadcast "alert"          # Broadcast to all
+echo status                     # Show context
+echo history                    # View history
+echo --json                     # JSON output
 ```
 
-## prism.sh — Kod Stili Profiling
+## prism.sh — Code Style Profiling
 
 ```bash
-prism init                    # Profil oluştur
-prism profile                 # Profili göster
-prism analyze src/            # Kod analizi
-prism suggest file.ts         # Stil önerisi
-prism --json                  # JSON çıktı
+prism init                      # Create profile
+prism profile                   # Show profile
+prism analyze src/              # Analyze code
+prism suggest file.ts           # Style suggestion
+prism --json                    # JSON output
 ```
 
-## sync-stars.sh — Star Güncelleme
+## sync-stars.sh — Star Sync
 
 ```bash
-./scripts/sync-stars.sh       # Tüm star'ları güncelle
+./scripts/sync-stars.sh         # Update all stars
 ```
 
-Rate-limit korumalı, sleep ile.
+Rate-limit protected with delays.
 
-## benchmark.sh — Performans Testi
+## benchmark.sh — Performance Test
 
 ```bash
-./scripts/benchmark.sh        # Tam test
-./scripts/benchmark.sh --quick  # Hızlı test
-./scripts/benchmark.sh --json   # JSON çıktı
+./scripts/benchmark.sh          # Full test
+./scripts/benchmark.sh --quick  # Quick test
+./scripts/benchmark.sh --json   # JSON output
 ```
 
-## validate-council.sh — Council Doğrulama
+## validate-council.sh — Council Validation
 
 ```bash
-./scripts/validate-council.sh  # SKILL.md referanslarını doğrula
+./scripts/validate-council.sh   # Validate SKILL.md references
 ```
 
-## cron-setup.sh — CRON Kurulumu
+## cron-setup.sh — CRON Setup
 
 ```bash
-./scripts/cron-setup.sh       # Haftalık star sync CRON
+./scripts/cron-setup.sh         # Weekly star sync CRON
 ```
 
 ## skill-wrap.sh — Skill Wrapper
 
 ```bash
-skill list                    # Tüm skill'leri listele
-skill search "python"         # Skill ara
-skill info caveman            # Skill detayı
-skill count                   # Skill sayısı
+skill list                      # List all skills
+skill search "python"           # Search skills
+skill info caveman              # Skill details
+skill count                     # Count skills
 ```

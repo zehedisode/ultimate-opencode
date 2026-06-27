@@ -20,39 +20,52 @@ Code intelligence knowledge graph. 14 MCP tools.
 - `query_graph('MATCH (f:Function) WHERE NOT EXISTS { (f)<-[:CALLS]-() } RETURN f.name')` — dead code
 <!-- codebase-memory-mcp:end -->
 
-> 💡 Tüm 103 agent artık `subagent_type` alanı içerir. Council agent'ları `claude-3-opus`/`claude-3-sonnet` modellerini kullanır.
+> 💡 All 103 agents now include `tools`, `model`, and `color` fields. Agents are categorized by opus/sonnet per domain.
 >
-> 🆕 **PRISM 2.0** — kod stili profiling. **CHAMBER** — multi-session yöneticisi. **ECHO** — cross-session context mirroring.
+> 🆕 **PRISM 2.0** — code style profiling. **CHAMBER** — multi-session manager. **ECHO** — cross-session context mirroring.
 
-## 🛠️ Bu Projede Kullanılan Tüm Araçlar
+## 🛠️ All Tools Used in This Project
 
-### 📡 MCP Server'lar
-| Araç | Ne İşe Yarar |
+### 📡 MCP Servers
+| Tool | Purpose |
 |---|---|
-| **codegraph_explore** | Kod bilgi grafiği — tek sorguda kaynak + çağrı yolları |
-| **search_graph / trace_path** | Semantik kod arama ve çağrı zinciri |
+| **codegraph_explore** | Code knowledge graph — source + call paths in one query |
+| **search_graph / trace_path** | Semantic code search and call chain |
 
-### 🎯 Skill'ler (Kategorik)
+### ⚡ Scripts (11 total)
+| Script | Purpose |
+|---|---|
+| `chamber.sh` | Session manager — `chamber new/list/snapshot/parallel` |
+| `echo.sh` | Context mirroring — `echo share/broadcast/status` |
+| `prism.sh` | Code style profiling — `prism init/analyze/suggest` |
+| `sync-stars.sh` | Sync star counts from GitHub API |
+| `benchmark.sh` | Performance testing |
+| `validate-council.sh` | Council member validation |
+| `skill-wrap.sh` | Skill wrapper |
+| `cron-setup.sh` | Weekly CRON setup |
+| `opencode.sh` | Master launcher |
 
-**⚡ Token & Performans**: caveman (%65 token tasarrufu), ponytail (kıdemli dev gibi düşün)
+### 🎯 Skills (Categorized)
 
-**🧠 AI Çerçeveleri**: ECC (222K⭐), superpowers (239K⭐), claude-mem (84K⭐), oh-my-openagent (63K⭐), ruflo (61K⭐), get-shit-done (64K⭐), graphify (72K⭐)
+**⚡ Token & Performance**: caveman (%65 token savings), ponytail (senior dev thinking), context-compressor
 
-**📐 Kod Kalitesi**: karpathy-skills (183K⭐), claude-code-best-practice (61K⭐), gstack (117K⭐), arc-kit (2K⭐)
+**🧠 AI Frameworks**: ECC (222K⭐), superpowers (239K⭐), claude-mem (84K⭐), ruflo (61K⭐), get-shit-done (64K⭐), graphify (72K⭐), pydantic-ai (18K⭐), swe-agent (12K⭐)
 
-**🛡️ Güvenlik**: Claude-BugHunter (2.7K⭐), raptor-security (3.2K⭐), hol-guard (372⭐)
+**📐 Code Quality**: karpathy-skills (183K⭐), gstack (117K⭐), arc-kit (2K⭐)
 
-**🔧 Geliştirme**: planning-with-files (24K⭐), ospec (555⭐), OpenCLI (25K⭐), SocratiCode (3K⭐), prompt-master (9.8K⭐), deliberation (107⭐), memorix (519⭐), cc-wf-studio (5.2K⭐), opencode-swarm (369⭐), bridle (431⭐)
+**🛡️ Security**: Claude-BugHunter (3.1K⭐), raptor-security (3.2K⭐), hol-guard (372⭐), agentic-threat-detection (4.8K⭐)
 
-**🎨 Tasarım/Doküman**: serena (25K⭐), vercel-skills (23K⭐), openpets (838⭐), agentify-desktop (452⭐)
+**🔧 Development**: planning-with-files (24K⭐), ospec (555⭐), OpenCLI (25K⭐), SocratiCode (3K⭐), prompt-master (9.8K⭐), deliberation (107⭐), memorix (519⭐), cc-wf-studio (5.2K⭐), opencode-swarm (369⭐), bridle (431⭐)
 
-**🔌 Entegrasyon**: AIClient2API (8.3K⭐), codebase-memory-skill, firecrawl-mcp (6.7K⭐)
+**🎨 Design/Docs**: serena (25K⭐), vercel-skills (23K⭐), openpets (838⭐), agentify-desktop (452⭐)
 
-**📚 Referans**: awesome-free-llm-apis (5.3K⭐), ask-user-questions, ultimate-opencode
+**🔌 Integration**: AIClient2API (8.3K⭐), codebase-memory-skill, firecrawl-mcp (6.7K⭐), Chrome DevTools MCP (44K⭐)
 
-**🆕 Yeni Eklenenler (Loop #5)**: cursor-tools (8.6K⭐), claude-code-memory-mcp (3.2K⭐), repomix (5.1K⭐), screenshot-to-code (64K⭐), claude-code-sync (1.2K⭐), mcp-router (890⭐), opencode-installer (450⭐)
+**📚 Reference**: awesome-free-llm-apis (5.3K⭐), ask-user-questions, ultimate-opencode
 
-**🆕 Loop #6**: PRISM 2.0 (özgün), CHAMBER (özgün), ECHO (özgün), dify (147K⭐), n8n (194K⭐), chrome-devtools-mcp (44K⭐), uv (40K⭐), ripgrep (51K⭐), lazygit (55K⭐), antigravity-awesome-skills (41K⭐), awesome-mcp-servers (89K⭐)
+**🆕 Loop #5**: cursor-tools (8.6K⭐), claude-code-memory-mcp (3.2K⭐), repomix (5.1K⭐), screenshot-to-code (64K⭐), claude-code-sync (1.2K⭐), mcp-router (890⭐), opencode-installer (450⭐)
+
+**🆕 Loop #6**: PRISM 2.0 (original), CHAMBER (original), ECHO (original), dify (147K⭐), n8n (194K⭐), chrome-devtools-mcp (44K⭐), uv (40K⭐), ripgrep (51K⭐), lazygit (55K⭐), antigravity-awesome-skills (41K⭐), awesome-mcp-servers (89K⭐)
 
 **🆕 Loop #7**: pydantic-ai (18K⭐), microsoft-agent-framework (11K⭐), deepseek-reasonix (25K⭐), cc-switch (109K⭐), wshobson-agents (37K⭐), agent-reach (43K⭐)
 
@@ -64,27 +77,22 @@ Code intelligence knowledge graph. 14 MCP tools.
 
 **🆕 Loop #11**: opencode-mcp-memory, opencode-mcp-filesystem, opencode-mcp-github, opencode-mcp-postgres, opencode-mcp-redis, opencode-mcp-brave
 
-### 🆕 Özgün Araç Script'leri (scripts/)
-| Script | Açıklama |
-|---|---|
-| `chamber.sh` | Session yöneticisi — `chamber new/list/snapshot/parallel` |
-| `echo.sh` | Context mirroring — `echo share/broadcast/status` |
-| `prism.sh` | Kod stili profiling — `prism init/analyze/suggest` |
-| `sync-stars.sh` | Skill star sayılarını GitHub API'den güncelle |
-
 ### 👥 Council of High Intelligence
-`/council <soru>` — 18 AI persona ile multi-perspektif müzakere.
-Detaylı kullanım için: `council/council/SKILL.md`
-- `--quick` hızlı, `--duo` ikili, `--triad <domain>` 3 kişi
-- Domain: strategy, architecture, decision, ethics, risk, shipping, ai
+`/council <question>` — 18 AI personas deliberate.
+Full reference: `council/council/SKILL.md`
+- `--quick` fast, `--duo` dual, `--triad <domain>` 3-person
+- Domains: strategy, architecture, decision, ethics, risk, shipping, ai
 
 ### 🌍 ATLAS — Project Intelligence
-Projende `atlas/init.sh` çalıştır.
-7 modül: core, quality, metrics, docs, team, reports
+Run `atlas/init.sh` in your project.
+7 modules: core, quality, metrics, docs, team, reports
 
-### 🔧 CLI Araçlar
-- `gograph` — Go AST analiz
+### 🔧 CLI Tools
+- `gograph` — Go AST analysis
 - `serena` — MCP toolkit
 - `opencli` — Website → CLI
 - `bridle` — TUI config manager
 - `claude-mem` — Persistent memory
+- `prism` — Code style profiling
+- `chamber` — Session management
+- `echo` — Context mirroring

@@ -1,50 +1,52 @@
-# 🏗️ Mimari
+# 🏗️ Architecture
 
-## Genel Bakış
+## Overview
 
-Ultimate OpenCode, açık opencode'u 5 dakikada full mod'a çeviren paket.
+Ultimate OpenCode turns a fresh opencode install into FULL MOD in 5 minutes.
 
-## Bileşenler
+## Components
 
-### 📁 agents/ — 103 Subagent Persona
-10 kategoride uzman AI personadır. Her biri:
-- `subagent_type` — opencode çağrısı için
-- `model` — claude-3-opus veya claude-3-sonnet
-- `tools` — yetkili araçlar
-- `color` — TUI rengi
+### 📁 agents/ — 103 Subagent Personas
+10 categories of expert AI personas. Each has:
+- `subagent_type` — for opencode invocation
+- `model` — claude-3-opus or claude-3-sonnet
+- `tools` — permitted tool set
+- `color` — TUI display color
+- `description` — expertise area
 
-### 📁 skills/ — 77 Skill Dosyası
-Her biri YAML frontmatter + Markdown içerik:
+### 📁 skills/ — 83 Skill Files
+Each has YAML frontmatter + Markdown content:
 ```yaml
 ---
-name: skill-adi
-description: "Kategori / Açıklama ⭐"
+name: skill-name
+description: "Category / Description ⭐"
 ---
 ```
 
-### 📁 scripts/ — 11 CLI Script
-| Script | İşlev |
+### 📁 scripts/ — 11 CLI Scripts
+| Script | Function |
 |---|---|
-| chamber.sh | Session yöneticisi |
+| chamber.sh | Session manager |
 | echo.sh | Context mirroring |
-| prism.sh | Kod stili profiling |
-| sync-stars.sh | Star güncelleme |
-| benchmark.sh | Performans testi |
-| validate-council.sh | Council doğrulama |
+| prism.sh | Code style profiling |
+| sync-stars.sh | Star count updater |
+| benchmark.sh | Performance test |
+| validate-council.sh | Council validation |
 | skill-wrap.sh | Skill wrapper |
-| cron-setup.sh | CRON kurulumu |
+| cron-setup.sh | CRON setup |
+| opencode.sh | Master launcher |
 
-### 📁 council/ — 18 Yapay Zeka Persona
-Aristoteles'ten Karpathy'e 18 tarihi figür.
+### 📁 council/ — 18 AI Personas
+From Aristotle to Karpathy — 18 historical figures.
 
-### 📁 atlas/ — Proje Bilinç Sistemi
-7 modül: core, quality, metrics, docs, team, reports
+### 📁 atlas/ — Project Intelligence System
+7 modules: core, quality, metrics, docs, team, reports
 
-## Veri Akışı
+## Data Flow
 
 ```
-install.sh
-  ├── config/   → ~/.config/opencode/
+install.sh                          uninstall.sh
+  ├── config/   → ~/.config/opencode/     ← removes
   ├── skills/   → ~/.config/opencode/skills/
   ├── agents/   → ~/.config/opencode/agents/
   ├── scripts/  → ~/.config/opencode/scripts/ + PATH

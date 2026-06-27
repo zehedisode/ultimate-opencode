@@ -1,25 +1,25 @@
-# Güvenlik Politikası
+# Security Policy
 
-## Desteklenen Versiyonlar
+## Supported Versions
 
-| Versiyon | Destek |
+| Version | Supported |
 |---|---|
 | ≥ 1.0.0 (main) | ✅ |
-| < 1.0.0 (eski) | ❌ |
+| < 1.0.0 (legacy) | ❌ |
 
-## Güvenlik Açığı Bildirimi
+## Reporting a Vulnerability
 
-Bir güvenlik açığı bulursanız:
+If you find a security vulnerability:
 
-1. **PUBLIC issue AÇMAYIN**
-2. GitHub Security Advisory kullanın: https://github.com/zehedisode/ultimate-opencode/security/advisories
-3. Veya eposta: (GitHub Issues üzerinden iletişime geçin)
+1. **DO NOT** open a public issue
+2. Use GitHub Security Advisory: https://github.com/zehedisode/ultimate-opencode/security/advisories
+3. Or contact via GitHub Issues
 
-## Kapsam
+## Scope
 
-- `install.sh` — root/yetki yükseltme
+- `install.sh` — privilege escalation
 - `config/` — API key exposure
 - `scripts/` — shell injection
-- `skills/` — zararlı içerik
+- `skills/` — malicious content
 
-Yanıt süresi: **48 saat** içinde geri dönüş.
+Response time: **48 hours**

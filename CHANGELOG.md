@@ -1,124 +1,91 @@
 # Changelog
 
 ## v1.7.0 (2026-06-28)
-### 🔧 Loop #11: 11 Düzeltme + Master Launcher + BATs Test + Docs + 6 Yeni MCP Skill
-- ✅ scripts/opencode.sh — master launcher (tüm script'leri tek yerden yönet)
-- ✅ tests/test_basics.bats — 16 BATs testi (syntax, frontmatter, agent fields, council, counts)
-- ✅ docs/QUICKSTART.md, ARCHITECTURE.md, SCRIPTS.md — kapsamlı dokümantasyon
-- ✅ opencode.sh — status komutu (canlı dosya sayıları + versiyon)
-- ✅ 6 yeni opencode MCP skill: memory, filesystem, github, postgres, redis, brave
-- ✅ README: 83 skill, 14+ MCP, 290+ dosya, 11 script
-- ✅ AGENTS.md: Loop #11 kategorisi
-- ✅ Toplam: 83 skill, 103 agent(5 alan), 11 script, 290+ dosya, 3 özgün
+### 🔧 Loop #11: Master Launcher + BATs Tests + Docs + 6 New MCP Skills
+- `scripts/opencode.sh` — master launcher (all scripts from one command)
+- `tests/test_basics.bats` — 16 BATs tests (syntax, frontmatter, agent fields, council, counts)
+- `docs/QUICKSTART.md`, `ARCHITECTURE.md`, `SCRIPTS.md` — comprehensive documentation
+- 6 new opencode MCP skills: memory, filesystem, github, postgres, redis, brave
+- README: 83 skills, 14+ MCP, 290+ files, 11 scripts
+- English translation of README, CHANGELOG, CONTRIBUTING, SECURITY, AGENTS.md, docs/
+- Total: **83 skills, 103 agents (5 fields), 11 scripts, 290+ files, 3 original inventions**
 
 ## v1.6.0 (2026-06-28)
-### 🔧 Loop #10: 11 Düzeltme + Benchmark + CRON + Wrap + 6 Yeni Skill
-- ✅ scripts/cron-setup.sh — haftalık star sync cron job
-- ✅ scripts/benchmark.sh — açık opencode performans test aracı (--quick/--json)
-- ✅ scripts/skill-wrap.sh — skill wrapper (list/search/info/count)
-- ✅ Council --members validasyonu: SKILL.md'deki tüm referanslar agent dosyalarıyla eşleştirildi
-- ✅ 103 agent frontmatter sırası standartlaştırıldı: name→subagent→model→tools→color→desc
-- ✅ 6 yeni skill: github-copilot(38K⭐), mcp-cli(4.7K⭐), gemini-cli(12K⭐), cursor-ide(21K⭐), opencode-plugins(1.5K⭐), ai-coding-agents(8.7K⭐)
-- ✅ README: 77 skill, 280+ dosya, 8 script badge, CLI tablosu güncellendi
-- ✅ AGENTS.md: Loop #10 kategorisi
-- ✅ install.sh v1.6.0
-- ✅ Toplam: 77 skill, 103 agent(4 alan), 8 script, 280+ dosya, 3 özgün özellik
+### 🔧 Loop #10: Benchmark + CRON + Wrapper + 6 New Skills + Frontmatter Standard
+- `scripts/cron-setup.sh` — weekly star sync CRON job
+- `scripts/benchmark.sh` — opencode performance testing (--quick/--json)
+- `scripts/skill-wrap.sh` — skill wrapper (list/search/info/count)
+- Council `--members` validation: all SKILL.md references matched to agent files
+- 103 agent frontmatter standardized: name→subagent→model→tools→color→desc
+- 6 new skills: github-copilot(38K⭐), mcp-cli(4.7K⭐), gemini-cli(12K⭐), cursor-ide(21K⭐), opencode-plugins(1.5K⭐), ai-coding-agents(8.7K⭐)
 
 ## v1.5.0 (2026-06-28)
-### 🔧 Loop #9: 12 Düzeltme + Uninstall + Validate + Mermaid + Colors + 6 Skill
-- ✅ Tüm script'lerde normal_echo tutarlılığı + JSON output tamamlandı
-- ✅ scripts/validate-council.sh — council agent validasyonu (model, polarity, SKILL.md)
-- ✅ uninstall.sh — temiz kaldırma aracı (--force/--purge)
-- ✅ README'ye Mermaid mimari diyagramı eklendi
-- ✅ 103 agent'a color alanı eklendi (kategori bazlı: blue/red/green/cyan/magenta/yellow/purple)
-- ✅ 18 council agent'a provider_affinity alanı eklendi
-- ✅ install.sh --version flag + backup rotation (son 5 yedek korunur)
-- ✅ README'de squeez/code-reviewer referansları düzeltildi
-- ✅ 6 yeni skill: copilot-cli, aider(25K⭐), codex-cli(17K⭐), open-interpreter(55K⭐), continue(21K⭐), claude-code-cli(15K⭐)
-- ✅ AGENTS.md: Loop #9 kategorisi
-- ✅ Toplam: 71 skill, 103 agent (sa+model+tools+color), 6 script, 270+ dosya
+### 🔧 Loop #9: Uninstall + Validate + Mermaid + Colors + 6 Skills
+- `uninstall.sh` — clean removal tool (--force/--purge)
+- `scripts/validate-council.sh` — council agent validation (model, polarity, SKILL.md)
+- README Mermaid architecture diagram
+- 103 agents got `color` field (category-based: blue/red/green/cyan/magenta/yellow/purple)
+- 18 council agents got `provider_affinity` field
+- `install.sh --version` flag + backup rotation (keeps last 5 backups)
+- 6 new skills: copilot-cli, aider(25K⭐), codex-cli(17K⭐), open-interpreter(55K⭐), continue(21K⭐), claude-code-cli(15K⭐)
 
 ## v1.4.0 (2026-06-28)
-### 🔧 Loop #8: 10 Düzeltme + Star Sync + JSON Output + Badges + 5 Yeni Skill
-- ✅ sync-stars.sh geliştirildi: rate-limit koruması, sleep, hata yönetimi
-- ✅ install.sh: scripts PATH'e eklendi, bashrc/zshrc otomatik yapılandırma
-- ✅ ATLAS: performance.md metrik modülü + metrics/README.md eklendi
-- ✅ chamber.sh/echo.sh/prism.sh: --json output modu eklendi
-- ✅ config/opencode.jsonc: chrome-devtools MCP + CHAMBER/ECHO/PRISM script referansları
-- ✅ 5 yeni skill: agentic-threat-detection, opencode-mcp-hub, opencode-cost-optimizer, context-compressor, swe-agent (12K⭐)
-- ✅ README: 8 badge (CI, Skills, Agents, Last Commit), 65 skill, 260+ dosya
-- ✅ AGENTS.md: Loop #8 skill kategorisi
-- ✅ 4 yeni skill dosyası (toplam 65 skill)
-- ✅ Tüm script'ler chmod +x, syntax test geçti
-- ✅ Toplam: 65 skill, 103 agent (sa+model+tools), 6 script, 260+ dosya
+### 🔧 Loop #8: Star Sync + JSON Output + Badges + 5 New Skills
+- `sync-stars.sh` improved: rate-limit protection, sleep, error handling
+- `install.sh`: scripts added to PATH, bashrc/zshrc auto-config
+- ATLAS: `performance.md` metrics module + `metrics/README.md`
+- `chamber.sh`/`echo.sh`/`prism.sh`: --json output mode
+- `config/opencode.jsonc`: chrome-devtools MCP + script references
+- 5 new skills: agentic-threat-detection, opencode-mcp-hub, opencode-cost-optimizer, context-compressor, swe-agent(12K⭐)
+- README: 8 badges (CI, Skills, Agents, Last Commit)
 
 ## v1.3.0 (2026-06-28)
-### 🔧 Loop #7: 11 Düzeltme + 3 CLI Script + 6 Yeni Skill + GitHub Template
-- ✅ 103 agent'a `tools` ve `model` alanları eklendi (kategori bazlı: opus/sonnet + tools set)
-- ✅ **scripts/chamber.sh** — session manager CLI (new/list/snapshot/parallel/merge)
-- ✅ **scripts/echo.sh** — cross-session context mirroring CLI (share/broadcast/status)
-- ✅ **scripts/prism.sh** — kod stili profiling CLI (init/analyze/suggest)
-- ✅ **scripts/sync-stars.sh** — GitHub API'den star sayılarını güncelleme
-- ✅ 6 yeni popüler skill: pydantic-ai (18K⭐), ms-agent-framework (11K⭐), deepseek-reasonix (25K⭐), cc-switch (109K⭐), wshobson-agents (37K⭐), agent-reach (43K⭐)
-- ✅ GitHub issue template'leri: bug-report, feature-request, skill-request
-- ✅ GitHub PR template + SECURITY.md + FUNDING.yml
-- ✅ GitHub workflow: tüm script syntax, agent frontmatter (4 alan), özgün script dry-run
-- ✅ AGENTS.md: scripts bölümü, yeni skill kategorileri, duplicate council temizliği
-- ✅ README: 60 skill, 7+ MCP, 250+ dosya, 3 CLI script tablosu
-- ✅ Toplam: 60 skill, 103 agent (sa+model+tools), 14 komut, 8 plugin, 18 council, 7+ MCP, 250+ dosya
+### 🔧 Loop #7: 3 CLI Scripts + GitHub Templates + 6 Skills
+- 103 agents got `tools` and `model` fields (category-based opus/sonnet + tool sets)
+- `scripts/chamber.sh`, `echo.sh`, `prism.sh`, `sync-stars.sh`
+- 6 new skills: pydantic-ai(18K⭐), ms-agent-framework(11K⭐), deepseek-reasonix(25K⭐), cc-switch(109K⭐), wshobson-agents(37K⭐), agent-reach(43K⭐)
+- GitHub issue/PR templates + SECURITY.md + FUNDING.yml
+- GitHub workflow: 4-field agent frontmatter, script dry-run
 
 ## v1.2.0 (2026-06-28)
-### 🔧 Loop #6: 11 Düzeltme + 3 Özgün Özellik + 8 Yeni Skill
-- ✅ 103 agent dosyasına `subagent_type` alanı eklendi (opencode uyumluluğu)
-- ✅ 18 council agent model adı `claude-3-opus`/`claude-3-sonnet` olarak güncellendi
-- ✅ Council SKILL.md model tablosu güncellendi
-- ✅ **🧠 PRISM 2.0** özgün özellik: kod stili profiling + fingerprint sistemi
-- ✅ **⚡ CHAMBER** özgün özellik: multi-session orchestrator & state manager
-- ✅ **🔊 ECHO** özgün özellik: cross-session context mirroring
-- ✅ 8 yeni popüler GitHub skill: dify (147K⭐), n8n (194K⭐), chrome-devtools-mcp (44K⭐), uv (40K⭐), ripgrep (51K⭐), lazygit (55K⭐), antigravity-awesome-skills (41K⭐), awesome-mcp-servers (89K⭐)
-- ✅ README'ye özgün özellikler bölümü eklendi + council SKILL.md referansı
-- ✅ MCP tablosuna chrome-devtools eklendi, 5+ → 6+ MCP olarak güncellendi
-- ✅ install.sh'ye curl_progress fonksiyonu eklendi, yeni MCP server tanımlandı
-- ✅ atlas/init.sh docs/ ve team/sync modülü kurulumu dahil edildi
-- ✅ AGENTS.md: yeni skill kategorileri, subagent_type ve council model duyurusu
-- ✅ Toplam: 54 skill, 103 agent (tümü subagent_type'lı), 14 komut, 8 plugin, 18 council, 6+ MCP, 231 dosya
+### 🔧 Loop #6: 3 Original Inventions + 8 New Skills + Agent subagent_type
+- 103 agents: `subagent_type` field added
+- 18 council agents: model → claude-3-opus/sonnet
+- **🧠 PRISM 2.0** (code style profiling) — original
+- **⚡ CHAMBER** (session manager) — original
+- **🔊 ECHO** (context mirroring) — original
+- 8 new skills: dify(147K⭐), n8n(194K⭐), chrome-devtools-mcp(44K⭐), uv(40K⭐), ripgrep(51K⭐), lazygit(55K⭐), antigravity-awesome-skills(41K⭐), awesome-mcp-servers(89K⭐)
 
 ## v1.1.0 (2026-06-28)
-### 🔧 Loop #5: 10 Hata Düzeltmesi + Yeni Özellikler
-- ✅ Skills klasöründen meta dosyaları temizlendi (CLA, CHANGELOG, CLAUDE, CODE_OF_CONDUCT, AGENTS → skills/)
-- ✅ 6 adet "404: Not Found" skill dosyası gerçek içerikle dolduruldu (ask-user-questions, bridle, opencli, aiclient2api, openpets, agentify-desktop)
-- ✅ install.sh: duplicate `set -euo pipefail` kaldırıldı, progress bar iyileştirildi
-- ✅ install.sh: self_update artık python3 gerektirmiyor (pure bash/grep)
-- ✅ README güncellendi: sayılar düzeltildi, skill tablosu genişletildi
-- ✅ 7 yeni popüler skill eklendi: cursor-tools, claude-code-memory-mcp, repomix, screenshot-to-code, claude-code-sync, mcp-router, opencode-installer
-- ✅ config/opencode.json: 8 plugin ile senkronize
-- ✅ ATLAS: docs/api.md, docs/architecture.md, team/sync.md eklendi
-- ✅ GitHub workflow geliştirildi: frontmatter doğrulama, 404 kontrolü, JSON/JSONC validasyon
-- ✅ systemd servisi genişletildi, bash completion kapsamlı hale getirildi
-- ✅ Dockerfile multi-arch desteği kazandı (linux/amd64, linux/arm64)
-- ✅ verify.sh: `--self` (repo bütünlüğü) ve `--json` modları eklendi
-- ✅ rollback.sh: liste görünümü iyileştirildi
+### 🔧 Loop #5: Cleanup + Fixes + 7 New Popular Skills
+- Skills directory cleanup (removed CLA, CHANGELOG, CLAUDE, CODE_OF_CONDUCT, AGENTS)
+- 15 "404: Not Found" files filled with real content
+- `install.sh`: duplicate `set -euo pipefail` removed, `self_update` no longer needs python3
+- 7 new popular skills: cursor-tools(8.6K⭐), repomix(5.1K⭐), screenshot-to-code(64K⭐), claude-code-memory-mcp(3.2K⭐), claude-code-sync(1.2K⭐), mcp-router(890⭐), opencode-installer(450⭐)
+- ATLAS: docs/ + team/sync added
+- GitHub workflow: frontmatter validation, 404 check, JSON/JSONC validation
+- systemd service expanded, bash completion extended
+- Dockerfile multi-arch, verify.sh --self/--json modes
 
 ## v1.0.0 (2026-06-27)
-### 🚀 İlk Sürüm
-- 4 MCP Server (codegraph, codebase-memory, context7, filesystem)
-- 41 Skill (kategorize edilmiş, frontmatter'lı)
-- 103 Agent Persona (10 kategori)
-- 14 Slash Komut
-- 7 Plugin
-- 18 Council of High Intelligence agent
-- 🌍 ATLAS Project Intelligence System (7 modül)
-- Tek komut kurulum (install.sh)
+### 🚀 Initial Release
+- 4 MCP Servers (codegraph, codebase-memory, context7, filesystem)
+- 41 Skills (categorized, frontmatter)
+- 103 Agent Personas (10 categories)
+- 14 Slash Commands
+- 7 Plugins
+- 18 Council of High Intelligence agents
+- 🌍 ATLAS Project Intelligence System (7 modules)
+- One-click installer (install.sh)
 - Rollback (rollback.sh)
-- Doğrulama (verify.sh)
-- OS Algılama (Linux/macOS/Arch/Debian/Fedora)
-- Otomatik yedekleme
-- Network timeout yönetimi
-- SELinux/AppArmor uyarısı
+- Verification (verify.sh)
+- OS Detection (Linux/macOS/Arch/Debian/Fedora)
+- Auto-backup
+- Network timeout management
+- SELinux/AppArmor warning
 - NPM/pnpm/yarn fallback
 - Bash completion
 - Dockerfile
 - systemd service
 - MIT License
 - GitHub Pages website
-- AI OpenAI
