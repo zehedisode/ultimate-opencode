@@ -46,6 +46,11 @@ Code intelligence knowledge graph. 14 MCP tools.
 
 **📚 Referans**: awesome-free-llm-apis (5.3K⭐), ask-user-questions, ultimate-opencode
 
+**🆕 Yeni Eklenenler (Loop #5)**: cursor-tools (8.6K⭐), claude-code-memory-mcp (3.2K⭐), repomix (5.1K⭐), screenshot-to-code (64K⭐), claude-code-sync (1.2K⭐), mcp-router (890⭐), opencode-installer (450⭐)
+
+### 👥 Council of High Intelligence
+`/council <soru>` — 18 AI persona ile multi-perspektif müzakere. Detaylı kullanım için: `council/council/SKILL.md`
+
 ### 👥 Council of High Intelligence
 `/council <soru>` — 18 AI persona tartışır
 - `--quick` hızlı, `--duo` ikili, `--triad <domain>` 3 kişi

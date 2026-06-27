@@ -7,6 +7,10 @@ jobs:
       - uses: actions/checkout@v4
       - name: Check install.sh syntax
         run: bash -n install.sh
+      - name: Check rollback.sh syntax
+        run: bash -n rollback.sh
+      - name: Check verify.sh syntax
+        run: bash -n verify.sh
       - name: Check README exists
         run: test -f README.md
       - name: Count files
@@ -15,3 +19,47 @@ jobs:
           echo "Agents: $(find agents -name '*.md' 2>/dev/null | wc -l)"
           echo "Commands: $(ls commands/*.md 2>/dev/null | wc -l)"
           echo "Council: $(ls council/agents/*.md 2>/dev/null | wc -l)"
+      - name: Validate skill frontmatter
+        run: |
+          for f in skills/*.md; do
+            if head -1 "$f" | grep -q '^---$'; then
+              if head -3 "$f" | grep -q '^name:'; then
+                echo "✅ $f has valid frontmatter"
+              else
+                echo "❌ $f missing 'name:' in frontmatter"
+                exit 1
+              fi
+            else
+              echo "❌ $f missing YAML frontmatter (---)"
+              exit 1
+            fi
+          done
+      - name: Validate agent frontmatter
+        run: |
+          for f in $(find agents -name '*.md'); do
+            if head -1 "$f" | grep -q '^---$'; then
+              echo "✅ Agent $f has valid frontmatter"
+            else
+              echo "❌ Agent $f missing YAML frontmatter"
+              exit 1
+            fi
+          done
+      - name: No 404 content check
+        run: |
+          if grep -r "404: Not Found" skills/ agents/ commands/ 2>/dev/null; then
+            echo "❌ Found '404: Not Found' content in files"
+            exit 1
+          fi
+          echo "✅ No 404 content found"
+      - name: Validate JSON config
+        run: |
+          python3 -c "import json; json.load(open('config/opencode.json'))" && echo "✅ JSON valid"
+      - name: Validate JSONC config
+        run: |
+          # Strip comments and validate
+          python3 -c "
+import re, json
+with open('config/opencode.jsonc') as f:
+    content = re.sub(r'//.*', '', f.read())
+    json.loads(content)
+          " && echo "✅ JSONC valid"

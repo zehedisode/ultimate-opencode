@@ -1,12 +1,30 @@
 [Unit]
 Description=Ultimate OpenCode MCP Servers
 After=network.target
+Wants=network-online.target
 
 [Service]
 Type=simple
-ExecStart=%h/.local/bin/codegraph serve --mcp
+ExecStartPre=/bin/sh -c 'until ping -c1 github.com &>/dev/null; do sleep 2; done'
+ExecStart=/home/soner/.local/bin/codegraph serve --mcp
 Restart=on-failure
-RestartSec=5
+RestartSec=10
+LimitNOFILE=65536
 
 [Install]
 WantedBy=default.target
+
+# Diğer MCP server'ları ayrı birimler olarak ekleyin:
+# /etc/systemd/user/opencode-mcp-memory.service
+# /etc/systemd/user/opencode-mcp-context7.service
+# 
+# Örnek memory MCP unit:
+# [Unit]
+# Description=Claude Code Memory MCP
+# After=network.target
+# [Service]
+# Type=simple
+# ExecStart=/home/soner/.local/bin/codebase-memory-mcp
+# Restart=on-failure
+# [Install]
+# WantedBy=default.target

@@ -1,6 +1,19 @@
 ---
 name: jjmartres-opencode
-description: "Referans / Yardımcı "
+description: "Referans / Yardımcı — JJ Martres opencode yapılandırması"
 ---
 
-404: Not Found
+# JJ Martres Opencode
+
+JJ Martres tarafından geliştirilen opencode konfigürasyon ve araç seti.
+
+## Özellikler
+
+- Gelişmiş opencode.jsonc yapılandırması
+- Özelleştirilmiş model/variant ayarları
+- MCP server entegrasyonları
+- Plugin yönetimi
+
+## Referans
+
+Detaylar: https://github.com/jjmartres/opencode

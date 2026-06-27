@@ -1,6 +1,6 @@
 ---
 name: ultimate-opencode
-description: "Bu repo Ultimate OpenCode konfigürasyonudur. 4 MCP server, 103 agent persona, 40+ skill, 14 slash komut, 7 plugin, 18 council agent içerir."
+description: "Bu repo Ultimate OpenCode konfigürasyonudur. 5+ MCP server, 103 agent persona, 43 skill, 14 slash komut, 8 plugin, 18 council agent, 1 ATLAS içerir."
 ---
 
 # Ultimate OpenCode

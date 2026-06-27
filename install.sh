@@ -5,6 +5,7 @@ RED='\033[0;31m'; GREEN='\033[0;32m'; YELLOW='\033[1;33m'; CYAN='\033[0;36m'; NC
 PWD="$(cd "$(dirname "$0")" && pwd)"
 BACKUP_DIR="$HOME/.config/opencode.yedek_$(date +%Y%m%d_%H%M%S)"
 TIMEOUT=30
+TOTAL_STEPS=12; CURRENT=0
 
 # ---- Help ----
 if [ "${1:-}" = "--help" ] || [ "${1:-}" = "-h" ]; then
@@ -57,8 +58,6 @@ for arg in "$@"; do
         --no-backup) SKIP_BACKUP=1 ;;
     esac
 done
-
-set -euo pipefail
 
 trap 'echo -e "${RED}❌ Hata!${NC}"; exit 1' ERR
 
@@ -116,9 +115,9 @@ progress() {
 # ---- Self-Update Check ----
 self_update() {
     local remote latest
-    remote=$(curl -s --max-time 5 "https://api.github.com/repos/zehedisode/ultimate-opencode/commits/main" 2>/dev/null | python3 -c "import json,sys; d=json.load(sys.stdin); print(d['sha'][:7])" 2>/dev/null || echo "")
-    latest=$(git rev-parse --short HEAD 2>/dev/null || echo "")
-    if [ -n "$remote" ] && [ "$remote" != "$latest" ]; then
+    remote=$(curl -s --max-time 5 "https://api.github.com/repos/zehedisode/ultimate-opencode/commits/main" 2>/dev/null | grep -o '"sha":"[a-f0-9]*"' | head -1 | grep -o '[a-f0-9]\{7\}' || echo "")
+    latest=$(git -C "$PWD" rev-parse --short HEAD 2>/dev/null || echo "")
+    if [ -n "$remote" ] && [ -n "$latest" ] && [ "$remote" != "$latest" ]; then
         echo -e "${YELLOW}⚠️  Yeni sürüm var! (${remote})${NC}"
         echo "   git pull ile güncelleyebilirsin."
         echo ""
@@ -169,8 +168,6 @@ if [ "$SKIP_BACKUP" -eq 0 ]; then
 else
     echo -e "${YELLOW}💾 Yedek atlandı${NC}"
 fi
-
-TOTAL_STEPS=10; CURRENT=0
 
 # ---- Copy Config ----
 ((CURRENT++)); progress $CURRENT $TOTAL_STEPS "Config"
@@ -224,6 +221,8 @@ plugins=(
     "opencode-poe-auth"
     "opencode-subagent-statusline"
     "opencode-websearch"
+    "opencode-bridge"
+    "opencode-cost-tracker"
 )
 PLUGIN_OK=0; PLUGIN_FAIL=0
 for p in "${plugins[@]}"; do

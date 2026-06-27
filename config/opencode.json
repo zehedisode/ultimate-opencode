@@ -6,6 +6,8 @@
     "opencode-gitlab-plugin",
     "opencode-poe-auth",
     "opencode-subagent-statusline",
-    "opencode-websearch"
+    "opencode-websearch",
+    "opencode-bridge",
+    "opencode-cost-tracker"
   ]
 }

@@ -4,14 +4,14 @@
 
 ### Sıfır opencode'u 5 dakikada full mod'a çeviren tek paket.
 
-**🎯 4 MCP Server · 39 Skill · 103 Agent · 14 Slash Komut · 7 Plugin · 18 Council · 1 Atlas**
+**🎯 5+ MCP Server · 43 Skill · 103 Agent · 14 Slash Komut · 8 Plugin · 18 Council · 1 Atlas · 220+ Dosya**
 
 [![GitHub stars](https://img.shields.io/github/stars/zehedisode/ultimate-opencode?style=social)](https://github.com/zehedisode/ultimate-opencode)
 [![Platform](https://img.shields.io/badge/platform-linux%20%7C%20macOS%20%7C%20wsl-blue)](https://github.com/zehedisode/ultimate-opencode)
 [![License](https://img.shields.io/badge/license-MIT-green)](https://github.com/zehedisode/ultimate-opencode)
 [![One-Click Install](https://img.shields.io/badge/install-one--click-orange)](https://github.com/zehedisode/ultimate-opencode)
 
-> **19 farklı GitHub reposundan toplanmış, test edilmiş ve optimize edilmiş en iyi opencode eklentileri.**
+> **25+ farklı GitHub reposundan toplanmış, test edilmiş ve optimize edilmiş en iyi opencode eklentileri.**
 > **Hiçbiri API key gerektirmez. Her şey tek komutla kurulur.**
 
 </div>
@@ -150,6 +150,8 @@ atlas/init.sh
 | **codebase-memory-mcp** | 17K | Kod zekası, Cypher sorguları, etki analizi |
 | **context7** | — | npm/framework dökümantasyon arama |
 | **filesystem** | — | Gelişmiş dosya sistemi işlemleri |
+| **brave-search** | — | Web araması (opsiyonel) |
+| **serena** | 25K | Semantik kod retriever, refactoring |
 
 ---
 
@@ -200,7 +202,7 @@ atlas/init.sh
 
 ---
 
-## 🎯 39 Skill
+## 🎯 43 Skill
 
 Kategoriye göre gruplandırılmış en popüler GitHub skill'leri:
 
@@ -273,6 +275,17 @@ Kategoriye göre gruplandırılmış en popüler GitHub skill'leri:
 | **awesome-free-llm-apis** | 5.3K | Ücretsiz LLM API listesi |
 | **claude-code-best-practice** | 61K | En iyi pratikler |
 
+### 🆕 Yeni Eklenenler (Loop #5)
+| Skill | ⭐ | Ne İşe Yarar |
+|---|---|---|
+| **cursor-tools** | 8.6K | Cursor IDE ile opencode arasında köprü |
+| **claude-code-memory-mcp** | 3.2K | Claude Code kalıcı bellek MCP sunucusu |
+| **repomix** | 5.1K | Tüm repoyu tek LLM-prompt dosyasına sıkıştır |
+| **screenshot-to-code** | 64K | Ekran görüntüsünden kod üret |
+| **claude-code-sync** | 1.2K | Claude Code oturumları arası senkronizasyon |
+| **mcp-router** | 890 | Çoklu MCP server yönlendirici |
+| **opencode-installer** | 450 | Tek adımda opencode + plugin kurulumu |
+
 ---
 
 ## ⚡ 14 Slash Komut
@@ -295,7 +308,7 @@ Kategoriye göre gruplandırılmış en popüler GitHub skill'leri:
 
 ---
 
-## 🔌 7 Plugin
+## 🔌 8 Plugin
 
 | Plugin | Görev |
 |---|---|
@@ -305,6 +318,8 @@ Kategoriye göre gruplandırılmış en popüler GitHub skill'leri:
 | **poe-auth** | Poe (Quora) hesabıyla giriş yap |
 | **websearch** | opencode içinden web araması yap |
 | **subagent-statusline** | Subagent durumunu TUI'de gör |
+| **opencode-bridge** | Çoklu opencode instance senkronizasyonu |
+| **opencode-cost-tracker** | Token tüketimi ve maliyet takibi |
 
 ---
 
@@ -325,7 +340,7 @@ Kategoriye göre gruplandırılmış en popüler GitHub skill'leri:
 
 | Soru | Cevap |
 |---|---|
-| **Neden 39 skill var?** | Çünkü her durum için doğru araç |
+| **Neden 43 skill var?** | Çünkü her durum için doğru araç |
 | **Neden 103 agent var?** | Çünkü her dil/alan için uzman gerek |
 | **Neden ATLAS var?** | Çünkü projeni anlayan TEK sistem |
 | **Neden tek komut?** | Çünkü vaktin skill kurmaktan değerli |
