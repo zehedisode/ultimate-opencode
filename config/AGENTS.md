@@ -60,6 +60,10 @@ Code intelligence knowledge graph. 14 MCP tools.
 
 **🆕 Loop #9**: copilot-cli (4.3K⭐), aider (25K⭐), codex-cli (17K⭐), open-interpreter (55K⭐), continue (21K⭐), claude-code-cli (15K⭐)
 
+**🆕 Loop #10**: github-copilot (38K⭐), mcp-cli (4.7K⭐), gemini-cli (12K⭐), cursor-ide (21K⭐), opencode-plugins (1.5K⭐), ai-coding-agents (8.7K⭐)
+
+**🆕 Loop #11**: opencode-mcp-memory, opencode-mcp-filesystem, opencode-mcp-github, opencode-mcp-postgres, opencode-mcp-redis, opencode-mcp-brave
+
 ### 🆕 Özgün Araç Script'leri (scripts/)
 | Script | Açıklama |
 |---|---|

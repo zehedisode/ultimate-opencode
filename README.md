@@ -4,7 +4,7 @@
 
 ### Sıfır opencode'u 5 dakikada full mod'a çeviren tek paket.
 
-**🎯 8+ MCP Server · 77 Skill · 103 Agent (sa+model+tools+color) · 14 Komut · 8 Plugin · 18 Council · 1 Atlas · 280+ Dosya · 8 Script · 3 Özgün**
+**🎯 14+ MCP · 83 Skill · 103 Agent (sa+model+tools+color) · 14 Komut · 8 Plugin · 18 Council · 1 Atlas · 290+ Dosya · 11 Script · 3 Özgün · 282 KB**
 
 [![GitHub stars](https://img.shields.io/github/stars/zehedisode/ultimate-opencode?style=social)](https://github.com/zehedisode/ultimate-opencode)
 [![Platform](https://img.shields.io/badge/platform-linux%20%7C%20macOS%20%7C%20wsl-blue)](https://github.com/zehedisode/ultimate-opencode)
@@ -188,6 +188,12 @@ graph TD
 | **brave-search** | — | Web araması (opsiyonel) |
 | **serena** | 25K | Semantik kod retriever, refactoring |
 | **chrome-devtools** | 44K | Chrome DevTools MCP |
+| **opencode-mcp-memory** | 2.8K | Kalıcı bellek MCP |
+| **opencode-mcp-filesystem** | 1.6K | Güvenli dosya sistemi MCP |
+| **opencode-mcp-github** | 3.2K | GitHub API MCP |
+| **opencode-mcp-postgres** | 1.8K | PostgreSQL MCP |
+| **opencode-mcp-redis** | 1.2K | Redis MCP |
+| **opencode-mcp-brave** | 1K | Brave Search MCP |
 
 ---
 
@@ -285,7 +291,7 @@ Detay: `skills/echo.md`
 
 ---
 
-## 🎯 77 Skill
+## 🎯 83 Skill
 
 Kategoriye göre gruplandırılmış en popüler GitHub skill'leri:
 
@@ -423,6 +429,16 @@ Kategoriye göre gruplandırılmış en popüler GitHub skill'leri:
 | **opencode-plugins** | 1.5K | Plugin geliştirme şablonu |
 | **ai-coding-agents** | 8.7K | AI coding agent karşılaştırma rehberi |
 
+### 🆕x7 Loop #11: 6 Yeni MCP Skill + Master Launcher + BATs Test
+| Skill | ⭐ | Ne İşe Yarar |
+|---|---|---|
+| **opencode-mcp-memory** | 2.8K | opencode kalıcı bellek MCP |
+| **opencode-mcp-filesystem** | 1.6K | opencode güvenli dosya MCP |
+| **opencode-mcp-github** | 3.2K | opencode GitHub MCP |
+| **opencode-mcp-postgres** | 1.8K | opencode PostgreSQL MCP |
+| **opencode-mcp-redis** | 1.2K | opencode Redis MCP |
+| **opencode-mcp-brave** | 1K | opencode Brave Search MCP |
+
 ---
 
 ## ⚡ 14 Slash Komut
@@ -485,7 +501,7 @@ Kategoriye göre gruplandırılmış en popüler GitHub skill'leri:
 
 | Soru | Cevap |
 |---|---|
-| **Neden 77 skill var?** | Çünkü her durum için doğru araç |
+| **Neden 83 skill var?** | Çünkü her durum için doğru araç |
 | **Neden 103 agent var?** | Çünkü her dil/alan için uzman gerek |
 | **Neden ATLAS var?** | Çünkü projeni anlayan TEK sistem |
 | **Neden tek komut?** | Çünkü vaktin skill kurmaktan değerli |

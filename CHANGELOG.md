@@ -1,5 +1,16 @@
 # Changelog
 
+## v1.7.0 (2026-06-28)
+### 🔧 Loop #11: 11 Düzeltme + Master Launcher + BATs Test + Docs + 6 Yeni MCP Skill
+- ✅ scripts/opencode.sh — master launcher (tüm script'leri tek yerden yönet)
+- ✅ tests/test_basics.bats — 16 BATs testi (syntax, frontmatter, agent fields, council, counts)
+- ✅ docs/QUICKSTART.md, ARCHITECTURE.md, SCRIPTS.md — kapsamlı dokümantasyon
+- ✅ opencode.sh — status komutu (canlı dosya sayıları + versiyon)
+- ✅ 6 yeni opencode MCP skill: memory, filesystem, github, postgres, redis, brave
+- ✅ README: 83 skill, 14+ MCP, 290+ dosya, 11 script
+- ✅ AGENTS.md: Loop #11 kategorisi
+- ✅ Toplam: 83 skill, 103 agent(5 alan), 11 script, 290+ dosya, 3 özgün
+
 ## v1.6.0 (2026-06-28)
 ### 🔧 Loop #10: 11 Düzeltme + Benchmark + CRON + Wrap + 6 Yeni Skill
 - ✅ scripts/cron-setup.sh — haftalık star sync cron job
