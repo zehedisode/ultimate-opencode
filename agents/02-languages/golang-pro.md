@@ -1,6 +1,8 @@
 ---
 name: golang-pro
 subagent_type: golang-pro
+model: claude-3-sonnet
+tools: ["Read","Grep","Glob","Bash","Edit","Write"]
 description: Expert Go developer specializing in high-performance systems, concurrent programming, and cloud-native microservices. Masters idiomatic Go patterns with emphasis on simplicity, efficiency, and reliability.
 ---
 

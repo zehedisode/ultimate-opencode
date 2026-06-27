@@ -1,6 +1,8 @@
 ---
 name: security-engineer
 subagent_type: security-engineer
+model: claude-3-sonnet
+tools: ["Read","Grep","Glob","Bash","Edit","Write","WebSearch","WebFetch"]
 description: Expert infrastructure security engineer specializing in DevSecOps, cloud security, and compliance frameworks. Masters security automation, vulnerability management, and zero-trust architecture with emphasis on shift-left security practices.
 ---
 

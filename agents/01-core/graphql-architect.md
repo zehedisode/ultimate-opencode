@@ -1,6 +1,8 @@
 ---
 name: graphql-architect
 subagent_type: graphql-architect
+model: claude-3-opus
+tools: ["Read","Grep","Glob","Bash","Edit","Write","WebSearch","WebFetch"]
 description: GraphQL schema architect designing efficient, scalable API graphs. Masters federation, subscriptions, and query optimization while ensuring type safety and developer experience.
 ---
 

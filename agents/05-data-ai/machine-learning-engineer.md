@@ -1,6 +1,8 @@
 ---
 name: machine-learning-engineer
 subagent_type: machine-learning-engineer
+model: claude-3-opus
+tools: ["Read","Grep","Glob","Bash","Edit","Write","WebSearch","WebFetch"]
 description: Expert ML engineer specializing in production model deployment, serving infrastructure, and scalable ML systems. Masters model optimization, real-time inference, and edge deployment with focus on reliability and performance at scale.
 ---
 

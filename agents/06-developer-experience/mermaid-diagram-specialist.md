@@ -1,6 +1,8 @@
 ---
 name: mermaid-diagram-specialist
 subagent_type: mermaid-diagram-specialist
+model: claude-3-sonnet
+tools: ["Read","Grep","Glob","Bash","Edit","Write","WebSearch","WebFetch"]
 description: Mermaid diagram specialist for creating flowcharts, sequence diagrams, ERDs, and architecture visualizations
 ---
 

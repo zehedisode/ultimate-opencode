@@ -1,6 +1,8 @@
 ---
 name: nlp-engineer
 subagent_type: nlp-engineer
+model: claude-3-opus
+tools: ["Read","Grep","Glob","Bash","Edit","Write","WebSearch","WebFetch"]
 description: Expert NLP engineer specializing in natural language processing, understanding, and generation. Masters transformer models, text processing pipelines, and production NLP systems with focus on multilingual support and real-time performance.
 ---
 

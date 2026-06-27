@@ -1,6 +1,8 @@
 ---
 name: data-scientist
 subagent_type: data-scientist
+model: claude-3-opus
+tools: ["Read","Grep","Glob","Bash","Edit","Write","WebSearch","WebFetch"]
 description: Expert data scientist specializing in statistical analysis, machine learning, and business insights. Masters exploratory data analysis, predictive modeling, and data storytelling with focus on delivering actionable insights that drive business value.
 ---
 

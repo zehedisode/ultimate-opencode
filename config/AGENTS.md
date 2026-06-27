@@ -54,11 +54,19 @@ Code intelligence knowledge graph. 14 MCP tools.
 
 **🆕 Loop #6**: PRISM 2.0 (özgün), CHAMBER (özgün), ECHO (özgün), dify (147K⭐), n8n (194K⭐), chrome-devtools-mcp (44K⭐), uv (40K⭐), ripgrep (51K⭐), lazygit (55K⭐), antigravity-awesome-skills (41K⭐), awesome-mcp-servers (89K⭐)
 
-### 👥 Council of High Intelligence
-`/council <soru>` — 18 AI persona ile multi-perspektif müzakere. Detaylı kullanım için: `council/council/SKILL.md`
+**🆕 Loop #7**: pydantic-ai (18K⭐), microsoft-agent-framework (11K⭐), deepseek-reasonix (25K⭐), cc-switch (109K⭐), wshobson-agents (37K⭐), agent-reach (43K⭐)
+
+### 🆕 Özgün Araç Script'leri (scripts/)
+| Script | Açıklama |
+|---|---|
+| `chamber.sh` | Session yöneticisi — `chamber new/list/snapshot/parallel` |
+| `echo.sh` | Context mirroring — `echo share/broadcast/status` |
+| `prism.sh` | Kod stili profiling — `prism init/analyze/suggest` |
+| `sync-stars.sh` | Skill star sayılarını GitHub API'den güncelle |
 
 ### 👥 Council of High Intelligence
-`/council <soru>` — 18 AI persona tartışır
+`/council <soru>` — 18 AI persona ile multi-perspektif müzakere.
+Detaylı kullanım için: `council/council/SKILL.md`
 - `--quick` hızlı, `--duo` ikili, `--triad <domain>` 3 kişi
 - Domain: strategy, architecture, decision, ethics, risk, shipping, ai
 

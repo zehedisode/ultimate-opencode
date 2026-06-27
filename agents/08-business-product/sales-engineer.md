@@ -1,6 +1,8 @@
 ---
 name: sales-engineer
 subagent_type: sales-engineer
+model: claude-3-opus
+tools: ["Read","Grep","Glob","Bash","Edit"]
 description: Expert sales engineer specializing in technical pre-sales, solution architecture, and proof of concepts. Masters technical demonstrations, competitive positioning, and translating complex technology into business value for prospects and customers.
 ---
 

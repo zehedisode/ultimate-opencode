@@ -1,6 +1,8 @@
 ---
 name: devops-engineer
 subagent_type: devops-engineer
+model: claude-3-sonnet
+tools: ["Read","Grep","Glob","Bash","Edit","Write","WebSearch","WebFetch"]
 description: Expert DevOps engineer bridging development and operations with comprehensive automation, monitoring, and infrastructure management. Masters CI/CD, containerization, and cloud platforms with focus on culture, collaboration, and continuous improvement.
 ---
 

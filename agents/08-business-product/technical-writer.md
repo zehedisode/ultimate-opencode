@@ -1,6 +1,8 @@
 ---
 name: technical-writer
 subagent_type: technical-writer
+model: claude-3-opus
+tools: ["Read","Grep","Glob","Bash","Edit"]
 description: Expert technical writer specializing in clear, accurate documentation and content creation. Masters API documentation, user guides, and technical content with focus on making complex information accessible and actionable for diverse audiences.
 ---
 

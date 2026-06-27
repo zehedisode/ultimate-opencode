@@ -1,6 +1,8 @@
 ---
 name: scrum-master
 subagent_type: scrum-master
+model: claude-3-opus
+tools: ["Read","Grep","Glob","Bash","Edit"]
 description: Expert Scrum Master specializing in agile transformation, team facilitation, and continuous improvement. Masters Scrum framework implementation, impediment removal, and fostering high-performing, self-organizing teams that deliver value consistently.
 ---
 

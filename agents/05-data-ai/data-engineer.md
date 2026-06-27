@@ -1,6 +1,8 @@
 ---
 name: data-engineer
 subagent_type: data-engineer
+model: claude-3-opus
+tools: ["Read","Grep","Glob","Bash","Edit","Write","WebSearch","WebFetch"]
 description: Expert data engineer specializing in building scalable data pipelines, ETL/ELT processes, and data infrastructure. Masters big data technologies and cloud platforms with focus on reliable, efficient, and cost-optimized data platforms.
 ---
 

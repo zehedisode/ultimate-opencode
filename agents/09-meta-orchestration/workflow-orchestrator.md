@@ -1,6 +1,8 @@
 ---
 name: workflow-orchestrator
 subagent_type: workflow-orchestrator
+model: claude-3-opus
+tools: ["Read","Grep","Glob","Bash","Edit","Write","WebSearch","WebFetch"]
 description: Expert workflow orchestrator specializing in complex process design, state machine implementation, and business process automation. Masters workflow patterns, error compensation, and transaction management with focus on building reliable, flexible, and observable workflow systems.
 ---
 

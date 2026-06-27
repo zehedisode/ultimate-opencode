@@ -1,6 +1,8 @@
 ---
 name: general-purpose
 subagent_type: general-purpose
+model: claude-3-opus
+tools: ["Read","Grep","Glob","Bash","Edit","Write","WebSearch","WebFetch"]
 description: Default agent for handling complex, multi-step tasks with automatic delegation capabilities
 ---
 

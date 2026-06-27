@@ -1,5 +1,20 @@
 # Changelog
 
+## v1.3.0 (2026-06-28)
+### 🔧 Loop #7: 11 Düzeltme + 3 CLI Script + 6 Yeni Skill + GitHub Template
+- ✅ 103 agent'a `tools` ve `model` alanları eklendi (kategori bazlı: opus/sonnet + tools set)
+- ✅ **scripts/chamber.sh** — session manager CLI (new/list/snapshot/parallel/merge)
+- ✅ **scripts/echo.sh** — cross-session context mirroring CLI (share/broadcast/status)
+- ✅ **scripts/prism.sh** — kod stili profiling CLI (init/analyze/suggest)
+- ✅ **scripts/sync-stars.sh** — GitHub API'den star sayılarını güncelleme
+- ✅ 6 yeni popüler skill: pydantic-ai (18K⭐), ms-agent-framework (11K⭐), deepseek-reasonix (25K⭐), cc-switch (109K⭐), wshobson-agents (37K⭐), agent-reach (43K⭐)
+- ✅ GitHub issue template'leri: bug-report, feature-request, skill-request
+- ✅ GitHub PR template + SECURITY.md + FUNDING.yml
+- ✅ GitHub workflow: tüm script syntax, agent frontmatter (4 alan), özgün script dry-run
+- ✅ AGENTS.md: scripts bölümü, yeni skill kategorileri, duplicate council temizliği
+- ✅ README: 60 skill, 7+ MCP, 250+ dosya, 3 CLI script tablosu
+- ✅ Toplam: 60 skill, 103 agent (sa+model+tools), 14 komut, 8 plugin, 18 council, 7+ MCP, 250+ dosya
+
 ## v1.2.0 (2026-06-28)
 ### 🔧 Loop #6: 11 Düzeltme + 3 Özgün Özellik + 8 Yeni Skill
 - ✅ 103 agent dosyasına `subagent_type` alanı eklendi (opencode uyumluluğu)

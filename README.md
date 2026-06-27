@@ -4,7 +4,7 @@
 
 ### Sıfır opencode'u 5 dakikada full mod'a çeviren tek paket.
 
-**🎯 6+ MCP Server · 54 Skill · 103 Agent · 14 Slash Komut · 8 Plugin · 18 Council · 1 Atlas · 240+ Dosya**
+**🎯 7+ MCP Server · 60 Skill · 103 Agent (tümü sa) · 14 Slash Komut · 8 Plugin · 18 Council · 1 Atlas · 250+ Dosya**
 
 [![GitHub stars](https://img.shields.io/github/stars/zehedisode/ultimate-opencode?style=social)](https://github.com/zehedisode/ultimate-opencode)
 [![Platform](https://img.shields.io/badge/platform-linux%20%7C%20macOS%20%7C%20wsl-blue)](https://github.com/zehedisode/ultimate-opencode)
@@ -252,7 +252,7 @@ Detay: `skills/echo.md`
 
 ---
 
-## 🎯 54 Skill
+## 🎯 60 Skill
 
 Kategoriye göre gruplandırılmış en popüler GitHub skill'leri:
 
@@ -351,6 +351,16 @@ Kategoriye göre gruplandırılmış en popüler GitHub skill'leri:
 | **antigravity-awesome-skills** | 41K | 1600+ agentic skill kütüphanesi |
 | **awesome-mcp-servers** | 89K | En kapsamlı MCP server koleksiyonu |
 
+### 🆕🆕🆕 Loop #7: 6 Yeni Skill + 3 CLI Script + Template'ler
+| Skill | ⭐ | Ne İşe Yarar |
+|---|---|---|
+| **pydantic-ai** | 18K | Pydantic AI Agent Framework (type-safe) |
+| **microsoft-agent-framework** | 11K | MS multi-agent orchestration |
+| **deepseek-reasonix** | 25K | DeepSeek-native AI coding agent |
+| **cc-switch** | 109K | Cross-platform AI CLI yöneticisi |
+| **wshobson-agents** | 37K | Multi-harness plugin marketplace |
+| **agent-reach** | 43K | AI agent'lara internet görüşü |
+
 ---
 
 ## ⚡ 14 Slash Komut
@@ -398,6 +408,9 @@ Kategoriye göre gruplandırılmış en popüler GitHub skill'leri:
 | **opencli** | Website → CLI | `opencli <url> <komut>` |
 | **bridle** | TUI config manager | `bridle` |
 | **claude-mem** | Persist context | Otomatik |
+| **🧠 prism** | Kod stili profiling | `prism analyze src/` |
+| **⚡ chamber** | Session yönetimi | `chamber new feature` |
+| **🔊 echo** | Context mirroring | `echo share "keşif"` |
 
 ---
 
@@ -405,7 +418,7 @@ Kategoriye göre gruplandırılmış en popüler GitHub skill'leri:
 
 | Soru | Cevap |
 |---|---|
-| **Neden 54 skill var?** | Çünkü her durum için doğru araç |
+| **Neden 60 skill var?** | Çünkü her durum için doğru araç |
 | **Neden 103 agent var?** | Çünkü her dil/alan için uzman gerek |
 | **Neden ATLAS var?** | Çünkü projeni anlayan TEK sistem |
 | **Neden tek komut?** | Çünkü vaktin skill kurmaktan değerli |
@@ -441,5 +454,13 @@ cd projen
 ## 📜 Lisans
 
 MIT — Özgürce kullan, değiştir, paylaş.
+
+---
+
+### 🔗 Bağlantılar
+- [📖 Katkı Rehberi](CONTRIBUTING.md)
+- [🛡️ Güvenlik Politikası](SECURITY.md)
+- [📝 Değişiklik Günlüğü](CHANGELOG.md)
+- [⭐ GitHub'da Yıldızla](https://github.com/zehedisode/ultimate-opencode)
 
 **https://github.com/zehedisode/ultimate-opencode**

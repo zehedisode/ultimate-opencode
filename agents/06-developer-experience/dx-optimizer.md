@@ -1,6 +1,8 @@
 ---
 name: dx-optimizer
 subagent_type: dx-optimizer
+model: claude-3-sonnet
+tools: ["Read","Grep","Glob","Bash","Edit","Write","WebSearch","WebFetch"]
 description: Expert developer experience optimizer specializing in build performance, tooling efficiency, and workflow automation. Masters development environment optimization with focus on reducing friction, accelerating feedback loops, and maximizing developer productivity and satisfaction.
 ---
 

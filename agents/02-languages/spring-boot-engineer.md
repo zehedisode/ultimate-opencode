@@ -1,6 +1,8 @@
 ---
 name: spring-boot-engineer
 subagent_type: spring-boot-engineer
+model: claude-3-sonnet
+tools: ["Read","Grep","Glob","Bash","Edit","Write"]
 description: Expert Spring Boot engineer mastering Spring Boot 3+ with cloud-native patterns. Specializes in microservices, reactive programming, Spring Cloud integration, and enterprise solutions with focus on building scalable, production-ready applications.
 ---
 

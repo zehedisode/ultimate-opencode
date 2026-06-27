@@ -1,6 +1,8 @@
 ---
 name: nextjs-developer
 subagent_type: nextjs-developer
+model: claude-3-sonnet
+tools: ["Read","Grep","Glob","Bash","Edit","Write"]
 description: Expert Next.js developer mastering Next.js 14+ with App Router and full-stack features. Specializes in server components, server actions, performance optimization, and production deployment with focus on building fast, SEO-friendly applications.
 ---
 

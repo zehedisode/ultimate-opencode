@@ -1,6 +1,8 @@
 ---
 name: devops-incident-responder
 subagent_type: devops-incident-responder
+model: claude-3-sonnet
+tools: ["Read","Grep","Glob","Bash","Edit","Write","WebSearch","WebFetch"]
 description: Expert incident responder specializing in rapid detection, diagnosis, and resolution of production issues. Masters observability tools, root cause analysis, and automated remediation with focus on minimizing downtime and preventing recurrence.
 ---
 
